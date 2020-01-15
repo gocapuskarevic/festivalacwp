@@ -40,7 +40,7 @@
 		echo $image;
 	}
 	?>
-
+<h1>test test test</h1>
 	<div class="entry-content clearfix">
 		<?php
 		global $more;

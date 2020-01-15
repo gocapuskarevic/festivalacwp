@@ -223,3 +223,6 @@ require_once( ACCELERATE_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-accelerate
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require ACCELERATE_INCLUDES_DIR . '/jetpack.php';
 }
+
+wp_enqueue_style('bootstrap',get_template_directory_uri().'/css/bootstrap.min.css');
+wp_enqueue_style('custom-style',get_template_directory_uri().'/css/custom.css');
