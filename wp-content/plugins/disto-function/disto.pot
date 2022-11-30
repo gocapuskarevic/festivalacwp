@@ -1,0 +1,739 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Disto Function\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-16 04:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#: widget/social_counter.php:329
+msgid ""
+"<a target=\"_blank\" href=\"https://outofthesandbox.com/pages/instagram-"
+"access-token\">Instagram access token generater</a></p>"
+msgstr ""
+
+#: widget/about-us.php:180
+msgid "About us"
+msgstr ""
+
+#: widget/about-us.php:15
+msgid "About us and social icons"
+msgstr ""
+
+#: widget/adswidget.php:17 widget/adswidget.php:74
+msgid "Advertisement"
+msgstr ""
+
+#: cus-metabox.php:299
+msgid "Audio Embed"
+msgstr ""
+
+#: cus-metabox.php:304
+msgid "Audio link"
+msgstr ""
+
+#: widget/about-us.php:214
+msgid "Behance Url:"
+msgstr ""
+
+#: widget/about-us.php:258
+msgid "Blogger Url:"
+msgstr ""
+
+#: widget/home-carousel.php:329
+msgid "Carousel Height: Custom height you want. EX: 300px or 120%"
+msgstr ""
+
+#: widget/home-carousel.php:334
+msgid "Carousel Margin: Custom margin you want. EX: 10px"
+msgstr ""
+
+#: widget/home-carousel.php:293
+msgid "Carousel Style"
+msgstr ""
+
+#: widget/home-carousel.php:349
+msgid "Carousel Style:"
+msgstr ""
+
+#: widget/category-widget.php:100
+msgid "Categories"
+msgstr ""
+
+#: widget/category-widget.php:117
+msgid "Category id EX: 1,2,3"
+msgstr ""
+
+#: cus-metabox.php:212
+msgid "Check this to enable single post content full."
+msgstr ""
+
+#: cus-metabox.php:334
+msgid "Check this to hide page title"
+msgstr ""
+
+#: cus-metabox.php:327
+msgid "Check this to remove top margin"
+msgstr ""
+
+#: widget/home-main-right-list.php:175 widget/home-grid6.php:187
+#: widget/home-grid-right-list.php:185 widget/home-grid5.php:149
+#: widget/home-list-medium.php:155 widget/recent-main-list.php:178
+#: widget/slider-post.php:158 widget/home-slider-tab.php:191
+#: widget/home-large-grid.php:242 widget/home-large-list.php:239
+#: widget/home-large.php:160 widget/recent-small-overlay.php:143
+#: widget/recent-grid.php:123 widget/home-main-post-below-2-grid.php:182
+#: widget/recent-small-number.php:137 widget/recent-list-number.php:136
+#: widget/home-carousel.php:258 widget/recent-small.php:148
+#: widget/home-small-list.php:148 widget/home-small-grid.php:211
+#: widget/home-newsticker.php:115 widget/home-2main-right-list.php:218
+#: widget/home-slider.php:155 widget/recent-large.php:147
+#: widget/home-small-grid-overlay.php:210
+msgid "Choose your category:"
+msgstr ""
+
+#: widget/home-feature-box.php:18
+msgid "Custom Image link"
+msgstr ""
+
+#: widget/about-us.php:263
+msgid "Deviantart Url:"
+msgstr ""
+
+#: widget/category-widget.php:17
+msgid "Dispaly Category With Image"
+msgstr ""
+
+#: widget/popular.php:17
+msgid "Display a list of popular posts"
+msgstr ""
+
+#: widget/recent-small-overlay.php:18 widget/recent-small-number.php:18
+#: widget/recent-list-number.php:17 widget/recent-small.php:18
+#: widget/home-small-list.php:18
+msgid "Display a list of recent post."
+msgstr ""
+
+#: widget/home-grid5.php:18
+msgid "Display Grid 5 post"
+msgstr ""
+
+#: widget/home-grid6.php:18
+msgid "Display Grid 6 post"
+msgstr ""
+
+#: widget/recent-grid.php:18
+msgid "Display grid of recent post."
+msgstr ""
+
+#: widget/home-newsticker.php:18
+msgid "Display Home post Newsticker"
+msgstr ""
+
+#: widget/home-slider-tab.php:18 widget/home-slider.php:18
+msgid "Display Home post slider"
+msgstr ""
+
+#: widget/home-main-right-list.php:18 widget/home-list-medium.php:18
+#: widget/home-large-grid.php:18 widget/home-large-list.php:18
+#: widget/home-large.php:18
+msgid "Display list post."
+msgstr ""
+
+#: widget/recent-main-list.php:18
+msgid "Display main post with list of recent post."
+msgstr ""
+
+#: widget/social_counter.php:19
+msgid "Display number of social followers"
+msgstr ""
+
+#: widget/recent-large.php:18
+msgid "Display post on menu or widget."
+msgstr ""
+
+#: widget/home-grid-right-list.php:18 widget/home-main-post-below-2-grid.php:18
+#: widget/home-2main-right-list.php:18
+msgid "Display Recent post with many layout"
+msgstr ""
+
+#: widget/slider-post.php:18
+msgid "Display slider on widget"
+msgstr ""
+
+#: widget/home-carousel.php:17 widget/home-small-grid.php:15
+#: widget/home-small-grid-overlay.php:17
+msgid "Displays Category Posts."
+msgstr ""
+
+#: widget/comments.php:16
+msgid "Displays recent comments."
+msgstr ""
+
+#. Name of the plugin
+msgid "Disto Function"
+msgstr ""
+
+#: widget/social_counter.php:361
+msgid "Dribbble Token (Client Access Token):"
+msgstr ""
+
+#: widget/social_counter.php:357
+msgid "Dribbble User Name:"
+msgstr ""
+
+#: widget/about-us.php:269
+msgid "Dribble Url:"
+msgstr ""
+
+#: widget/about-us.php:280
+msgid "Dropbox Url:"
+msgstr ""
+
+#: cus-metabox.php:211
+msgid "Enable Full Post"
+msgstr ""
+
+#: widget/recent-small.php:144
+msgid "Enable number overlay"
+msgstr ""
+
+#: widget/home-small-grid-overlay.php:256
+msgid "Exception text to show: EX: 200"
+msgstr ""
+
+#: widget/slider-post.php:152 widget/home-large-grid.php:225
+#: widget/home-carousel.php:288 widget/home-small-grid.php:237
+msgid "Exclude Posts ID: EX(1,2,3,4)"
+msgstr ""
+
+#: widget/social_counter.php:301
+msgid "Facebook App Token (Optional):"
+msgstr ""
+
+#: widget/social_counter.php:297
+msgid "Facebook Page Name:"
+msgstr ""
+
+#: widget/about-us.php:209
+msgid "Facebook Url:"
+msgstr ""
+
+#: widget/about-us.php:204
+msgid "Feed description:"
+msgstr ""
+
+#: widget/about-us.php:307
+msgid "Flickr Url:"
+msgstr ""
+
+#: widget/home-carousel.php:358
+msgid "Font Size:"
+msgstr ""
+
+#. Description of the plugin
+msgid "Function and feature for Disto theme"
+msgstr ""
+
+#: cus-metabox.php:254
+msgid "gallery"
+msgstr ""
+
+#: widget/social_counter.php:364
+msgid "Generate your dribbble app"
+msgstr ""
+
+#: widget/social_counter.php:349
+msgid "Generate your soundcloud app"
+msgstr ""
+
+#: widget/social_counter.php:318
+msgid "Generate your Twitter App"
+msgstr ""
+
+#: widget/home-carousel.php:338
+msgid "Grid Columns:"
+msgstr ""
+
+#: widget/home-small-grid-overlay.php:233
+msgid "Grid Overlay Style"
+msgstr ""
+
+#: widget/home-small-grid.php:241
+msgid "Grid Style"
+msgstr ""
+
+#: cus-metabox.php:333
+msgid "Hide page title"
+msgstr ""
+
+#: widget/home-carousel.php:210
+msgid "Home Carousel"
+msgstr ""
+
+#: widget/home-small-grid.php:175 widget/home-small-grid-overlay.php:178
+msgid "Home Small Grid"
+msgstr ""
+
+#: widget/comments.php:79
+msgid "How many entries to display?"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://themeforest.net/user/jellywp"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://themeforest.net/user/jellywp/portfolio"
+msgstr ""
+
+#: widget/social_counter.php:339
+msgid "If use add Channel ID so no need to add user name"
+msgstr ""
+
+#: widget/about-us.php:198
+msgid "Image sign Url:"
+msgstr ""
+
+#: widget/home-feature-box.php:71
+msgid "Image URL:"
+msgstr ""
+
+#: widget/adswidget.php:92 widget/about-us.php:192
+msgid "Image Url:"
+msgstr ""
+
+#: widget/social_counter.php:326
+msgid "Instagram Access Token Key:"
+msgstr ""
+
+#: widget/about-us.php:236
+msgid "Instagram Url:"
+msgstr ""
+
+#. Author of the plugin
+msgid "Jellywp"
+msgstr ""
+
+#: widget/about-us.php:16
+msgid "jellywp: About us"
+msgstr ""
+
+#: widget/category-widget.php:18
+msgid "jellywp: Category Image"
+msgstr ""
+
+#: widget/home-large-grid.php:21
+msgid "jellywp: Home 1st large then grid post"
+msgstr ""
+
+#: widget/home-large-list.php:21
+msgid "jellywp: Home 1st large then list post"
+msgstr ""
+
+#: widget/home-2main-right-list.php:21
+msgid "jellywp: Home 2 main right list"
+msgstr ""
+
+#: widget/home-carousel.php:20
+msgid "jellywp: Home Carousel"
+msgstr ""
+
+#: widget/home-feature-box.php:21
+msgid "jellywp: Home Feature Box"
+msgstr ""
+
+#: widget/home-grid5.php:21
+msgid "jellywp: Home Grid 5 Post"
+msgstr ""
+
+#: widget/home-grid6.php:21
+msgid "jellywp: Home Grid 6 Post"
+msgstr ""
+
+#: widget/home-small-grid.php:18
+msgid "jellywp: Home Grid Post"
+msgstr ""
+
+#: widget/home-small-grid-overlay.php:20
+msgid "jellywp: Home Grid Post Overlay"
+msgstr ""
+
+#: widget/home-grid-right-list.php:21
+msgid "jellywp: Home grid with right list"
+msgstr ""
+
+#: widget/home-large.php:21
+msgid "jellywp: Home large post"
+msgstr ""
+
+#: widget/home-list-medium.php:21
+msgid "jellywp: Home list post"
+msgstr ""
+
+#: widget/home-main-post-below-2-grid.php:21
+msgid "jellywp: Home main below grid"
+msgstr ""
+
+#: widget/home-main-right-list.php:21
+msgid "Jellywp: Home Main Right List"
+msgstr ""
+
+#: widget/home-newsticker.php:21
+msgid "jellywp: Home newsticker"
+msgstr ""
+
+#: widget/home-slider.php:21
+msgid "jellywp: Home post slider"
+msgstr ""
+
+#: widget/home-slider-tab.php:21
+msgid "jellywp: Home post slider tab"
+msgstr ""
+
+#: widget/home-small-list.php:21
+msgid "jellywp: Home Small List"
+msgstr ""
+
+#: widget/recent-main-list.php:20
+msgid "jellywp: main post images with list post"
+msgstr ""
+
+#: widget/adswidget.php:18
+msgid "jellywp: place your ads here"
+msgstr ""
+
+#: widget/popular.php:18
+msgid "jellywp: popular post"
+msgstr ""
+
+#: widget/recent-large.php:20
+msgid "jellywp: Post large or menu post"
+msgstr ""
+
+#: widget/comments.php:17
+msgid "jellywp: Recent Comments"
+msgstr ""
+
+#: widget/recent-grid.php:20
+msgid "jellywp: Recently grid Posts"
+msgstr ""
+
+#: widget/recent-list-number.php:20
+msgid "jellywp: Recently list number"
+msgstr ""
+
+#: widget/recent-small.php:20
+msgid "jellywp: Recently Posts"
+msgstr ""
+
+#: widget/recent-small-number.php:21
+msgid "jellywp: Recently Posts Number"
+msgstr ""
+
+#: widget/recent-small-overlay.php:21
+msgid "jellywp: Recently Posts Overlay"
+msgstr ""
+
+#: widget/slider-post.php:20
+msgid "jellywp: Widget slider"
+msgstr ""
+
+#: widget/adswidget.php:86
+msgid "Link Url:"
+msgstr ""
+
+#: widget/home-feature-box.php:76
+msgid "Link:"
+msgstr ""
+
+#: widget/about-us.php:241
+msgid "Linkedin Url:"
+msgstr ""
+
+#: widget/home-list-medium.php:108 widget/home-large-grid.php:172
+#: widget/home-large-list.php:176 widget/home-large.php:113
+#: widget/home-small-grid.php:134 widget/home-small-grid-overlay.php:136
+msgid "Load more"
+msgstr ""
+
+#: post-like.php:345
+msgid "Most Popular Posts"
+msgstr ""
+
+#: widget/category-widget.php:112
+msgid "Number Of Category:"
+msgstr ""
+
+#: widget/home-main-right-list.php:162 widget/home-list-medium.php:144
+#: widget/recent-main-list.php:165 widget/slider-post.php:145
+#: widget/home-slider-tab.php:183 widget/home-large-grid.php:218
+#: widget/home-large-list.php:220 widget/home-large.php:149
+#: widget/recent-small-overlay.php:134 widget/recent-grid.php:114
+#: widget/recent-small-number.php:128 widget/recent-list-number.php:127
+#: widget/recent-small.php:136 widget/home-small-list.php:141
+#: widget/home-newsticker.php:107 widget/home-slider.php:142
+#: widget/recent-large.php:139
+msgid "Number of posts to show:"
+msgstr ""
+
+#: widget/popular.php:114
+msgid "Number of posts:"
+msgstr ""
+
+#: widget/home-main-right-list.php:165 widget/home-grid6.php:179
+#: widget/home-grid-right-list.php:181 widget/home-grid5.php:141
+#: widget/home-list-medium.php:147 widget/recent-main-list.php:168
+#: widget/slider-post.php:148 widget/home-slider-tab.php:187
+#: widget/home-large-grid.php:221 widget/home-large-list.php:223
+#: widget/home-large.php:152 widget/recent-small-overlay.php:138
+#: widget/recent-grid.php:118 widget/home-main-post-below-2-grid.php:178
+#: widget/recent-small-number.php:132 widget/recent-list-number.php:131
+#: widget/home-carousel.php:248 widget/recent-small.php:140
+#: widget/home-small-list.php:144 widget/home-small-grid.php:206
+#: widget/home-newsticker.php:111 widget/home-2main-right-list.php:214
+#: widget/home-slider.php:146 widget/recent-large.php:142
+#: widget/home-small-grid-overlay.php:205
+msgid "Offset posts:"
+msgstr ""
+
+#: widget/comments.php:52
+msgid "On"
+msgstr ""
+
+#: cus-metabox.php:340
+msgid "Pagination for grid layout"
+msgstr ""
+
+#: widget/about-us.php:247
+msgid "Pinterest Url:"
+msgstr ""
+
+#: widget/social_counter.php:321
+msgid "Pinterest User Name:"
+msgstr ""
+
+#: widget/popular.php:104
+msgid "Popular Posts"
+msgstr ""
+
+#: cus-metabox.php:319
+msgid "Post slider, feature post and page options"
+msgstr ""
+
+#: cus-metabox.php:218
+msgid "Post Subtitle"
+msgstr ""
+
+#: widget/home-carousel.php:283
+msgid "Posts ID: EX(1,2,3,4)"
+msgstr ""
+
+#: widget/home-grid-right-list.php:177 widget/home-carousel.php:243
+#: widget/home-small-grid.php:201 widget/home-2main-right-list.php:210
+#: widget/home-small-grid-overlay.php:201
+msgid "Posts Per Page:"
+msgstr ""
+
+#: widget/home-carousel.php:252
+msgid "Query post by:"
+msgstr ""
+
+#: cus-metabox.php:270
+msgid "Quote author"
+msgstr ""
+
+#: cus-metabox.php:265
+msgid "Quote title"
+msgstr ""
+
+#: functions.php:297 widget/home-large-grid.php:121
+#: widget/home-large-list.php:118 widget/home-large.php:105
+msgid "Read More"
+msgstr ""
+
+#: cus-metabox.php:102
+msgid "Remove All"
+msgstr ""
+
+#: cus-metabox.php:326
+msgid "Remove top margin"
+msgstr ""
+
+#: widget/about-us.php:285
+msgid "RSS Url:"
+msgstr ""
+
+#: cus-metabox.php:224
+msgid "Select Post Layout"
+msgstr ""
+
+#: cus-metabox.php:247
+msgid "Single Post Format"
+msgstr ""
+
+#: cus-metabox.php:205
+msgid "Single Post Options"
+msgstr ""
+
+#: widget/about-us.php:291
+msgid "Skype Url:"
+msgstr ""
+
+#: widget/social_counter.php:22
+msgid "Social Counter"
+msgstr ""
+
+#: widget/about-us.php:312
+msgid "Sound Cloud Url:"
+msgstr ""
+
+#: widget/social_counter.php:346
+msgid "Soundcloud API Key(Client ID) :"
+msgstr ""
+
+#: widget/social_counter.php:342
+msgid "SoundCloud User Name:"
+msgstr ""
+
+#: widget/social_counter.php:262
+msgid "Stay Connected"
+msgstr ""
+
+#: widget/about-us.php:274
+msgid "Stumbleupon Url:"
+msgstr ""
+
+#: widget/social_counter.php:290
+msgid "Style 1"
+msgstr ""
+
+#: widget/social_counter.php:291
+msgid "Style 2"
+msgstr ""
+
+#: widget/social_counter.php:288
+msgid "Style:"
+msgstr ""
+
+#: widget/home-large-grid.php:215 widget/home-large-list.php:217
+#: widget/home-carousel.php:238 widget/home-small-list.php:138
+#: widget/home-small-grid.php:197
+msgid "Sub Title:"
+msgstr ""
+
+#: post-like.php:294
+msgid "This Month's Most Popular Posts"
+msgstr ""
+
+#: post-like.php:326
+msgid "This Week's Most Popular Posts"
+msgstr ""
+
+#: widget/home-main-right-list.php:158 widget/home-grid6.php:175
+#: widget/home-grid-right-list.php:173 widget/home-grid5.php:137
+#: widget/home-list-medium.php:140 widget/recent-main-list.php:160
+#: widget/slider-post.php:140 widget/home-slider-tab.php:179
+#: widget/comments.php:75 widget/adswidget.php:80
+#: widget/home-large-grid.php:213 widget/home-large-list.php:215
+#: widget/home-large.php:145 widget/recent-small-overlay.php:130
+#: widget/recent-grid.php:110 widget/home-main-post-below-2-grid.php:174
+#: widget/recent-small-number.php:124 widget/recent-list-number.php:123
+#: widget/home-carousel.php:235 widget/home-feature-box.php:66
+#: widget/about-us.php:186 widget/recent-small.php:132
+#: widget/home-small-list.php:135 widget/home-small-grid.php:194
+#: widget/category-widget.php:106 widget/home-newsticker.php:103
+#: widget/home-2main-right-list.php:206 widget/home-slider.php:138
+#: widget/recent-large.php:134 widget/home-small-grid-overlay.php:196
+#: widget/social_counter.php:283 widget/popular.php:109
+msgid "Title:"
+msgstr ""
+
+#: post-like.php:262
+msgid "Today's Most Popular Posts"
+msgstr ""
+
+#: widget/about-us.php:230
+msgid "tumblr Url:"
+msgstr ""
+
+#: widget/social_counter.php:311
+msgid "Twitter Consumer Key (Optional):"
+msgstr ""
+
+#: widget/social_counter.php:315
+msgid "Twitter Consumer Secret (Optional):"
+msgstr ""
+
+#: widget/social_counter.php:307
+msgid "Twitter Name:"
+msgstr ""
+
+#: widget/about-us.php:252
+msgid "Twitter Url:"
+msgstr ""
+
+#: cus-metabox.php:100
+msgid "Upload or Edit"
+msgstr ""
+
+#: cus-metabox.php:282
+msgid "Video Embed"
+msgstr ""
+
+#: cus-metabox.php:287
+msgid "Video link"
+msgstr ""
+
+#: view-post-counter.php:122
+msgid "Views"
+msgstr ""
+
+#: widget/about-us.php:220
+msgid "Vimeo Url:"
+msgstr ""
+
+#: widget/social_counter.php:352
+msgid "Vimeo User Name:"
+msgstr ""
+
+#: widget/social_counter.php:366
+msgid "VK User Name/ID:"
+msgstr ""
+
+#: widget/about-us.php:296
+msgid "Wordpress Url:"
+msgstr ""
+
+#: widget/about-us.php:302
+msgid "Yahoo Url:"
+msgstr ""
+
+#: post-like.php:202
+msgid "You don't like anything yet."
+msgstr ""
+
+#: post-like.php:178 post-like.php:230
+msgid "You Like:"
+msgstr ""
+
+#: widget/social_counter.php:336
+msgid "Youtube Channel ID:"
+msgstr ""
+
+#: widget/about-us.php:225
+msgid "Youtube Url:"
+msgstr ""
+
+#: widget/social_counter.php:332
+msgid "Youtube User Name:"
+msgstr ""

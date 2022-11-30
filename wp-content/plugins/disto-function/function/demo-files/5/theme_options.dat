@@ -1,0 +1,37 @@
+a:4:{s:8:"template";s:5:"disto";s:4:"mods";a:21:{i:0;b:0;s:18:"nav_menu_locations";a:3:{s:8:"Top_Menu";i:82;s:9:"Main_Menu";i:81;s:11:"Footer_Menu";N;}s:18:"custom_css_post_id";i:4268;s:10:"disto_logo";s:0:"";s:16:"sidebars_widgets";a:2:{s:4:"time";i:1552227964;s:4:"data";a:10:{s:19:"wp_inactive_widgets";a:7:{i:0;s:25:"disto_ads300x250_widget-2";i:1;s:38:"disto_category_image_widget_register-2";i:2;s:38:"disto_category_image_widget_register-3";i:3;s:26:"disto_recent_post_widget-4";i:4;s:26:"disto_recent_post_widget-5";i:5;s:35:"disto_recent_large_slider_widgets-2";i:6;s:35:"disto_recent_large_slider_widgets-3";}s:15:"general-sidebar";a:4:{i:0;s:17:"socialcountplus-2";i:1;s:38:"disto_category_image_widget_register-4";i:2;s:26:"disto_recent_post_widget-6";i:3;s:35:"disto_recent_large_slider_widgets-4";}s:14:"banner-sidebar";a:0:{}s:19:"mobile-menu-sidebar";a:1:{i:0;s:23:"disto_about_us_widget-2";}s:15:"footer1-sidebar";a:1:{i:0;s:23:"disto_about_us_widget-3";}s:15:"footer2-sidebar";a:1:{i:0;s:26:"disto_recent_post_widget-3";}s:15:"footer3-sidebar";a:1:{i:0;s:12:"categories-4";}s:15:"footer4-sidebar";a:1:{i:0;s:12:"categories-3";}s:19:"woocommerce-sidebar";a:5:{i:0;s:25:"woocommerce_widget_cart-2";i:1;s:26:"woocommerce_price_filter-2";i:2;s:22:"woocommerce_products-2";i:3;s:27:"woocommerce_rating_filter-2";i:4;s:32:"woocommerce_product_categories-2";}s:8:"menupost";a:1:{i:0;s:28:"disto_recent_large_widgets-2";}}}s:13:"jl_date_title";s:13:"Current Date:";s:19:"letter_spacing_menu";s:6:"0.04em";s:22:"letter_spacing_heading";s:7:"-0.03em";s:8:"facebook";s:1:"#";s:11:"google_plus";s:1:"#";s:7:"behance";s:1:"#";s:12:"jl_copyright";s:65:"© Copyright 2019 Jellywp. All Rights Reserved Powered by Jellywp";s:19:"disto_p_font_family";s:4:"Lato";s:17:"disto_p_font_size";s:4:"16px";s:24:"disto_sub_menu_font_size";s:4:"12px";s:23:"disto_title_font_weight";s:3:"500";s:20:"header_layout_design";s:22:"header-header_layout_6";s:20:"disto_menu_font_size";s:4:"12px";s:22:"disto_menu_font_weight";s:3:"400";s:20:"disto_menu_transform";s:9:"uppercase";s:23:"disto_title_font_family";s:7:"Poppins";}s:7:"options";a:20:{s:22:"woocommerce_demo_store";s:2:"no";s:29:"woocommerce_demo_store_notice";s:79:"This is a demo store for testing purposes &mdash; no orders shall be fulfilled.";s:29:"woocommerce_shop_page_display";s:0:"";s:36:"woocommerce_category_archive_display";s:0:"";s:35:"woocommerce_default_catalog_orderby";s:10:"menu_order";s:30:"woocommerce_single_image_width";s:3:"600";s:33:"woocommerce_thumbnail_image_width";s:3:"300";s:30:"woocommerce_thumbnail_cropping";s:3:"1:1";s:43:"woocommerce_thumbnail_cropping_custom_width";s:1:"4";s:44:"woocommerce_thumbnail_cropping_custom_height";s:1:"3";s:34:"woocommerce_checkout_company_field";s:8:"optional";s:36:"woocommerce_checkout_address_2_field";s:8:"optional";s:32:"woocommerce_checkout_phone_field";s:8:"required";s:46:"woocommerce_checkout_highlight_required_fields";s:3:"yes";s:55:"woocommerce_checkout_terms_and_conditions_checkbox_text";s:44:"I have read and agree to the website [terms]";s:40:"woocommerce_checkout_privacy_policy_text";s:161:"Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our [privacy_policy].";s:26:"wp_page_for_privacy_policy";s:1:"0";s:25:"woocommerce_terms_page_id";s:0:"";s:9:"site_icon";s:1:"0";s:23:"nav_menus_created_posts";a:0:{}}s:6:"wp_css";s:1370:"#content .content_single_page.page .woocommerce form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit, .woocommerce .woocommerce-form-login .woocommerce-form-login__submit:hover { background: #222; width: 100%; margin-right: 0px !important; }
+#content .content_single_page.page .woocommerce form a {
+    font-size: 14px;
+}
+.woocommerce-account .woocommerce h2 {
+    display: none;
+}
+.woocommerce-account .page-full#content {
+    width: 400px !important;
+}
+.woocommerce-cart .page-full#content{width: 100% !important;}
+.jelly_homepage_builder .large_post_content p, .jelly_homepage_builder .content_post_grid p{font-size: 16px;}
+.comment-form-comment{margin-bottom: 0px;}#commentform #submit, .wpcf7-form-control.wpcf7-submit{margin-top: 30px;}
+.image-post-thumb iframe {
+    margin-bottom: 0px !important;
+}
+.jl_search_rel#wrapper_masonry{
+    padding-top: 50px;
+}
+.footer-columns .cat-item.cat-item-8, .footer-columns .cat-item.cat-item-9{display: none;}
+.social-count-plus .count:before{
+    content: "2";
+
+}
+.social-count-plus .count:after{
+    content: ".5k";
+
+}
+
+.wp-caption p.wp-caption-text{font-style: normal; letter-spacing: -0.03em; font-weight: 300 !important;font-size: 14px !important;}
+.jl_single_style8 .single-post-meta-wrapper span.post-author a:hover{
+    color: #fff !important;
+}";}
