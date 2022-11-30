@@ -27374,3 +27374,12 @@ p.has-drop-cap:not(:focus):first-letter {
         height: 750px;
     }
 }
+
+/*custom added style*/
+
+.btn-primary{
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #000;
+    color: #fff;
+}
