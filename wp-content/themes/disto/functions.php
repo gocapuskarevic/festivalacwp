@@ -254,15 +254,27 @@ function disto_post_meta_love_view($post_id) {
 ?>
 <?php
 function disto_singlepost_meta($post_id) {
-                echo'<span class="single-post-meta-wrapper">';
-                 if(get_theme_mod('disable_post_author') !=1){ echo '<span class="post-author"><span itemprop="author">';echo get_avatar(get_the_author_meta('ID'), 50); echo the_author_posts_link().'</span></span>';}		
-                 if(get_theme_mod('disable_post_date') !=1){ echo '<span class="post-date updated" datetime="'.get_the_date().'" itemprop="datePublished"><i class="fa fa-clock-o"></i>'.get_the_date().'</span>';}
-                 if(get_theme_mod('disable_post_comment_meta') !=1){ echo '<span class="meta-comment"><i class="fa fa-comment"></i>'; echo comments_popup_link(esc_html__('0 Comment', 'disto' ), esc_html__('1 Comment', 'disto'), esc_html__('% Comments', 'disto')).'</span>'; }               
+    if( 'festivals' == get_post_type() ){
+        echo'<span class="single-post-meta-wrapper">';
+                echo '<span>'. get_field('start_date').' - '. get_field('end_date') .'</span>';
+                echo '<span>'. get_the_terms( get_the_ID(), 'locations' )[0]->name .'</span>';
+               
                 if(function_exists('disto_bac_PostViews')){
                 if(get_theme_mod('disable_post_view') !=1){echo '<span class="view_options"><i class="fa fa-eye"></i>';
                 echo disto_bac_PostViews(get_the_ID());
                 echo '</span>';}}
                 echo'</span>';	
+    }else{
+        echo'<span class="single-post-meta-wrapper">';
+        if(get_theme_mod('disable_post_author') !=1){ echo '<span class="post-author"><span itemprop="author">';echo get_avatar(get_the_author_meta('ID'), 50); echo the_author_posts_link().'</span></span>';}		
+        if(get_theme_mod('disable_post_date') !=1){ echo '<span class="post-date updated" datetime="'.get_the_date().'" itemprop="datePublished"><i class="fa fa-clock-o"></i>'.get_the_date().'</span>';}
+        if(get_theme_mod('disable_post_comment_meta') !=1){ echo '<span class="meta-comment"><i class="fa fa-comment"></i>'; echo comments_popup_link(esc_html__('0 Comment', 'disto' ), esc_html__('1 Comment', 'disto'), esc_html__('% Comments', 'disto')).'</span>'; }               
+       if(function_exists('disto_bac_PostViews')){
+       if(get_theme_mod('disable_post_view') !=1){echo '<span class="view_options"><i class="fa fa-eye"></i>';
+       echo disto_bac_PostViews(get_the_ID());
+       echo '</span>';}}
+       echo'</span>';
+    }
 }
 
 function disto_single_post_meta($post_id) {

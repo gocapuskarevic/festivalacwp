@@ -1,8 +1,3 @@
-<style>
-    * {
-        text-transform: none !important;
-    }
-</style>
 <div class="jl_single_style4">
     <div class="single_content_header single_captions_overlay_bottom_image_full_width">
         <?php if ( has_post_thumbnail()) {?>
