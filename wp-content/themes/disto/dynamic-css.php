@@ -3,7 +3,7 @@
     $disto_menu_font_family = get_theme_mod('disto_menu_font_family') ?: 'Poppins';
     $disto_menu_font_size = get_theme_mod('disto_menu_font_size') ?: '15px';
     $disto_menu_font_weight = get_theme_mod('disto_menu_font_weight') ?: '600';
-    $disto_menu_transform = get_theme_mod('disto_menu_transform') ?: 'capitalize';
+    //$disto_menu_transform = get_theme_mod('disto_menu_transform') ?: 'capitalize';
     //Sub Menu
     $disto_sub_menu_font_size = get_theme_mod('disto_sub_menu_font_size') ?: '14px';
     $disto_sub_menu_font_weight = get_theme_mod('disto_sub_menu_font_weight') ?: '400';
@@ -14,7 +14,7 @@
     //Title
     $disto_title_font_family = get_theme_mod('disto_title_font_family') ?: 'Poppins';
     $disto_title_font_weight = get_theme_mod('disto_title_font_weight') ?: '700';
-    $disto_title_transform = get_theme_mod('disto_title_transform') ?: 'capitalize';
+    //$disto_title_transform = get_theme_mod('disto_title_transform') ?: 'capitalize';
 
     $large_post_font_size = get_theme_mod('large_post_font_size');
     $grid_post_font_size = get_theme_mod('grid_post_font_size');

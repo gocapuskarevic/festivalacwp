@@ -1,6 +1,8 @@
 <?php get_header();?>
 <?php
 if (have_posts()) { while (have_posts()) { the_post();
+$poster = get_field('announcement_poster');
+$video = get_field('youtube_link');
 $categories = get_the_category();
 $tags = get_the_tags();
 $post_id = get_the_ID();
@@ -10,99 +12,97 @@ get_template_part('single-header-7');
 ?>
 
 <section id="content_main" class="clearfix jl_spost">
-
-    
-        <?php the_field('custom_link'); ?>
-        <?php the_field('text_for_the_official_website'); ?>
-        <div class="container">
-            <div class="row main_content">
-            <div class="<?php if(!empty($full)){echo "col-md-12 enable_single_post_full ";}else{echo "col-md-8 ";}?> loop-large-post" id="content">
-                    <div class="widget_container content_page">
-                        <!-- start post -->
-                        <div <?php post_class(); ?> id="post-<?php the_ID();?>">
-                            <div class="single_section_content box blog_large_post_style">
+    <div class="container">
+        <div class="row main_content">
+            <div class="col-md-12 enable_single_post_full loop-large-post" id="content">
+                <div class="widget_container content_page">
+                    <!-- start post -->
+                    <div <?php post_class(); ?> id="post-<?php the_ID();?>">
+                        <div class="single_section_content box blog_large_post_style">
                                 
-                                <div class="post_content" itemprop="articleBody">
+                            <div class="post_content" itemprop="articleBody">
 
+                                <?php 
+                                if (is_active_sidebar('jl_ads_before_content')) : echo '<div class="jl_ads_section">'; dynamic_sidebar('jl_ads_before_content');echo '</div>'; endif;
+                                echo '<h2 class="festival-heading-level-2">';
+                                    echo 'O festivalu';
+                                echo '</h2>';
+                                the_content();
+                                ?>
+                                <div class="smislicemo">
+                                    <a href="<?php the_field('tickets'); ?>" class="btn-primary">Karte</a>
+                                    <a href="<?php the_field('official_website'); ?>" class="btn-primary">Festivalski websajt</a>
+                                </div>
+
+                                <div class="meta-data">
+                                    <h2>Bitne informacije</h2>
+                                    <p>Datumi:</p>
                                     <?php 
-                                    if (is_active_sidebar('jl_ads_before_content')) : echo '<div class="jl_ads_section">'; dynamic_sidebar('jl_ads_before_content');echo '</div>'; endif;
-                                    echo '<h2 class="festival-heading-level-2">';
-                                        echo 'O festivalu';
-                                    echo '</h2>';
-                                    the_content();
+                                        the_field('start_date');
+                                        echo '<br>';
+                                        the_field('end_date');
+                                        //get the taxonomies
+                                        $location = get_the_terms( get_the_ID(), 'locations' );
+                                        $genres = get_the_terms( get_the_ID(), 'genres' );
+                                        $size = get_the_terms( get_the_ID(), 'sizes' );
+                                        $lasting = get_the_terms( get_the_ID(), 'numberofdays' );
                                     ?>
-                                    <div class="smislicemo">
-                                        <a href="<?php the_field('tickets'); ?>" class="btn-primary">Karte</a>
-                                        <a href="<?php the_field('official_website'); ?>" class="btn-primary">Festivalski websajt</a>
-                                    </div>
-
-                                    <div class="meta-data">
-                                        <h2>Bitne informacije</h2>
-                                        <p>Datumi:</p>
-                                        <?php 
-                                            the_field('start_date');
-                                            echo '<br>';
-                                            the_field('end_date');
-                                            //get the taxonomies
-                                            $location = get_the_terms( get_the_ID(), 'locations' );
-                                            $genres = get_the_terms( get_the_ID(), 'genres' );
-                                            $size = get_the_terms( get_the_ID(), 'sizes' );
-                                            $lasting = get_the_terms( get_the_ID(), 'numberofdays' );
-                                            //var_dump($genres);
-                                        ?>
                                         
-                                        <p>Lokacija: <?php echo $location[0]->name; ?></p>
-                                        <p>Zanrovi</p>
-                                        <div class="meta-category-small">
-                                            <?php
+                                    <p>Lokacija: <?php echo $location[0]->name; ?></p>
+                                    <p>Zanrovi</p>
+                                    <div class="meta-category-small">
+                                        <?php
                                             $link = get_site_url();
-                                                foreach( $genres as $genre ){
-                                                    echo '<a href="'.$link.'/genre/'.$genre->slug.'">'.$genre->name.'</a>';
-                                                }
-                                            ?>
-                                        </div>
-                                        <div>
+                                            foreach( $genres as $genre ){
+                                                echo '<a href="'.$link.'/genre/'.$genre->slug.'">'.$genre->name.'</a>';
+                                            }
+                                        ?>
+                                    </div>
+                                    <div>
                                         <p>Velicina <?php echo $size[0]->name; ?></p>
                                         <p>Trajanje <?php echo $lasting[0]->name; ?></p>
-                                        </div>
                                     </div>
-
+                                </div>
+                                <?php if( $poster || $video ) : ?>
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <h3 class="poster">Poster</h3>
-                                                <img src="<?php the_field('announcement_poster'); ?>" width="350px">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h3 class="video">Video</h3>
-                                                <div style="width:500px;"><?php the_field('youtube_link'); ?></div>
-                                            </div>
+                                            <?php if( $poster ) : ?>
+                                                <div class="col-md-6">
+                                                    <h3 class="poster">Poster</h3>
+                                                    <img src="<?php echo $poster; ?>" width="350px">
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if( $video ) : ?>
+                                                <div class="col-md-6">
+                                                    <h3 class="video">Video</h3>
+                                                    <div style="width:500px;"><?php echo $video; ?></div>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
-
-                                    <?php
+                                <?php endif; ?>
+                                <?php
                                     if (is_active_sidebar('jl_ads_after_content')) : echo '<div class="jl_ads_section">'; dynamic_sidebar('jl_ads_after_content');echo '</div>'; endif;
-                                    ?>
-                                </div>
-                                <?php wp_link_pages( array( 'before' => '<ul class="page-links">', 'after' => '</ul>', 'link_before' => '<li class="page-link">', 'link_after' => '</li>' ) ); ?>
-                                <div class="clearfix"></div>
-                                <div class="single_tag_share">
-                                    <?php  if(get_theme_mod('disable_post_tag') !=1){?>
+                                ?>
+                            </div>
+                            <?php wp_link_pages( array( 'before' => '<ul class="page-links">', 'after' => '</ul>', 'link_before' => '<li class="page-link">', 'link_after' => '</li>' ) ); ?>
+                            <div class="clearfix"></div>
+                            <div class="single_tag_share">
+                                <?php  if(get_theme_mod('disable_post_tag') !=1){?>
                                     <div class="tag-cat">
-                                        <?php if (!empty($tags)){ ?>
-                                        <?php the_tags('<ul class="single_post_tag_layout"><li>', '</li><li>', '</li></ul>'); ?>
-                                        <?php } ?>
+                                    <?php if (!empty($tags)){ ?>
+                                    <?php the_tags('<ul class="single_post_tag_layout"><li>', '</li><li>', '</li></ul>'); ?>
+                                    <?php } ?>
                                     </div>
-                                    <?php }?>
+                                <?php }?>
 
-                                    <?php if(get_theme_mod('disable_post_share') !=1){
-                                if(function_exists('disto_single_share_link')){?>
+                                <?php if(get_theme_mod('disable_post_share') !=1){
+                                    if(function_exists('disto_single_share_link')){?>
                                     <div class="single_post_share_icons">
                                         <?php esc_html_e('Share', 'disto'); ?><i class="fa fa-share-alt"></i></div>
                                     <?php }}?>
-                                </div>
+                                    </div>
                                 <?php if(get_theme_mod('disable_post_share') !=1){ if(function_exists('disto_single_share_link')){echo disto_single_share_link(get_the_ID());}}?>                            
-
 
                                 <?php
                                     if(get_theme_mod('disable_post_nav') !=1){
@@ -118,7 +118,6 @@ get_template_part('single-header-7');
                                     </div>
                                 </div>
                                 <?php } ?>
-
 
                                 <?php
                                     $next_post = get_next_post();
@@ -193,11 +192,9 @@ get_template_part('single-header-7');
                                 $categories = get_the_category(get_the_ID());
                                 $post_count ++;
                                 ?>
-
-                                        <div class="jl_related_feature_items">
-                                            <div class="jl_related_feature_items_in">
-                                                
-                                                <?php if(get_theme_mod('disable_post_category') !=1){
+                                <div class="jl_related_feature_items">
+                                    <div class="jl_related_feature_items_in">
+                                        <?php if(get_theme_mod('disable_post_category') !=1){
                                                 $categories = get_the_category(get_the_ID());          
                                                 if ($categories) {
                                                     echo '<span class="meta-category-small">';
@@ -207,49 +204,44 @@ get_template_part('single-header-7');
                                                     $title_reactions = get_term_meta($tag->term_id, "disto_cat_reactions", true);
                                                     if($title_reactions){}else{echo '<a class="post-category-color-text" style="background:'.$title_bg_Color.'" href="'.esc_url($tag_link).'">'.$tag->name.'</a>';}
                                                     }
-                                                    echo "</span>";
-                                                    }
-                                                    }
-                                                    echo disto_post_type();
-                                                ?>
-
-                                                
-                                                <div class="post-entry-content">        
-                                                    <h3 class="jl-post-title"><a href="<?php the_permalink(); ?>">
-                                                            <?php the_title()?></a></h3>
-                                                    <?php echo disto_post_meta(get_the_ID()); ?>
-                                                </div>
-
-                                            </div>
+                                                echo "</span>";
+                                                }
+                                            }
+                                            echo disto_post_type();
+                                        ?> 
+                                        <div class="post-entry-content">        
+                                            <h3 class="jl-post-title"><a href="<?php the_permalink(); ?>">
+                                            <?php the_title()?></a></h3>
+                                            <?php echo disto_post_meta(get_the_ID()); ?>
                                         </div>
 
-
-                                        <?php if($post_count%2==0){echo '<div class="clear_2col_related"></div>';}elseif($post_count%3==0){echo '<div class="clear_3col_related"></div>';}?>
-                                        <?php } wp_reset_postdata(); ?>
                                     </div>
-
                                 </div>
-                                <?php } ?>
-                                <!-- comment -->                            
-                                <?php 
-                                if (is_active_sidebar('jl_ads_before_comment')) : echo '<div class="jl_ads_section jl_before_comment">'; dynamic_sidebar('jl_ads_before_comment');echo '</div>'; endif;
-                                comments_template('', true);
-                                ?>
+
+
+                                <?php if($post_count%2==0){echo '<div class="clear_2col_related"></div>';}elseif($post_count%3==0){echo '<div class="clear_3col_related"></div>';}?>
+                                <?php } wp_reset_postdata(); ?>
                             </div>
+
                         </div>
-                        <!-- end post -->
-                        <div class="brack_space"></div>
+                    <?php } ?>
+                    <!-- comment -->                            
+                    
                     </div>
                 </div>
+                <!-- end post -->
+                <div class="brack_space"></div>
+            </div>
+        </div>
 
-                <?php if(!empty($full)){}else{?>
-                <div class="col-md-4" id="sidebar">
+        <?php if(!empty($full)){}else{?>
+                    <div class="col-12" id="sidebar">
                     <?php echo disto_post_sidebar();?>
                     <div class="brack_space"></div>
                 </div>
-                <?php }?>
-            </div>
+            <?php }?>
         </div>
+    </div>
 </section>
 <!-- end content -->
 <?php get_footer(); ?>

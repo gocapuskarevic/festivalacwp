@@ -398,7 +398,7 @@ a img.aligncenter {
     opacity: 0.7;
 }
 h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .postnav #prepost, .postnav  #nextpost, .bbp-forum-title, .single_post_arrow_content #prepost, .single_post_arrow_content #nextpost{
-    text-transform: capitalize;
+    
 }
 .breadcrumbs_options{
     font-size: 11px;
@@ -406,7 +406,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .postnav #prepost, .
     font-weight: 400;
     float: left;
     width: 100%;
-    text-transform: capitalize;
+    
     letter-spacing: 0px;
 }
 
@@ -1844,7 +1844,7 @@ header fullscreen post
     float: none;
 }
 .home_post_feature_fullscreen_wrapper .banner-container h5 a{
-    text-transform: capitalize;
+    
     font-weight: 500;
     font-size: 45px;
 }
@@ -2760,7 +2760,7 @@ header  post header
     text-align: left;
     float: left;
     width: 100%;
-    text-transform: capitalize;
+    
 }
 .home_grid_2_post_header_wrapper .home_grid_2_post_header_style .banner-container .post-meta span, .home_grid_2_post_header_wrapper .home_grid_2_post_header_style .banner-container .post-meta span a{
     color: #fff !important;
@@ -2837,7 +2837,7 @@ header  post header
 .home_grid_2_post_header_wrapper .home_grid_2_post_header_style .small_main_image_header .banner-container h1>a{
     color: #fff;
     font-size: 17px !important;
-    text-transform: capitalize;
+    
     font-weight: 500;
     line-height: 1.2;
 }
@@ -2987,7 +2987,7 @@ header grid 3 post header
 
 .large_main_image_header.small_static_grid_3 .banner-container h1>a{
     font-size: 17px !important;
-    text-transform: capitalize;
+    
 }
 
 .large_main_image_header.large_static_grid_3:before{
@@ -3051,7 +3051,7 @@ header grid 3 post header
     font-size: 30px;
     font-weight: 500;
     line-height: 1.2;
-    text-transform: capitalize;
+    
 }
 .home_grid_3_post_header_wrapper .home_grid_3_post_header .small_main_image_header{
     float: left;
@@ -3120,7 +3120,7 @@ header grid 3 post header
 .home_grid_3_post_header_wrapper .home_grid_3_post_header .small_main_image_header .banner-container h1>a{
     color: #fff;
     font-size: 17px !important;
-    text-transform: capitalize;
+    
     font-weight: 500;
     line-height: 1.2;
 }
@@ -3385,7 +3385,7 @@ header grid 5 post header
     font-size: 28px;
     font-weight: 500;
     line-height: 1.2;
-    text-transform: capitalize;
+    
 }
 .home_grid_post_header_wrapper .home_grid_post_header .large_main_image_header .banner-container h1>a:hover{
     color: #fff !important;
@@ -3428,7 +3428,7 @@ header grid 5 post header
 .home_grid_post_header_wrapper .home_grid_post_header .small_main_image_header .banner-container h1>a{
     color: #fff;
     font-size: 16px !important;
-    text-transform: capitalize;
+    
     font-weight: 500;
     line-height: 1.2;
 }
@@ -3580,7 +3580,7 @@ header grid 5 post header style 2
     font-size: 25px;
     font-weight: 500;
     line-height: 1.2;
-    text-transform: capitalize;
+    
 }
 .home_grid_5_post_header_wrapper .home_grid_5_post_header .small_main_image_header{
     float: left;
@@ -3649,7 +3649,7 @@ header grid 5 post header style 2
 .home_grid_5_post_header_wrapper .home_grid_5_post_header .small_main_image_header .banner-container h1>a{
     color: #fff;
     font-size: 17px !important;
-    text-transform: capitalize;
+    
     font-weight: 500;
     line-height: 1.2;
 }
@@ -3748,7 +3748,7 @@ header grid 5 post header
     text-align: center;
     margin: 13px 0px 5px 0px;
     text-align: left;
-    text-transform: capitalize;
+    
 }
 
 .home_grid_main_5_post_header .home_grid_main_5_post_header_large_post .heading_title_post_5_main{
@@ -3757,7 +3757,7 @@ header grid 5 post header
     width: 100%;
     text-align: center;
     margin: 10px 0px 10px 0px;
-    text-transform: capitalize;
+    
 }
 
 .home_grid_main_5_post_header .meta-category-small{
@@ -4000,7 +4000,7 @@ header grid 8 post header
     font-size: 30px;
     font-weight: 500;
     line-height: 1.2;
-    text-transform: capitalize;
+    
 }
 .home_grid_8_post_header_wrapper .home_grid_8_post_header .small_main_image_header{
     float: left;
@@ -4069,7 +4069,7 @@ header grid 8 post header
 .home_grid_8_post_header_wrapper .home_grid_8_post_header .small_main_image_header .banner-container h1>a{
     color: #fff;
     font-size: 17px !important;
-    text-transform: capitalize;
+    
     font-weight: 500;
     line-height: 1.2;
 }
@@ -4226,13 +4226,13 @@ header grid 8 post header
     float: left;
     margin: 10px 0px 10px 0px;
     width: 100%;
-    text-transform: capitalize;
+    
 }
 .banner-container h5 a {
     font-size: 25px;
     color: #fff;
     line-height: 1.2;
-    text-transform: capitalize;
+    
 }
 .banner-container .post-meta {
     font-size: 10px;
@@ -4392,7 +4392,7 @@ border-radius: 100%;
     margin: 10px 0px;
     width: 100%;
     line-height: 1.1;
-    text-transform: capitalize;
+    
 }
 .banner-carousel-item-style .captions_carousel_style_main h5 a,
 .banner-carousel-item-style .captions_carousel_style h5 a {
@@ -4431,7 +4431,7 @@ border-radius: 100%;
     color: #818181;
     font-size: 13px;
     text-decoration: none !important;
-    text-transform: capitalize;
+    
     float: left;
     line-height: 25px;
 }
@@ -4440,7 +4440,7 @@ border-radius: 100%;
     color: #818181;
     font-size: 13px;
     line-height: 25px;
-    text-transform: capitalize;
+    
     letter-spacing: 0px;
 }
 .jl_post_meta .post-date i{
@@ -4647,7 +4647,7 @@ color: #777;
     line-height: 1.3;
     margin-top: 0px;
     margin-bottom: 0px;
-    text-transform: capitalize;
+    
 }
 /*slider full width*/
 .jl_slider_fullwidth.large_center_slider_container .jelly_pro_post_arrow_left, .jl_slider_fullwidth.large_center_slider_container .jelly_pro_post_arrow_right{
@@ -5194,7 +5194,7 @@ color: #777;
 .large_center_slider_container .banner-container h5 a{
     font-size: 45px !important;
     color: #fff;
-    text-transform: capitalize;
+    
 }
 
 .large_center_slider_container .banner-container h5 a:hover{
@@ -5738,7 +5738,7 @@ Header feature post
 .jl_latest_main_title h2{
     margin: 0px; 
     font-size: 25px;
-    text-transform: capitalize;
+    
     letter-spacing: -0.03em !important;
 }
 
@@ -6086,7 +6086,7 @@ Header menu style 3
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.03em;
-  text-transform: capitalize;
+  
 }
 .header_magazine_style.header_layout_style3_custom .navigation_wrapper > ul > li > a{
     color: #fff;
@@ -7243,7 +7243,7 @@ line-height: 45px;
 .social-count-plus .label {
     font-size: 11px !important;
     line-height: 1.2 !important;
-    text-transform: capitalize !important;
+    !important;
     margin-top: 5px;
 }
 
@@ -7374,7 +7374,7 @@ line-height: 45px;
     width: 100%;
     margin: 10px 0px;
     line-height: 0;
-    text-transform: capitalize;
+    
 }
 .magazine_3_grid_slider .banner-container h1 a{
     color: #fff;
@@ -7440,7 +7440,7 @@ line-height: 45px;
 .magazine_3_grid_slider .main-static-post-header .banner-container h1 a{
     font-size: 30px !important;
     letter-spacing: -0.03em;
-    text-transform: capitalize;
+    
     font-weight: 500;
 }
 .magazine_3_grid_slider .jl_review_wrapper{ z-index: 1;}
@@ -7458,7 +7458,7 @@ line-height: 45px;
 }
 .magazine_3_grid_slider .small-static-post-header .banner-container h1 a{
     font-size: 20px !important;
-    text-transform: capitalize;
+    
     font-weight: 500;
 }
 
@@ -7634,7 +7634,7 @@ line-height: 45px;
     width: 100%;
     margin: 7px 0px;
     line-height: 0;
-    text-transform: capitalize;
+    
 }
 .page_slider_grid_3_style_2 .main-static-post-header .banner-container h1 a{
         font-size: 30px;
@@ -7644,7 +7644,7 @@ line-height: 45px;
 }
 .page_slider_grid_3_style_2 .banner-container h1 a{
     letter-spacing: -0.03em;
-    text-transform: capitalize;
+    
     line-height: 1.2;
     color: #fff;
 }
@@ -7763,12 +7763,12 @@ line-height: 45px;
     width: 100%;
     margin: 15px 0px;
     line-height: 0;
-    text-transform: capitalize;
+    
 }
 .page_slider_grid_5_style .banner-container h1 a{
     font-size: 35px !important;
     letter-spacing: -0.03em;
-    text-transform: capitalize;
+    
     line-height: 1.3;
     color: #fff;
     float: left;
@@ -8104,7 +8104,7 @@ line-height: 45px;
     width: 100%;
     margin: 7px 0px;
     line-height: 0;
-    text-transform: capitalize;
+    
 }
 .page_slider_grid_6_style .small-static-post-header.margin_2 .banner-container h1{
     margin: 7px 0px !important;
@@ -8117,7 +8117,7 @@ line-height: 45px;
 }
 .page_slider_grid_6_style .banner-container h1 a, .page_slider_grid_6_style .small-static-post-header.margin_8 .banner-container h1 a, .page_slider_grid_6_style .small-static-post-header.margin_2 .banner-container h1 a{
     font-size: 26px !important;
-    text-transform: capitalize;
+    
     line-height: 1.2;
     color: #fff;
 }
@@ -8273,14 +8273,14 @@ line-height: 45px;
     font-size: 26px;
     line-height: 1.2;
     color: #fff;
-    text-transform: capitalize;
+    
 }
 
 .page_slider_grid_3_pop .small-static-post-header .banner-container h1 a{
     font-size: 15px;
     line-height: 1.2;
     color: #fff;
-    text-transform: capitalize;
+    
 }
 
 /*right pop post*/
@@ -8364,7 +8364,7 @@ line-height: 45px;
     font-size: 13px;
     color: #fff;
     line-height: 1.4;
-    text-transform: capitalize;
+    
 }
 .pop_post_right_slider .slider_pop_post_list_items .post-meta{
     float: left;
@@ -8421,13 +8421,13 @@ Magazine grid
 
 .magazine_static_grid_color .main-static-post-header h5 a, .magazine_static_grid_image .main-static-post-header h5 a{
     font-weight: 700 !important;
-    text-transform: capitalize;
+    
     letter-spacing: -0.01em;
     font-size: 25px;
 }
 .magazine_static_grid_color .small-static-post-header h5 a, .magazine_static_grid_image .small-static-post-header h5 a{
     font-weight: 700 !important;
-    text-transform: capitalize;
+    
     letter-spacing: -0.01em;
     font-size: 18px;
 }
@@ -8853,7 +8853,7 @@ Loading
 .main_new_ticker_wrapper .header_news_ticker_style_wrapper .feature-post-title a{
     font-size: 14px;
     line-height: 1.2;
-    text-transform: capitalize;
+    
     font-weight: 500 !important;
 }
 
@@ -8938,7 +8938,7 @@ continue reading button
     color: #000000;
     background: #FFF;
     padding: 0px;
-    text-transform: capitalize;
+    
     letter-spacing: 0px;
 }
 .large_continue_reading span a {
@@ -9028,7 +9028,7 @@ footer .social-icons-list-widget.iconss_widget_display li a {
     padding-right: 0px;
     padding-left: 0px;
     color: #fff;
-    text-transform: capitalize;
+    
     text-align: left;
     -webkit-border-radius: 0px !important;
     -moz-border-radius: 0px !important;
@@ -9244,7 +9244,7 @@ Form
     float: left;
     width: 100%;
     font-size: 12px !important;
-    text-transform: capitalize;
+    
     letter-spacing: 0em;
 }
 
@@ -9462,7 +9462,7 @@ title
     float: left;
     width: 100%;
     text-align: center;
-    text-transform: capitalize;
+    
 }
 
 .main_title_wrapper.jl_cat_img_bg p{
@@ -9626,7 +9626,7 @@ footer .recent_post_large_widget{
     width: 100%;
     color: #737373;
     font-size: 14px !important;
-    text-transform: capitalize;
+    
     line-height: 1.2;
 }
 .recent_post_large_widget .post-meta a{
@@ -9823,7 +9823,7 @@ footer .recent_post_large_widget{
     margin: 0px 0px 10px 0px;
     font-size: 20px;
     line-height: 1.2;
-    text-transform: capitalize;
+    
     text-align: left;
 }
 .recent_post_large_widget .wrap_box_style_main .post-meta span {
@@ -10093,7 +10093,7 @@ Ajax tab menu
     margin-right: 0px !important;
 }
 .menu_post_feature .category_post_ajax_wrap .wrapper_display_post_cat .recent_post_large_widget .image-post-title a, .menu_post_feature .image-post-title a{
-    text-transform: capitalize;
+    
 }
 
 .menu_post_feature .category_post_ajax_wrap .wrapper_display_post_cat .recent_post_large_widget .image-post-title a:hover, .menu_post_feature .image-post-title a:hover{
@@ -10221,7 +10221,7 @@ Top menu
     position:relative;
     font-size:12px !important;
     color:#FFF;
-    text-transform: capitalize !important;
+    !important;
     letter-spacing: 0px;
 }
 .sf-top-menu a:hover {
@@ -10715,7 +10715,7 @@ Megamenu
     margin: 5px 0px;
     font-size: 14px;
     line-height: 1.2;
-    text-transform: capitalize;
+    
 }
 
 .widget_home-main-post-style.main_post_style .blog_grid_post_style .post-entry-content h3 a, .widget_home-main-post-style.main_post_style .blog_grid_post_style .post-entry-content h3 a:hover {
@@ -10810,7 +10810,7 @@ menu post
     text-decoration: none !important;
 }
 .menu_post_feature .post-entry-content .image-post-title a, .menu_post_feature .item-details .feature-post-title a{
-    text-transform: capitalize !important;
+    !important;
 }
 
 .menu_post_feature .recent_post_large_widget .post-meta.meta-main-img{
@@ -11863,7 +11863,7 @@ category header
 
 .category_header_post_2col_wrapper .category_header_post_2col_item .category-item-caption h2 a{
     color: #fff !important;
-    text-transform: capitalize;
+    
     line-height: 1.2;
     font-weight: 500;
 }
@@ -12288,7 +12288,7 @@ home grid overlay 4 col
 .mainpost_with_list_widget .blog_grid_post_style .post-entry-content .post-meta.meta-main-img, .mainpost_with_list_widget .blog_grid_post_style .post-entry-content .post-meta.meta-main-img a{
     color: #444;
     font-size: 11px !important;
-    text-transform: capitalize;
+    
     line-height: 1.2;
 }
 .mainpost_with_list_widget .blog_grid_post_style .post-entry-content .post-meta.meta-main-img a{
@@ -12493,7 +12493,7 @@ home grid overlay 4 col
 }
 .feature-post-list .item-details h3 {
     margin: 0px 0px 10px 0px  !important;
-    text-transform: capitalize;
+    
     float: left;
     width: 100%;
 }
@@ -12523,7 +12523,7 @@ footer .feature-post-list .item-details .post-meta a {
     margin-top: 0px;
     float: left;
     margin-left: 0px;
-    text-transform: capitalize;
+    
     color: #818181;
     letter-spacing: 0.03em;
     font-weight: 400;
@@ -12559,7 +12559,7 @@ footer .feature-post-list .item-details .post-meta a {
 .jl_recent_post_number .meta-category-small-text a{
     font-size: 12px;
     margin-right: 10px;
-    text-transform: capitalize;
+    
     letter-spacing: 0em;
     font-weight: 400;
     float: left;
@@ -12667,12 +12667,12 @@ Grid post widget
     width: 100%;
     margin-top: 10px;
     margin-bottom: 7px;
-    text-transform: capitalize;
+    
 }
 .recent-grid-post-widget .grid_post_wrapper .post-meta{
     color: #444;
     font-size: 12px !important;
-    text-transform: capitalize;
+    
     font-style: italic;
 }
 
@@ -12886,7 +12886,7 @@ footer .tagcloud a{
     -moz-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
-    text-transform: capitalize;
+    
     text-decoration: none !important;
     text-transform: uppercase;
     -webkit-border-radius: 5px;
@@ -13128,7 +13128,7 @@ Author profile
 }
 .author-info .author-description h5 {
     font-size: 18px;
-    text-transform: capitalize;
+    
 }
 .author-info .author-description h2 {
     font-size: 25px;
@@ -13420,7 +13420,7 @@ span.previouspost {
     margin-left: 0px;
     top: 5px;
     display: block;
-    text-transform: capitalize;
+    
     font-weight: 600;
     letter-spacing: -0.03em;
 }
@@ -13448,7 +13448,7 @@ span.previouspost {
     top: 5px;
     display: block;
     font-weight: 600;
-    text-transform: capitalize;
+    
     letter-spacing: -0.03em;
 }
 .single_post_arrow_content  #nextpost:hover{
@@ -13499,7 +13499,7 @@ body:not(.jl-has-sidebar) .related-posts .jl-post-title{
     line-height: 27px;
     margin: 0px;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    
 }
 .related-posts .jl_related_feature_items_in{
     float: left;
@@ -13880,7 +13880,7 @@ Comment box
 }
 .comment-meta .comment-author-name{
     display: block;
-    text-transform: capitalize;
+    
     font-size: 14px;
     color: #202020;
     margin-top: 0px;
@@ -13949,7 +13949,7 @@ Comment box
     font-weight: 300;
     font-size: 11px;
     color: #777;
-    text-transform: capitalize;
+    
     letter-spacing: 0em;
 }
 .comments-area .comments-title,
@@ -14080,7 +14080,7 @@ dd{
 }
 .comments-area h3#reply-title {
     margin: 0px;
-    text-transform: capitalize;
+    
     color: #202020;
     float: left;
     width: 100%;
@@ -14127,7 +14127,7 @@ Comment List
 .jl_comment_post li .jl_comment_title{
     font-size: 14px;
     line-height: 1.2;
-    text-transform: capitalize;
+    
     margin: 0px;
 }
 .jl_comment_post li .jl_comment_title a{
@@ -14217,7 +14217,7 @@ Menu slide
     text-align: left;
     background: none;
     color: #000;
-    text-transform: capitalize;
+    
     margin-bottom: 0px;
 }
 #content_nav .widget .widget-title h2:after{
@@ -14354,7 +14354,7 @@ Menu slide
 #content_nav .menu_moble_slide > li a {
     padding-left: 40px !important;
     font-weight: 400;
-    text-transform: capitalize;
+    
     font-size: 14px
 }
 #content_nav .sub-menu li {
@@ -14783,13 +14783,13 @@ Menu slide
     margin-top: 0px;
     margin-bottom: 15px;
     text-align: left !important;
-    text-transform: capitalize;
+    
 }
 .blog_list_post_style .post-meta {
     float: left;
     color: #444;
     font-size: 11px !important;
-    text-transform: capitalize;
+    
     letter-spacing: 0.05em;
 }
 .blog_list_post_style .post-meta a{
@@ -15233,7 +15233,7 @@ Menu slide
 
 h2.notfound_p_title{
     color: #222;
-    text-transform: capitalize;
+    
 }
 p.notfound_p_text{
     margin-bottom: 40px;
@@ -15786,7 +15786,7 @@ p.notfound_p_text{
 font-size: 35px;
 line-height: 1.2;
 color: #fff;
-text-transform: capitalize;
+
 }
 .full-slider-main-home .banner-container h5 a:hover, .page_builder_slider .banner-container h5 a:hover{
     color: #fff !important;
@@ -15905,7 +15905,7 @@ text-transform: capitalize;
 .jl_post_loop_wrapper .jl_wrapper_cat .auto_image_with_date span{
     margin-right: 10px;
     letter-spacing: 0;
-    text-transform: capitalize;
+    
 }
 .jl_post_loop_wrapper .jl_wrapper_cat .auto_image_with_date span i{
     margin-right: 5px;
@@ -16463,7 +16463,7 @@ text-transform: capitalize;
     margin-bottom: 10px;
     float: left;
     width: 100%;
-    text-transform: capitalize;
+    
 }
 
 .blog_grid_post_style .post-entry-content .post-entry-content-wrapper{
@@ -17248,7 +17248,7 @@ text-transform: capitalize;
 .single_post_entry_content .single_post_title_main{
     font-size: 40px;
     color: #000;
-    text-transform: capitalize;
+    
     margin-top: 0px;
     margin-bottom: 0px;
     line-height: 1.125 !important;
@@ -17336,10 +17336,10 @@ text-transform: capitalize;
     text-align: left;
     text-transform: uppercase;
 }
-.single-post-meta-wrapper span{ font-size: 12px; margin: 0px 5px; padding-right: 5px; color: #818181 !important; text-transform: capitalize; letter-spacing: 0.03em; font-weight: 400;}
+.single-post-meta-wrapper span{ font-size: 12px; margin: 0px 5px; padding-right: 5px; color: #818181 !important;  letter-spacing: 0.03em; font-weight: 400;}
 .single-post-meta-wrapper .jm-post-like{ margin: 0px 10px 0px 5px;}
 .single-post-meta-wrapper .jm-post-like{ font-size: 11px !important; letter-spacing: 0.2em;}
-.single-post-meta-wrapper span a{ font-size: 12px;  color: #818181 !important; text-transform: capitalize;}
+.single-post-meta-wrapper span a{ font-size: 12px;  color: #818181 !important; }
 .single-post-meta-wrapper span.post-author a{font-weight: 400;}
 .single-post-meta-wrapper span a:hover, .single-post-meta-wrapper span.post-author a:hover, .single-post-meta-wrapper span.meta-comment a:hover, .single_post_entry_content .single-post-meta-wrapper .jm-post-like:hover{ color: #000 !important;}
 .single-post-meta-wrapper .post-author{ color: #000 !important;}
@@ -17859,7 +17859,7 @@ text-transform: capitalize;
 .pk-social-links-items .pk-social-links-item .pk-social-links-label{
     font-size: 11px !important;
     line-height: 1.2 !important;
-    text-transform: capitalize !important;
+    !important;
     margin-top: 5px;
     color: #000 !important;
 }
@@ -18027,7 +18027,7 @@ text-transform: capitalize;
     width: auto;
     letter-spacing: 0px;
     font-size: 13px;
-    text-transform: capitalize;
+    
     height: 32px !important;
     line-height: 32px !important;
     -webkit-border-radius: 5px;
@@ -18059,7 +18059,7 @@ text-transform: capitalize;
     width: auto;
     letter-spacing: 0px;
     font-size: 13px;
-    text-transform: capitalize;
+    
     height: 32px !important;
     line-height: 32px !important;
     -webkit-border-radius: 100px;
@@ -19122,7 +19122,7 @@ Blog large overlay layout with sidebar
     color: #222222;
     float: left;
     width: 100%;
-    text-transform: capitalize;
+    
     text-align: left;
     padding: 0px;
 }
@@ -19180,7 +19180,7 @@ Blog large overlay layout with sidebar
     margin-right: 9px;
     padding-right: 7px;
     line-height: 2;
-    text-transform: capitalize;
+    
 }
 .post_large_footer_meta .post_tag_footer:after{
     position: relative;
@@ -19303,7 +19303,7 @@ Blog large overlay layout with sidebar
 }
 .blog_post_related_title h5{
     text-align: center;
-    text-transform: capitalize;
+    
     font-size: 20px;
     color: #000;
     margin: 0px;
@@ -19347,7 +19347,7 @@ Blog large overlay layout with sidebar
     margin: 0px;
     font-size: 15px;
     line-height: 1.2;
-    text-transform: capitalize;
+    
 }
 
 
@@ -19454,7 +19454,7 @@ Blog large overlay layout with sidebar
 .blog_large_post_style .qoute_large_content_inside .quote_source, .full_width_quote_options .qoute_large_content_inside .quote_source {
     font-size: 13px;
     font-style: normal;
-    text-transform: capitalize;
+    
     letter-spacing: 1px;
 }
 
@@ -19657,7 +19657,7 @@ Blog large overlay layout with sidebar
     margin-top: 0px;
     letter-spacing: 0px;
     font-weight: 400;
-    text-transform: capitalize;
+    
     max-width: 160px;
     margin-right: 10px;
 }
@@ -19933,7 +19933,7 @@ Blog large overlay layout with sidebar
     margin: 0px;
     font-size: 13px;
     letter-spacing: 0px;
-    text-transform: capitalize;
+    
     float: left;
     width: 100%;
     color: #565656;
@@ -20227,7 +20227,7 @@ footer .widget:last-child{
     width: 100%;
     display: block;
     font-size: 17px;
-    text-transform: capitalize;
+    
     line-height: inherit;
     letter-spacing: 0em;
     position: relative;
@@ -20240,7 +20240,7 @@ footer .widget:last-child{
     display: block;
     font-size: 20px;
     line-height: 1.2;
-    text-transform: capitalize;
+    
     padding-bottom: 20px;
     margin: 0px 0px 25px 0px;
     border-bottom: 1px solid #E2E3E7;
@@ -20389,7 +20389,7 @@ widget style 5
     margin-bottom: 30px;
     line-height: 1.2;
     position: relative;
-    text-transform: capitalize;
+    
     letter-spacing: -0.03em;
     font-weight: 600 !important;
     font-size: 20px;
@@ -20573,7 +20573,7 @@ widget style 6
     margin-bottom: 30px;
     line-height: 1.2;
     position: relative;
-    text-transform: capitalize;
+    
     letter-spacing: -0.03em;
     font-weight: 600 !important;
     font-size: 20px;
@@ -20607,14 +20607,14 @@ footer .widget .widget-title h2{
     font-size: 18px;
     padding-bottom: 30px !important;
     border-bottom: 1px solid #E4E4E4;
-    text-transform: capitalize;
+    
     letter-spacing: 0.03em;
 }
 .widget-title h2 {
     font-size: 17px;
     line-height: 27px;
     margin: 0px;
-    text-transform: capitalize;
+    
 }
 .widget_archive ul {
     float: left;
@@ -20776,7 +20776,7 @@ footer .widget .widget-title h2{
     display: block;
     font-size: 14px;
     letter-spacing: 0px;
-    text-transform: capitalize;
+    
     position: absolute;
     z-index: 3;
     width: 100%;
@@ -21108,7 +21108,7 @@ footer .widget_rss ul li a{
     margin: 0px 0px 5px 0px;
     font-size: 20px;
     line-height: 1.2;
-    text-transform: capitalize;
+    
     float: left;
 }
 .slider_widget_post .wrap_box_style_main .jl_post_meta span, .slider_widget_post .wrap_box_style_main .jl_post_meta span a{
@@ -22751,7 +22751,7 @@ Page builder block
     line-height: 1.2 !important;
     font-size: 30px !important;
     font-weight: 800 !important;
-    text-transform: capitalize;
+    
     color: #fff !important;
 }
 
@@ -22880,7 +22880,7 @@ Page builder block
     color: #000;
     display: block;
     font-size: 26px;
-    text-transform: capitalize;
+    
     letter-spacing: -.03em !important;
     padding-bottom: 0px;
     margin: 0px;
@@ -23108,7 +23108,7 @@ Page builder block
 .jelly_homepage_builder .post-meta.meta-main-img, .jelly_homepage_builder .post-meta.meta-main-img a{
     color: #999;
     font-size: 13px !important;
-    text-transform: capitalize !important;
+    !important;
     letter-spacing: 0.03em;
     font-weight: 300;
     line-height: 1.2;
@@ -23257,7 +23257,7 @@ Page builder block
 .page_builder_slider .banner-container h5 a{
     width: 100%;
     font-size: 30px !important;
-    text-transform: capitalize;
+    
 }
 .page_builder_slider.page_builder_slider_single_wrapper .banner-container h5{
     margin: 20px 0px 15px 0px;
@@ -23449,7 +23449,7 @@ Page builder block
 }
 .jellywp_home_builder_carousel_post .popular-item-title h4 a{
     color: #fff;
-    text-transform: capitalize;
+    
 }
 .jellywp_home_builder_carousel_post .popular-item-title h4 a:hover{
     color: #fff !important;
@@ -23742,7 +23742,7 @@ Page builder block
 .jelly_homepage_builder.builder_post_grid_bellow .post_grid_main_with_grid_bellow .blog_main_grid_post_style .post-entry-content h3 a{
     line-height: 1.2;
     font-size: 22px;
-    text-transform: capitalize;
+    
 }
 .jelly_homepage_builder.builder_post_grid_bellow .post_grid_main_with_grid_bellow .blog_main_grid_post_style .post-entry-content h3:hover, .jelly_homepage_builder.builder_post_grid_bellow .post_grid_main_with_grid_bellow .blog_main_grid_post_style .post-entry-content h3 a:hover, .jelly_homepage_builder.builder_post_grid_bellow .post_grid_main_with_grid_bellow .blog_main_grid_post_style .post-entry-content .post-meta span a:hover{
     color: #fff !important;
@@ -23842,7 +23842,7 @@ Page builder block
 .container_grid_small_post_home .wrapper_grid_post_home .post-entry-content h3 a{
     line-height: 1.2;
     font-size: 20px;
-    text-transform: capitalize;
+    
 }
 .container_grid_small_post_home .wrapper_grid_post_home .post-entry-content h3:hover, .container_grid_small_post_home .wrapper_grid_post_home .post-entry-content h3 a:hover, .container_grid_small_post_home .wrapper_grid_post_home .post-entry-content .post-meta span a:hover{
     color: #fff !important;
@@ -25655,7 +25655,7 @@ transition: all .1s ease-in-out;
 .woocommerce #content div.product .product_title, .woocommerce div.product .product_title, .woocommerce-page #content div.product .product_title, .woocommerce-page div.product .product_title{
     margin-top: 0px;
     margin-bottom: 0px;
-    text-transform: capitalize;
+    
     color: #000;
     font-size: 35px;
 }
@@ -26015,7 +26015,7 @@ BBpress
     bottom: 0px;
     border-radius: 0px 3px 3px 0px !important;
     font-size: 14px;
-    text-transform: capitalize;
+    
     font-weight: 400;
     line-height: 16px;
     background-color: #222222;
@@ -26054,7 +26054,7 @@ BBpress
     
 }
 
-.forum-titles li {text-transform: capitalize;}
+.forum-titles li {}
 #bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-topics, #bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results{
   
 }
@@ -26068,7 +26068,7 @@ div.bbp-template-notice .bbp-author-avatar{ display: none;}
     font-size: 11px;
     font-weight: 500;
     color: #fff;
-    text-transform: capitalize;
+    
     background-color: #000;
     padding: 3px 10px;
     border-radius: 15px;
@@ -26233,7 +26233,7 @@ li.bbp-forum-freshness {
     font-size: 10px;
     font-weight: 500;
     color: #fff;
-    text-transform: capitalize;
+    
     background-color: #000;
     padding: 1px 10px;
     border-radius: 15px;

@@ -223,10 +223,7 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
                             </div>
                             <?php } ?>
                             <!-- comment -->                            
-                            <?php 
-                            if (is_active_sidebar('jl_ads_before_comment')) : echo '<div class="jl_ads_section jl_before_comment">'; dynamic_sidebar('jl_ads_before_comment');echo '</div>'; endif;
-                            comments_template('', true);
-                            ?>
+                            
                         </div>
                     </div>
                     <!-- end post -->

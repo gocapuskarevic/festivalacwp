@@ -7696,10 +7696,6 @@ textarea.form-control-lg {
   text-transform: uppercase !important;
 }
 
-.text-capitalize {
-  text-transform: capitalize !important;
-}
-
 .text-wrap {
   white-space: normal !important;
 }
