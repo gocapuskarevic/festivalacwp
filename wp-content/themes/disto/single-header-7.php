@@ -17,22 +17,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="single_post_entry_content">
-                            <?php  
-                                $categories = get_the_category(get_the_ID()); 
-                                    if(get_theme_mod('disable_post_category') !=1){
-                                        if ($categories) {
-                                            echo '<span class="meta-category-small">';
-                                            foreach( $categories as $tag) {
-                                            $tag_link = get_category_link($tag->term_id);
-                                            $title_bg_Color = get_term_meta($tag->term_id, "category_color_options", true);
-                                            echo '<a class="post-category-color-text" itemprop="articleSection" style="background:'.$title_bg_Color.'" href="'.esc_url($tag_link).'">'.$tag->name.'</a>';
-                                            }
-                                            echo "</span>";
-                                        }
-                                    }?>
-                                <h1 class="single_post_title_main" itemprop="headline">
-                                    <?php the_title()?>
-                                </h1>
+                            <h1 class="single_post_title_main" itemprop="headline">
+                                <?php the_title()?>
+                            </h1>
                             <?php echo disto_singlepost_meta(get_the_ID()); ?>
                         </div>
                     </div>
