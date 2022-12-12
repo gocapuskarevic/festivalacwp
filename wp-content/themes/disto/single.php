@@ -117,7 +117,7 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
                             <div class="related-posts">
                               <?php if (is_active_sidebar('jl_ads_before_related')) : echo '<div class="jl_ads_section">'; dynamic_sidebar('jl_ads_before_related');echo '</div>'; endif;?>  
                                 <h4>
-                                    <?php esc_html_e('Related Articles', 'disto'); ?>
+                                    <?php esc_html_e('Povezani članci', 'disto'); ?>
                                 </h4>
 
                                 <div class="single_related_post">
@@ -158,19 +158,7 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
                                                     <div class="background_over_image"></div>
                                                 </a>
                                             </div>
-                                            <?php if(get_theme_mod('disable_post_category') !=1){
-                                                $categories = get_the_category(get_the_ID());          
-                                                if ($categories) {
-                                                    echo '<span class="meta-category-small">';
-                                                    foreach( $categories as $tag) {
-                                                    $tag_link = get_category_link($tag->term_id);
-                                                    $title_bg_Color = get_term_meta($tag->term_id, "category_color_options", true);
-                                                    $title_reactions = get_term_meta($tag->term_id, "disto_cat_reactions", true);
-                                                    if($title_reactions){}else{echo '<a class="post-category-color-text" style="background:'.$title_bg_Color.'" href="'.esc_url($tag_link).'">'.$tag->name.'</a>';}
-                                                    }
-                                                    echo "</span>";
-                                                    }
-                                                    }
+                                            <?php 
                                                     echo disto_post_type();
                                                 ?>
 

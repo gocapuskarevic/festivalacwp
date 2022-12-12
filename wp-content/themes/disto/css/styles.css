@@ -11429,3 +11429,11 @@ video.bg-video {
 .meta-category-small a{
   margin: 4px !important;
 }
+
+.festivals-single .single-post-meta-wrapper span{
+  display: inline-block;
+  padding: 5px;
+  background: linear-gradient(90deg, rgba(58,76,180,1) 0%, rgba(253,29,29,1) 100%);
+  border-radius: 5px;
+  line-height: normal;
+}
