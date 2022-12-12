@@ -80,6 +80,12 @@ get_template_part('single-header-7');
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <h3>Lineup - to be implemented</h3>
+                                    
+                                </div>
+
                                 <?php
                                 if( $poster || $video ) : ?>
                                     <div class="row">
@@ -92,7 +98,7 @@ get_template_part('single-header-7');
                                     <?php if( $video ) : ?>
                                         <div class="col-md-6">
                                             <h3 class="video">Video</h3>
-                                                <div style="width:500px;"><?php echo $video; ?></div>
+                                                <div><?php echo $video; ?></div>
                                             </div>
                                         </div>
                                     <?php endif; ?>
@@ -108,50 +114,38 @@ get_template_part('single-header-7');
 
                                 
 
-                                <?php  if(get_theme_mod('disable_post_author') !=1){
-                                if(get_the_author_meta('description')){?>
-                                <div class="auth">
-                                    <div class="author-info">
-                                        <div class="author-avatar">
-                                            <?php echo get_avatar(get_the_author_meta('user_email'), 165); ?>
-                                        </div>
-                                        <div class="author-description">
-                                            <h5><a itemprop="author" href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ))); ?>">
-                                                    <?php the_author_meta( 'display_name' ); ?></a></h5>
-                                            <p itemprop="description">
-                                                <?php echo get_the_author_meta('description'); ?>
-                                            </p>
-                                            <?php if(function_exists('disto_author_contact')){echo disto_author_contact(get_the_ID());}?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php }} ?>
+                            <?php } ?>
 
-                                <?php } ?>
+                        <?php } // end of the loop.   ?>
 
-                                <?php } // end of the loop.   ?>
-
-                                <div class="related-posts">
+                        <div class="related-posts">
                                    <?php
                                    $cat = get_the_category();
                                    if($cat[0]->term_id)
                                         $args = array('cat' => $cat[0]->term_id, 'posts_per_page' => 4);
                                         $category_posts = new WP_Query($args);
-                                        if( $category_posts->have_posts() ){
-                                            echo '<h3>Povezane vesti</h3>';
-                                            while( $category_posts->have_posts() ) $category_posts->the_post(); ?>
-                                            <div class="jl_related_feature_items">
-                                                <div class="jl_related_feature_items_in">
-                                                    <div class="image-post-thumb">
-                                                        <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
-                                                            <?php the_post_thumbnail('disto_large_feature_image');?>
-                                                            <div class="background_over_image"></div>
-                                                            <?php the_title(); ?>
-                                                        </a>
+                                        if( $category_posts->have_posts() ) : ?>
+                                            <div class="row">
+                                                
+                                            <h3>Povezane vesti</h3>
+                                            <?php while( $category_posts->have_posts() ) : $category_posts->the_post(); ?>
+                                                <div class="col-sm-6">
+                                                    <div class="jl_related_feature_items">
+                                                        <div class="jl_related_feature_items_in">
+                                                            <div class="image-post-thumb">
+                                                                <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
+                                                                    <?php the_post_thumbnail('disto_large_feature_image');?>
+                                                                    <div class="background_over_image"></div>
+                                                                    <?php the_title(); ?>
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                
+                                                <?php endwhile; wp_reset_postdata(); ?>
                                             </div>
-                                        <?php } wp_reset_postdata(); ?>
+                                        <?php endif; ?>
                                    
 
                                     <div class="single_related_post"></div>
