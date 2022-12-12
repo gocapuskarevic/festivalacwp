@@ -11417,3 +11417,15 @@ video.bg-video {
     width: auto;
   }
 }
+/*custom style */
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.meta-category-small{
+  margin-bottom: 20px;
+}
+.meta-category-small a{
+  margin: 4px !important;
+}

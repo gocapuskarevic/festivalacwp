@@ -90,37 +90,6 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
                             <?php if(get_theme_mod('disable_post_share') !=1){ if(function_exists('disto_single_share_link')){echo disto_single_share_link(get_the_ID());}}?>                            
 
 
-                            <?php
-                                if(get_theme_mod('disable_post_nav') !=1){
-                                $prev_post = get_previous_post();
-                                if (!empty($prev_post)){
-                                ?>
-                            <div class="postnav_left">
-                                <div class="single_post_arrow_content">                                    
-                                    <a href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>" id="prepost">
-                                        <?php echo esc_attr($prev_post->post_title); ?>
-                                        <span class="jl_post_nav_left">
-                                            <?php esc_html_e('Previous post', 'disto'); ?></span></a>
-                                </div>
-                            </div>
-                            <?php } ?>
-
-
-                            <?php
-                                $next_post = get_next_post();
-                                if (!empty($next_post)){
-                                ?>
-                            <div class="postnav_right">
-                                <div class="single_post_arrow_content">                                    
-                                    <a href="<?php echo esc_url(get_permalink($next_post->ID)); ?>" id="nextpost">
-                                        <?php echo esc_attr($next_post->post_title); ?>
-                                        <span class="jl_post_nav_left">
-                                            <?php esc_html_e('Next post', 'disto'); ?></span></a>
-                                </div>
-                            </div>
-                            <?php }} ?>
-
-
                             <?php  if(get_theme_mod('disable_post_author') !=1){
                               if(get_the_author_meta('description')){?>
                             <div class="auth">
@@ -190,20 +159,20 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
                                                 </a>
                                             </div>
                                             <?php if(get_theme_mod('disable_post_category') !=1){
-          $categories = get_the_category(get_the_ID());          
-          if ($categories) {
-            echo '<span class="meta-category-small">';
-            foreach( $categories as $tag) {
-              $tag_link = get_category_link($tag->term_id);
-              $title_bg_Color = get_term_meta($tag->term_id, "category_color_options", true);
-              $title_reactions = get_term_meta($tag->term_id, "disto_cat_reactions", true);
-             if($title_reactions){}else{echo '<a class="post-category-color-text" style="background:'.$title_bg_Color.'" href="'.esc_url($tag_link).'">'.$tag->name.'</a>';}
-            }
-            echo "</span>";
-            }
-            }
-            echo disto_post_type();
-        ?>
+                                                $categories = get_the_category(get_the_ID());          
+                                                if ($categories) {
+                                                    echo '<span class="meta-category-small">';
+                                                    foreach( $categories as $tag) {
+                                                    $tag_link = get_category_link($tag->term_id);
+                                                    $title_bg_Color = get_term_meta($tag->term_id, "category_color_options", true);
+                                                    $title_reactions = get_term_meta($tag->term_id, "disto_cat_reactions", true);
+                                                    if($title_reactions){}else{echo '<a class="post-category-color-text" style="background:'.$title_bg_Color.'" href="'.esc_url($tag_link).'">'.$tag->name.'</a>';}
+                                                    }
+                                                    echo "</span>";
+                                                    }
+                                                    }
+                                                    echo disto_post_type();
+                                                ?>
 
                                             <?php }else{}?>
                                             <div class="post-entry-content">        
