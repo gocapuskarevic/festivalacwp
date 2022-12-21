@@ -1,11 +1,12 @@
 <?php get_header();?>
 <div class="festivals-single">
-
+<style>.fluidvids{width:100% !important;}</style>
     <?php
     if (have_posts()) { while (have_posts()) { the_post();
     $coat_of_arms = get_field('coat_of_arms_of_festival');
     $poster = get_field('announcement_poster');
     $video = get_field('youtube_link');
+    $lineup = get_field('lineup');
     $categories = get_the_category();
     $tags = get_the_tags();
     $post_id = get_the_ID();
@@ -25,7 +26,7 @@
                                     
                                 <div class="post_content" itemprop="articleBody">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-8">
                                             <?php
                                                 if (is_active_sidebar('jl_ads_before_content')) : echo '<div class="jl_ads_section">'; dynamic_sidebar('jl_ads_before_content');echo '</div>'; endif;
                                                     echo '<h2 class="festival-heading-level-2">';
@@ -34,7 +35,7 @@
                                                     the_content();
                                             ?>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="meta-data">
                                                 <h2>Bitne informacije</h2>
                                                 <span><b>Datumi:</b></span>
@@ -81,11 +82,14 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="row">
-                                        <h3>Lineup - to be implemented</h3>
-                                        
-                                    </div>
+                                    <?php if($lineup) : ?>
+                                        <div class="row">
+                                            <div class="lineup-wrapper">
+                                                <h3>Lineup</h3>
+                                                <?php echo $lineup; ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
 
                                     <?php
                                     if( $poster || $video ) : ?>

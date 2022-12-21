@@ -11437,3 +11437,46 @@ video.bg-video {
   border-radius: 5px;
   line-height: normal;
 }
+a:hover{
+  text-decoration: none !important;
+}
+
+iframe {
+  max-width: 100%;
+}
+.fluidvids{
+	width: 100% !important;
+}
+.festivals-single .meta-category-small a{
+  transition:all ease .5s;
+}
+.festivals-single .meta-category-small a:hover{
+  background-color: #ff4200;
+}
+
+.btn-primary{
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #000;
+  color: #fff;
+}
+.btn-primary:hover{
+  text-decoration: none;
+  background-color: #ff4200;
+}
+
+.lineup-wrapper ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lineup-wrapper ul li{
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+}

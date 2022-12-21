@@ -10,9 +10,64 @@ $single_post_layout_options = get_theme_mod('single_post_layout_options');
 if($post_layout_display == "full_width_image_with_caption_overlay_center" || $post_layout_display == "full_width_image_with_caption_overlay_bottom" || $post_layout_display == "full_width_image_with_caption_above" 
   || $single_post_layout_options == "single_post_layout_7" || $single_post_layout_options == "single_post_layout_8" || $single_post_layout_options == "single_post_layout_9"){
 }else{
-
+?>
+<?php }?>
+<!-- begin content -->
+<?php
+if(get_theme_mod('single_post_layout_options') == 'single_post_layout_2'){
+$class_full_width_option = "single_full_width_custom_options options_admin_single_style1 ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_3'){
+$class_full_width_option = "single_full_width_custom_options options_admin_single_style1 ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_4'){
+$class_full_width_option = "single_full_width_custom_options options_admin_single_style1 ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_5'){
+$class_full_width_option = "single_full_width_custom_options options_admin_single_style1 ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_6'){
+$class_full_width_option = "single_full_width_custom_options options_admin_single_style1 ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_7'){
+get_template_part('single-header-6');
+$class_full_width_option = "single_full_width_custom_options ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_8'){
 get_template_part('single-header-7');
-
+$class_full_width_option = "single_full_width_custom_options ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_9'){
+get_template_part('single-header-8');
+$class_full_width_option = "single_full_width_custom_options ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_10'){
+get_template_part('single-header-9');
+$class_full_width_option = "single_full_width_custom_options ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_11'){
+get_template_part('single-header-11');
+$class_full_width_option = "single_full_width_custom_options ";
+}elseif(get_theme_mod('single_post_layout_options') == 'single_post_layout_12'){
+$class_full_width_option = "single_full_width_custom_options options_admin_single_style1 ";
+}else{
+if($post_layout_display == "full_width_image_with_caption_overlay_center"){
+get_template_part('single-header-6');
+$class_full_width_option = "single_full_width_custom_options ";
+}
+elseif($post_layout_display == "full_width_image_with_caption_overlay_bottom"){
+get_template_part('single-header-7');
+$class_full_width_option = "single_full_width_custom_options ";
+}
+elseif($post_layout_display == "full_width_image_with_caption_above"){
+get_template_part('single-header-8');
+$class_full_width_option = "single_full_width_custom_options ";
+}
+elseif($post_layout_display == "full_width_caption_without_image"){
+get_template_part('single-header-9');
+$class_full_width_option = "single_full_width_custom_options ";
+}
+elseif($post_layout_display == "full_width_caption_with_post_format"){
+get_template_part('single-header-11');
+$class_full_width_option = "single_full_width_custom_options ";
+}
+elseif($post_layout_display == "title_below_align_left"){
+$class_full_width_option = "single_bellow_left_align ";  
+}
+else{
+$class_full_width_option = "single_box_width_custom_options ";  
+}
 }
 if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section">'; dynamic_sidebar('jl_ads_above_title');echo '</div>'; endif;
 ?>

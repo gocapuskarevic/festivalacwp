@@ -20,44 +20,31 @@
             <div class="col-md-12 grid-sidebar">
                 <div class="jl_wrapper_cat">
                         <div class="jl_small_list_wrapper">
-                        <div class="feature-post-list recent-post-widget jl_home_small_list">
-  <?php 
-  $disto_qry = disto_get_qry();
-  if ( $disto_qry->have_posts() ) {
-    $row_count = 0;
-    while ( $disto_qry->have_posts() ) { 
-       $disto_qry->the_post();
-        $disto_post_id = $post->ID; 
-			     $row_count++;?>
+                            <div class="feature-post-list recent-post-widget jl_home_small_list">
+                                <?php 
+                                $disto_qry = disto_get_qry();
+                                if ( $disto_qry->have_posts() ) {
+                                    $row_count = 0;
+                                    while ( $disto_qry->have_posts() ) { 
+                                    $disto_qry->the_post();
+                                        $disto_post_id = $post->ID; 
+                                                $row_count++;?>
+                                                    
+                                <div class="jl_list_item jl_home_list3">
+                                <a  href="<?php the_permalink(); ?>" class="jl_small_format feature-image-link image_post featured-thumbnail" title="<?php the_title_attribute(); ?>">              
+                                <?php if ( has_post_thumbnail()) {the_post_thumbnail('disto_small_feature');}
+                                else{echo '<img class="no_feature_img" src="'.esc_url(get_template_directory_uri().'/img/feature_img/small-feature.jpg').'">';} ?>
+                                <div class="background_over_image"></div>
+                                </a>
+                                <div class="item-details">
+                                <h3 class="feature-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
+                                
+                            </div>
+                        </div>
 					
-<div class="jl_list_item jl_home_list3">
-<a  href="<?php the_permalink(); ?>" class="jl_small_format feature-image-link image_post featured-thumbnail" title="<?php the_title_attribute(); ?>">              
-<?php if ( has_post_thumbnail()) {the_post_thumbnail('disto_small_feature');}
-else{echo '<img class="no_feature_img" src="'.esc_url(get_template_directory_uri().'/img/feature_img/small-feature.jpg').'">';} ?>
-<div class="background_over_image"></div>
-</a>
-   <div class="item-details">
-    <?php if(get_theme_mod('disable_post_category') !=1){
-          $categories = get_the_category(get_the_ID());          
-          if ($categories) {
-            echo '<span class="meta-category-small">';
-            foreach( $categories as $tag) {
-              $tag_link = get_category_link($tag->term_id);
-              $title_bg_Color = get_term_meta($tag->term_id, "category_color_options", true);
-             echo '<a class="post-category-color-text" style="background:'.$title_bg_Color.'" href="'.esc_url($tag_link).'">'.$tag->name.'</a>';
-            }
-            echo "</span>";
-            }
-            }
- ?>
-   <h3 class="feature-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
-   <?php echo disto_post_meta_date(get_the_ID()); ?> 
-</div>
-   </div>
-					
-            <?php
-            if($row_count %2==0){echo '<div class="clear_line_2col_home"></div>';}
-            if($row_count %3==0){echo '<div class="clear_line_3col_home"></div>';}
+                        <?php
+                        if($row_count %2==0){echo '<div class="clear_line_2col_home"></div>';}
+                        if($row_count %3==0){echo '<div class="clear_line_3col_home"></div>';}
 
                      }}else{                               
                         if (is_search()) {  esc_html_e('No result found', 'disto');}                                         
@@ -66,10 +53,9 @@ else{echo '<img class="no_feature_img" src="'.esc_url(get_template_directory_uri
                 <?php disto_pagination( $disto_qry );?>
                 </div>
                 </div>
-<?php wp_reset_postdata();?>
+                <?php wp_reset_postdata();?>
             </div>            
         </div>
-
     </div>
 </div>
 <!-- end content -->
