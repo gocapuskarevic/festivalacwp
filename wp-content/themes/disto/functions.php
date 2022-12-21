@@ -907,4 +907,47 @@ function disto_enqueue_script() {
 add_action( 'wp_enqueue_scripts', 'disto_enqueue_script' );
 
 
+add_action('wp_ajax_show_festivals', 'show_festivals');
+add_action('wp_ajax_nopriv_show_festivals', 'show_festivals');
+function show_festivals(){
+    var_dump($_POST);
+    $args = array(
+        'post_type'     => 'festivals',
+        'post_status'     => 'publish',
+        'order_by'      => 'date',
+        'order'         => 'DESC',
+    );
+
+    $args['tax_query'] = array (
+        'relation' => 'AND',
+        array (
+            'taxonomy' => 'countries',
+            'field' => 'id',
+            'terms' => [$_POST['country']]
+        ),
+        array (
+            'taxonomy' => 'numbersofday',
+            'field' => 'id',
+            'terms' => [$_POST['numofdays']]
+        ),
+        array (
+            'taxonomy' => 'genres',
+            'field' => 'id',
+            'terms' => [$_POST['genre']]
+        ),
+        array (
+            'taxonomy' => 'camping',
+            'field' => 'id',
+            'terms' => [$_POST['campaing']]
+        ),
+        array (
+            'taxonomy' => 'sizes',
+            'field' => 'id',
+            'terms' => [$_POST['size']]
+        ),
+    );
+
+    var_dump($args);
+}
+
 ?>

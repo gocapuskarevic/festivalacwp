@@ -1,7 +1,26 @@
-/*!
-* Start Bootstrap - Coming Soon v6.0.6 (https://startbootstrap.com/theme/coming-soon)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-coming-soon/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+jQuery( function ( $ ) {
+  $('#search').on('click', function(){
+    $country = $('#country').val()
+    $category = $('#category').val()
+    $numofdays = $('#numofdays').val()
+    $genre = $('#genre').val()
+    $campaing = $('#campaing').val()
+    $size = $('#size').val()
+
+
+    all_data = {action: 'show_festivals', country: $country, category: $category, numofdays: $numofdays, genre: $genre, campaing: $campaing, size: $size }
+
+    //console.log(all_data)
+    $.ajax({
+      url: window.location.origin+'/wp-admin/admin-ajax.php',
+      data: all_data,
+      method: 'POST',
+      beforeSend: function(){
+      
+      },
+      success: function(data) {
+        console.log(data)
+      }
+    });
+  })
+})
