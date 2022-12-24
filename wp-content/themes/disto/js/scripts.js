@@ -2,13 +2,14 @@ jQuery( function ( $ ) {
   $('#search').on('click', function(){
     $country = $('#country').val()
     $category = $('#category').val()
+    $month = $('#month').val()
     $numofdays = $('#numofdays').val()
     $genre = $('#genre').val()
     $campaing = $('#campaing').val()
     $size = $('#size').val()
 
 
-    all_data = {action: 'show_festivals', country: $country, category: $category, numofdays: $numofdays, genre: $genre, campaing: $campaing, size: $size }
+    all_data = {action: 'show_festivals', country: $country, category: $category, month: $month, numofdays: $numofdays, genre: $genre, campaing: $campaing, size: $size }
 
     //console.log(all_data)
     $.ajax({
@@ -19,7 +20,8 @@ jQuery( function ( $ ) {
       
       },
       success: function(data) {
-        console.log(data)
+        //console.log(data)
+        $('#result-wrapper').html(data)
       }
     });
   })

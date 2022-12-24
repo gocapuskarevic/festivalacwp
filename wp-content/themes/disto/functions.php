@@ -910,7 +910,8 @@ add_action( 'wp_enqueue_scripts', 'disto_enqueue_script' );
 add_action('wp_ajax_show_festivals', 'show_festivals');
 add_action('wp_ajax_nopriv_show_festivals', 'show_festivals');
 function show_festivals(){
-    var_dump($_POST);
+    
+   //var_dump($_POST);
     $args = array(
         'post_type'     => 'festivals',
         'post_status'     => 'publish',
@@ -918,36 +919,90 @@ function show_festivals(){
         'order'         => 'DESC',
     );
 
-    $args['tax_query'] = array (
-        'relation' => 'AND',
-        array (
-            'taxonomy' => 'countries',
+    $terms_array = array();
+
+    if($_POST['country'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'locations',
             'field' => 'id',
-            'terms' => [$_POST['country']]
-        ),
-        array (
-            'taxonomy' => 'numbersofday',
+            'terms' => [(int)$_POST['country']]
+        ));
+    }
+    if($_POST['category'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'category',
             'field' => 'id',
-            'terms' => [$_POST['numofdays']]
-        ),
-        array (
+            'terms' => [(int)$_POST['category']]
+        ));
+    }
+    if($_POST['month'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'months',
+            'field' => 'id',
+            'terms' => [(int)$_POST['month']]
+        ));
+    }
+    if($_POST['numofdays'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'numberofdays',
+            'field' => 'id',
+            'terms' => [(int)$_POST['numofdays']]
+        ));
+    }
+    if($_POST['genre'] != 0){
+        array_push($terms_array, array (
             'taxonomy' => 'genres',
             'field' => 'id',
-            'terms' => [$_POST['genre']]
-        ),
-        array (
+            'terms' => [(int)$_POST['genre']]
+        ));
+    }
+    if($_POST['camping'] != 0){
+        array_push($terms_array, array (
             'taxonomy' => 'camping',
             'field' => 'id',
-            'terms' => [$_POST['campaing']]
-        ),
-        array (
+            'terms' => [(int)$_POST['camping']]
+        ));
+    }
+    if($_POST['size'] != 0){
+        array_push($terms_array, array (
             'taxonomy' => 'sizes',
             'field' => 'id',
-            'terms' => [$_POST['size']]
-        ),
-    );
+            'terms' => [(int)$_POST['size']]
+        ));
+    }
+    $args['tax_query'] = $terms_array;
+    //var_dump($args);
+    $result = new WP_Query($args);
+    //var_dump($result->request);
 
-    var_dump($args);
+	if ($result->have_posts()) : ?>
+        <div class="container">
+            <div class="row">
+                <?php while ($result->have_posts()) : $result->the_post(); ?>
+                    <div class="col-md-4">
+                        <div class="post_grid_content_wrapper">
+                            <?php if ( has_post_thumbnail()) {?>
+                                <div class="image-post-thumb">
+                                    <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
+                                        <?php the_post_thumbnail('disto_large_feature_image');?>
+                                        <div class="background_over_image"></div>
+                                    </a>
+                                </div>
+                            <?php }?>
+                            <div class="post-entry-content">
+                                <div class="post-entry-content-wrapper">
+                                    <div class="large_post_content">
+                                        <?php echo disto_post_meta_dc(get_the_ID()); ?>
+                                        <h3 class="image-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; wp_reset_postdata(); ?>
+            </div>
+        </div>
+    <?php endif;
+    die();
 }
 
-?>
