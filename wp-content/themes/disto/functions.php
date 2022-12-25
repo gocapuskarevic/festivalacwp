@@ -257,15 +257,20 @@ function disto_post_meta_love_view($post_id) {
 <?php
 function disto_singlepost_meta($post_id) {
     if( 'festivals' == get_post_type() ){
+        $date_s = get_field('start_date');
+        $date_e = get_field('end_date');
+        $location = get_the_terms( get_the_ID(), 'locations' );
         echo'<span class="single-post-meta-wrapper">';
-                echo '<span>'. get_field('start_date').' - '. get_field('end_date') .'</span>';
-                echo '<span>'. get_the_terms( get_the_ID(), 'locations' )[0]->name .'</span>';
+            if( $date_s && $date_e)
+                echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+            if($location)
+                echo '<span class="festival-data">'. $location[0]->name .'</span>';
                
-                if(function_exists('disto_bac_PostViews')){
+                /*if(function_exists('disto_bac_PostViews')){
                 if(get_theme_mod('disable_post_view') !=1){echo '<span class="view_options"><i class="fa fa-eye"></i>';
                 echo disto_bac_PostViews(get_the_ID());
                 echo '</span>';}}
-                echo'</span>';	
+                echo'</span>';	*/
     }else{
         echo'<span class="single-post-meta-wrapper">';
         if(get_theme_mod('disable_post_author') !=1){ echo '<span class="post-author"><span itemprop="author">';echo get_avatar(get_the_author_meta('ID'), 50); echo the_author_posts_link().'</span></span>';}		
