@@ -25,4 +25,8 @@ jQuery( function ( $ ) {
       }
     });
   })
+
+  $(document).ready(function() {
+    $('.js-basic-dropdown').select2();
+  });
 })

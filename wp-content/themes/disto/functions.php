@@ -1011,3 +1011,18 @@ function show_festivals(){
     die();
 }
 
+// Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
+function html5wp_pagination($number) {
+    $big = 999999999;
+    echo paginate_links(array(
+        'base'      => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format'    => '?paged=%#%',
+        'current'   => max(1, get_query_var('paged')),
+        'total'     => $number->max_num_pages,
+        'prev_text' => '<<',
+        'next_text' => '>>',
+        'mid_size'  => 4,
+        'end_size'  => 4,
+    ));
+  }
+
