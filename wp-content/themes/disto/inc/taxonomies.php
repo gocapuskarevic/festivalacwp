@@ -28,7 +28,7 @@ function festival_post_type() {
         // Features this CPT supports in Post Editor
         'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
         // You can associate this CPT with a taxonomy or custom taxonomy. 
-        'taxonomies'          => array( 'locations', 'genres', 'months', 'sizes', 'numberofdays', 'category', 'years', 'camping' ),
+        'taxonomies'          => array( 'locations', 'genres', 'months', 'sizes', 'numberofdays', 'category', 'years', 'camping', 'miscellaneous' ),
         /* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.
@@ -248,5 +248,33 @@ function create_festival_camping_taxonomy() {
     'show_admin_column' => true,
     'query_var' => true,
     'rewrite' => array( 'slug' => 'camping' ),
+  ));
+}
+
+add_action( 'init', 'create_festival_miscellaneous_taxonomy', 0 );
+function create_festival_miscellaneous_taxonomy() {
+  $labels = array(
+    'name' => _x( 'Miscellaneous', 'taxonomy general name' ),
+    'singular_name' => _x( 'Miscellaneous', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search miscellaneous' ),
+    'all_items' => __( 'All miscellaneous' ),
+    'parent_item' => __( 'Parent miscellaneous' ),
+    'parent_item_colon' => __( 'Parent miscellaneous:' ),
+    'edit_item' => __( 'Edit miscellaneous' ), 
+    'update_item' => __( 'Update miscellaneous' ),
+    'add_new_item' => __( 'Add New miscellaneous' ),
+    'new_item_name' => __( 'New Year miscellaneous' ),
+    'menu_name' => __( 'Miscellaneous' ),
+  );    
+  
+// Now register the taxonomy
+  register_taxonomy('miscellaneous','festivals', array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'miscellaneous' ),
   ));
 }

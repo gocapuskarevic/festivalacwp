@@ -11482,3 +11482,11 @@ iframe {
   border-radius: 5px;
   margin: 5px;
 }
+a.page-numbers, .page-numbers.current{
+  font-size: 18px;
+  font-weight: 800;
+  margin: 5px;
+}
+.c-pagination{
+  text-align: center;
+}

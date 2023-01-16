@@ -1011,6 +1011,58 @@ function show_festivals(){
     die();
 }
 
+
+add_action('wp_ajax_show_festivals_default', 'show_festivals_default');
+add_action('wp_ajax_nopriv_show_festivals_default', 'show_festivals_default');
+function show_festivals_default(){
+    //var_dump($_POST);
+    $args = array(
+        'post_type'       => 'festivals',
+        'post_status'     => 'publish',
+        'order_by'        => 'date',
+        'order'           => 'ASC',
+        'posts_per_page'  => 9,
+        'paged'           => $_POST['page'],
+      );
+    
+    
+    
+    //var_dump($args);
+    $all_festivals = new WP_Query($args);
+    //var_dump($result->request);
+    
+    if ($all_festivals->have_posts()) : ?>
+      <div class="content-festivals">
+        <div class="container">
+          <div class="row">
+            <?php while ($all_festivals->have_posts()) : $all_festivals->the_post(); ?>
+              <div class="col-md-4">
+                <div class="post_grid_content_wrapper">
+                  <?php if ( has_post_thumbnail()) {?>
+                    <div class="image-post-thumb">
+                      <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
+                        <?php the_post_thumbnail('disto_large_feature_image');?>
+                        <div class="background_over_image"></div>
+                      </a>
+                    </div>
+                  <?php }?>
+                  <div class="post-entry-content">
+                    <div class="post-entry-content-wrapper">
+                      <div class="large_post_content">
+                        <?php echo disto_post_meta_dc(get_the_ID()); ?>
+                        <h3 class="image-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>                    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php endwhile; ?>
+          </div>
+        </div>
+    <?php endif; 
+    die();
+}
+
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
 function html5wp_pagination($number) {
     $big = 999999999;

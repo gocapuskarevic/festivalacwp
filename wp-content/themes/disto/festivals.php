@@ -51,7 +51,7 @@ $sizes = get_terms( 'sizes', array(
       <h2>Pretraga</h2>
       <div class="agenda-filters">
         <div class="choise-wrapper">
-          <p>Drzava</p>
+          <p>Država</p>
           <select id="country" class="js-basic-dropdown">
             <option value="0">Svi</option>
             <?php
@@ -95,7 +95,7 @@ $sizes = get_terms( 'sizes', array(
         </div>
 
         <div class="choise-wrapper">
-          <p>Zanr</p>
+          <p>Žanr</p>
           <select id="genre" class="js-basic-dropdown">
             <option value="0">Svi</option>
             <?php
@@ -117,7 +117,7 @@ $sizes = get_terms( 'sizes', array(
         </div>
 
         <div class="choise-wrapper">
-          <p>Velicina</p>
+          <p>Veličina</p>
           <select id="size" class="js-basic-dropdown">
             <option value="0">Svi</option>
             <?php
@@ -137,61 +137,61 @@ $sizes = get_terms( 'sizes', array(
 </div>
 <!-- end of filters -->
 <?php
-  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+  //$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
   $args = array(
     'post_type'       => 'festivals',
     'post_status'     => 'publish',
     'order_by'        => 'date',
     'order'           => 'ASC',
     'posts_per_page'  => 9,
-    'paged'           => $paged,
+    'paged'           => 1,
   );
 
 
 
 //var_dump($args);
-$all_festivals = new WP_Query($args);
-//var_dump($result->request);
+$all_festivals = new WP_Query($args); ?>
 
-if ($all_festivals->have_posts()) : ?>
-  <div class="content-festivals">
-    <div class="container">
-      <div class="row">
-        <?php while ($all_festivals->have_posts()) : $all_festivals->the_post(); ?>
-          <div class="col-md-4">
-            <div class="post_grid_content_wrapper">
-              <?php if ( has_post_thumbnail()) {?>
-                <div class="image-post-thumb">
-                  <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
-                    <?php the_post_thumbnail('disto_large_feature_image');?>
-                    <div class="background_over_image"></div>
-                  </a>
-                </div>
-              <?php }?>
-              <div class="post-entry-content">
-                <div class="post-entry-content-wrapper">
-                  <div class="large_post_content">
-                    <?php echo disto_post_meta_dc(get_the_ID()); ?>
-                    <h3 class="image-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>                    
+<div id="main-default-wrapper">
+  <?php if ($all_festivals->have_posts()) : ?>
+    <div class="content-festivals">
+      <div class="container">
+        <div class="row">
+          <?php while ($all_festivals->have_posts()) : $all_festivals->the_post(); ?>
+            <div class="col-md-4">
+              <div class="post_grid_content_wrapper">
+                <?php if ( has_post_thumbnail()) {?>
+                  <div class="image-post-thumb">
+                    <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
+                      <?php the_post_thumbnail('disto_large_feature_image');?>
+                      <div class="background_over_image"></div>
+                    </a>
+                  </div>
+                <?php }?>
+                <div class="post-entry-content">
+                  <div class="post-entry-content-wrapper">
+                    <div class="large_post_content">
+                      <?php echo disto_post_meta_dc(get_the_ID()); ?>
+                      <h3 class="image-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>                    
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        <?php endwhile; ?>
+          <?php endwhile; ?>
+        </div>
       </div>
+  <?php endif; ?>
+</div></div>
+<div class="container">
+  <div class="row">
+    <div class="c-pagination">
+        <?php 
+            html5wp_pagination($all_festivals); wp_reset_postdata(); 
+        ?>
     </div>
-
-<?php endif; ?>
-
-<div class="pagination">
-    <?php 
-        html5wp_pagination($all_festivals); wp_reset_postdata(); 
-    ?>
+  </div>
 </div>
-
-
-
-</div>
+  
 
 <?php get_footer(); ?>
