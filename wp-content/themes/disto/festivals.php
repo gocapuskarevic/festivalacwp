@@ -34,7 +34,10 @@ $other = get_terms( 'miscellaneous', array(
       <?php get_template_part('single-header-7'); ?>
 
       <section id="content_main" class="clearfix jl_spost">
-        <h2>Pretraga</h2>
+        <div class="heading-section">
+          <h2>Pretraga</h2>
+          <a  href="<?php echo get_site_url().'/agenda' ?>" class="reset-button">Resetuj</a>
+        </div>
         <div class="agenda-filters">
           <div class="row">
 

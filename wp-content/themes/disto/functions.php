@@ -991,29 +991,51 @@ function show_festivals(){
         <div class="container">
             <div class="row">
                 <?php while ($result->have_posts()) : $result->the_post(); ?>
-                    <div class="col-md-4">
-                        <div class="post_grid_content_wrapper">
-                            <?php if ( has_post_thumbnail()) {?>
-                                <div class="image-post-thumb">
-                                    <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
-                                        <?php the_post_thumbnail('disto_large_feature_image');?>
-                                        <div class="background_over_image"></div>
-                                    </a>
-                                </div>
-                            <?php }?>
-                            <div class="post-entry-content">
-                                <div class="post-entry-content-wrapper">
-                                    <div class="large_post_content">
-                                        <?php echo disto_post_meta_dc(get_the_ID()); ?>
-                                        <h3 class="image-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <?php
+                $year = get_the_terms( get_the_ID(), 'years' );
+                $date_s = get_field('start_date');
+                $date_e = get_field('end_date');
+                $location = get_the_terms( get_the_ID(), 'locations' );
+            ?>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="post_grid_content_wrapper">
+                <?php if ( has_post_thumbnail()) {?>
+                  <div class="image-post-thumb">
+                    <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
+                      <?php the_post_thumbnail('disto_large_feature_image');?>
+                      <div class="background_over_image"></div>
+                    </a>
+                  </div>
+                <?php }?>
+                <div class="post-entry-content">
+                  <div class="post-entry-content-wrapper">
+                    <div class="large_post_content">
+                      <?php echo disto_post_meta_dc(get_the_ID()); ?>
+                      <h3 class="image-post-title">
+                        <a href="<?php the_permalink(); ?>">
+                          <?php the_title(); ?>
+                          <?php if($year) : ?>
+                            <span><?php echo $year[0]->name; ?></span>
+                          <?php endif; ?>
+                        </a>
+                      </h3>
+                      <div class="e-data">
+                      <?php if( $date_s && $date_e)
+                        echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+                      ?>
+                      <?php if( $location)
+                        echo '<p">'. $location[0]->name .'</p>';
+                      ?>
+                      </div>                 
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
                 <?php endwhile; wp_reset_postdata(); ?>
             </div>
         </div>
+    <?php else : echo '<p>Nema rezultata za ovu pretragu, pokušajte opet.</p>'; ?>
     <?php endif;
     die();
 }
@@ -1044,10 +1066,10 @@ function show_festivals_default(){
           <div class="row">
           <?php while ($all_festivals->have_posts()) : $all_festivals->the_post(); ?>
             <?php
-              $year = get_the_terms( get_the_ID(), 'years' );
-              $date_s = get_field('start_date');
-              $date_e = get_field('end_date');
-              $location = get_the_terms( get_the_ID(), 'locations' );
+                $year = get_the_terms( get_the_ID(), 'years' );
+                $date_s = get_field('start_date');
+                $date_e = get_field('end_date');
+                $location = get_the_terms( get_the_ID(), 'locations' );
             ?>
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="post_grid_content_wrapper">

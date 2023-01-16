@@ -11546,6 +11546,17 @@ a.page-numbers, .page-numbers.current{
   color: #fff;
   font-size: 12px;
 }
+.heading-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading-section p{
+  color: #000;
+}
+.heading-section p:hover{
+  color: #ff4200;
+}
 @media (max-width: 1200px) {
   .btn-wrapper{
     height: 100px;

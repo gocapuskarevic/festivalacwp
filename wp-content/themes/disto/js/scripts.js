@@ -24,6 +24,9 @@ jQuery( function ( $ ) {
         //console.log(data)
         $('#main-default-wrapper').html(data)
         $('.c-pagination').remove()
+        $('html, body').animate({
+          scrollTop: $('#main-default-wrapper').offset().top - 130 
+        }, 100);
       }
     });
   })
