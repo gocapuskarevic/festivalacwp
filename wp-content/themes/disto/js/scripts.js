@@ -7,9 +7,10 @@ jQuery( function ( $ ) {
     $genre = $('#genre').val()
     $campaing = $('#campaing').val()
     $size = $('#size').val()
+    $other = $('#other').val()
 
 
-    all_data = {action: 'show_festivals', country: $country, category: $category, month: $month, numofdays: $numofdays, genre: $genre, campaing: $campaing, size: $size }
+    all_data = {action: 'show_festivals', country: $country, category: $category, month: $month, numofdays: $numofdays, genre: $genre, campaing: $campaing, size: $size, other: $other }
 
     //console.log(all_data)
     $.ajax({
@@ -21,7 +22,8 @@ jQuery( function ( $ ) {
       },
       success: function(data) {
         //console.log(data)
-        $('#result-wrapper').html(data)
+        $('#main-default-wrapper').html(data)
+        $('.c-pagination').remove()
       }
     });
   })

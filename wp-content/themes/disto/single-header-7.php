@@ -27,5 +27,5 @@
             </div>
         </div>
     </div>
-    <div style="text-align:right;font-size:10px;"><?php the_post_thumbnail_caption(); ?></div>
+    <div style="text-align:right;font-size:12px;"><?php the_post_thumbnail_caption(); ?></div>
 </div>

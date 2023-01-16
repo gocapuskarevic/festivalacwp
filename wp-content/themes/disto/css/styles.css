@@ -11490,3 +11490,64 @@ a.page-numbers, .page-numbers.current{
 .c-pagination{
   text-align: center;
 }
+/*.agenda-filters{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: end;
+  margin-bottom: 50px;
+}*/
+.agenda-filters select{
+  display: block;
+  width: 100%;
+
+}
+.choise-wrapper p{
+  font-size: 25px;
+  margin: 30px 0 0 0;
+  color: #000;
+}
+.choise-wrapper #search{
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+}
+.select2-container{
+  width: 100% !important;
+}
+#content_main h2{
+  margin: 0;
+}
+.btn-wrapper{
+  position: relative;
+}
+.choise-button{
+  width: 60%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 22%;
+}
+#main-default-wrapper h3.image-post-title{
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+#main-default-wrapper span.festival-data{
+  display: block;
+  width: fit-content;
+  margin-bottom: 5px;
+  padding: 3px;
+  background: linear-gradient(90deg, rgba(58,76,180,1) 0%, rgba(253,29,29,1) 100%);
+  border-radius: 5px;
+  line-height: normal;
+  color: #fff;
+  font-size: 12px;
+}
+@media (max-width: 1200px) {
+  .btn-wrapper{
+    height: 100px;
+  }
+}
