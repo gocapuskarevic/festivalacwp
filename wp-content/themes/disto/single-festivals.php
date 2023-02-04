@@ -59,7 +59,7 @@
                                                     <a href="<?php the_field('official_website'); ?>" class="btn-primary btn-primary-c">Festivalski websajt</a>
                                                 </div>
                                             </div>
-                                        
+                                        </div>
                                         <div class="col-md-4">
                                             <div class="meta-data">
                                             <?php

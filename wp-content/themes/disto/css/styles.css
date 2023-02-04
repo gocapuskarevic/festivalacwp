@@ -11564,6 +11564,13 @@ a.page-numbers, .page-numbers.current{
 .festivals-single .links a{
   margin: 5px 0;
 }
+#footer-container .feature-post-list{
+  float: none;
+}
+
+#footer-container .feature-post-list .item-details .meta-category-small{
+  display: none;
+}
 
 @media (max-width: 1200px) {
   .btn-wrapper{
