@@ -52,15 +52,14 @@
                                                     the_content();
                                             ?>
                                             <div class="flex">
-                                                <div class="image">
-                                                    <?php if($coat_of_arms) echo '<img src="'. $coat_of_arms .'" width="210px">'; ?>
-                                                </div>
+                                                <?php if($coat_of_arms) echo '<div class="image"><img src="'. $coat_of_arms .'" width="210px"></div>'; ?>
+                                                
                                                 <div class="links">
-                                                    <a href="<?php the_field('tickets'); ?>" class="btn-primary">Karte</a>
-                                                    <a href="<?php the_field('official_website'); ?>" class="btn-primary">Festivalski websajt</a>
+                                                    <a href="<?php the_field('tickets'); ?>" class="btn-primary btn-primary-c">Karte</a>
+                                                    <a href="<?php the_field('official_website'); ?>" class="btn-primary btn-primary-c">Festivalski websajt</a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        
                                         <div class="col-md-4">
                                             <div class="meta-data">
                                             <?php
@@ -94,16 +93,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        
                                     </div>
                                     <?php if($lineup) : ?>
-                                        <div class="row">
-                                            <div class="lineup-wrapper">
-                                                <h3>Lineup</h3>
-                                                <?php echo $lineup; ?>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="lineup-wrapper">
+                                                    <h3>Lineup</h3>
+                                                    <?php echo $lineup; ?>
+                                                </div>
                                             </div>
                                         </div>
                                     <?php endif; ?>

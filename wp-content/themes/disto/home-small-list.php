@@ -37,10 +37,9 @@
                                 <div class="background_over_image"></div>
                                 </a>
                                 <div class="item-details">
-                                <h3 class="feature-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
-                                
+                                    <h3 class="feature-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
+                                 </div>
                             </div>
-                        </div>
 					
                         <?php
                         if($row_count %2==0){echo '<div class="clear_line_2col_home"></div>';}

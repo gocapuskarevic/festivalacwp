@@ -1764,6 +1764,3 @@ footer .col-md-4 { width: 100%;    padding: 0px 15px !important; }
 .header_layout_style3_custom .header_top_bar_wrapper .search_header_menu > .search_header_wrapper i{color: #000 !important; font-size: 20px; padding-top: 10px;}
 .header_layout_style3_custom .header_top_bar_wrapper .search_header_menu > .menu_mobile_icons i{ color: #000 !important; font-size: 20px;}
 }
-*{
-    text-transform: none !important;
-}

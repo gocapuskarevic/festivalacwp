@@ -11456,13 +11456,14 @@ iframe {
   background-color: #ff4200;
 }
 
-.btn-primary{
+.btn-primary-c{
   display: inline-block;
-  padding: 20px 40px;
+  padding: 10px 20px;
+  text-transform: uppercase !important;
   background-color: #000;
   color: #fff;
 }
-.btn-primary:hover{
+.btn-primary-c:hover{
   text-decoration: none;
   background-color: #ff4200;
 }
@@ -11557,9 +11558,28 @@ a.page-numbers, .page-numbers.current{
 .heading-section p:hover{
   color: #ff4200;
 }
+.festivals-single .links{
+  text-align: center;
+}
+.festivals-single .links a{
+  margin: 5px 0;
+}
 
 @media (max-width: 1200px) {
   .btn-wrapper{
     height: 100px;
   }
+}
+@media (max-width: 768px) {
+  .festivals-single .meta-data{
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .flex{
+    flex-direction: column-reverse;
+  }
+
 }
