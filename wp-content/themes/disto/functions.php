@@ -19,6 +19,8 @@ function disto_post_type(){
     return $post_type_image;    
 }
 
+include 'inc/taxonomies.php';
+
 function disto_register_menu() {
     register_nav_menus(
             array(
@@ -255,15 +257,20 @@ function disto_post_meta_love_view($post_id) {
 <?php
 function disto_singlepost_meta($post_id) {
     if( 'festivals' == get_post_type() ){
+        $date_s = get_field('start_date');
+        $date_e = get_field('end_date');
+        $location = get_the_terms( get_the_ID(), 'locations' );
         echo'<span class="single-post-meta-wrapper">';
-                echo '<span>'. get_field('start_date').' - '. get_field('end_date') .'</span>';
-                echo '<span>'. get_the_terms( get_the_ID(), 'locations' )[0]->name .'</span>';
+            if( $date_s && $date_e)
+                echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+            if($location)
+                echo '<span class="festival-data">'. $location[0]->name .'</span>';
                
-                if(function_exists('disto_bac_PostViews')){
+                /*if(function_exists('disto_bac_PostViews')){
                 if(get_theme_mod('disable_post_view') !=1){echo '<span class="view_options"><i class="fa fa-eye"></i>';
                 echo disto_bac_PostViews(get_the_ID());
                 echo '</span>';}}
-                echo'</span>';	
+                echo'</span>';	*/
     }else{
         echo'<span class="single-post-meta-wrapper">';
         if(get_theme_mod('disable_post_author') !=1){ echo '<span class="post-author"><span itemprop="author">';echo get_avatar(get_the_author_meta('ID'), 50); echo the_author_posts_link().'</span></span>';}		
@@ -904,255 +911,220 @@ function disto_enqueue_script() {
 }
 add_action( 'wp_enqueue_scripts', 'disto_enqueue_script' );
 
-/*
-* Creating a function to create our CPT
-*/
- 
-add_action( 'init', 'festival_post_type', 0 );
-function festival_post_type() {
-    $labels = array(
-        'name'                => _x( 'Festivals', 'Post Type General Name', 'disto' ),
-        'singular_name'       => _x( 'Festival', 'Post Type Singular Name', 'disto' ),
-        'menu_name'           => __( 'Festivals', 'twentytwentyone' ),
-        'parent_item_colon'   => __( 'Parent Festival', 'disto' ),
-        'all_items'           => __( 'All Festivals', 'disto' ),
-        'view_item'           => __( 'View Festival', 'disto' ),
-        'add_new_item'        => __( 'Add New Festival', 'disto' ),
-        'add_new'             => __( 'Add New', 'disto' ),
-        'edit_item'           => __( 'Edit Festival', 'disto' ),
-        'update_item'         => __( 'Update Festival', 'disto' ),
-        'search_items'        => __( 'Search Festival', 'disto' ),
-        'not_found'           => __( 'Not Found', 'disto' ),
-        'not_found_in_trash'  => __( 'Not found in Trash', 'disto' ),
-    );
- 
+
+add_action('wp_ajax_show_festivals', 'show_festivals');
+add_action('wp_ajax_nopriv_show_festivals', 'show_festivals');
+function show_festivals(){
+    
+   //var_dump($_POST);
     $args = array(
-        'label'               => __( 'festival', 'disto' ),
-        'description'         => __( 'Festival', 'disto' ),
-        'labels'              => $labels,
-        // Features this CPT supports in Post Editor
-        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-        // You can associate this CPT with a taxonomy or custom taxonomy. 
-        'taxonomies'          => array( 'locations', 'genres', 'months', 'sizes', 'numberofdays', 'category', 'years', 'camping' ),
-        /* A hierarchical CPT is like Pages and can have
-        * Parent and child items. A non-hierarchical CPT
-        * is like Posts.
-        */
-        'hierarchical'        => false,
-        'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
-        'menu_position'       => 5,
-        'can_export'          => true,
-        'has_archive'         => true,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'capability_type'     => 'post',
-        'show_in_rest' => true,
-  
+        'post_type'     => 'festivals',
+        'post_status'     => 'publish',
+        'order_by'      => 'date',
+        'order'         => 'DESC',
     );
-    register_post_type( 'festivals', $args );
+
+    $terms_array = array();
+
+    if($_POST['country'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'locations',
+            'field' => 'id',
+            'terms' => [(int)$_POST['country']]
+        ));
+    }
+    if($_POST['category'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'category',
+            'field' => 'id',
+            'terms' => [(int)$_POST['category']]
+        ));
+    }
+    if($_POST['month'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'months',
+            'field' => 'id',
+            'terms' => [(int)$_POST['month']]
+        ));
+    }
+    if($_POST['numofdays'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'numberofdays',
+            'field' => 'id',
+            'terms' => [(int)$_POST['numofdays']]
+        ));
+    }
+    if($_POST['genre'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'genres',
+            'field' => 'id',
+            'terms' => [(int)$_POST['genre']]
+        ));
+    }
+    if($_POST['camping'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'camping',
+            'field' => 'id',
+            'terms' => [(int)$_POST['camping']]
+        ));
+    }
+    if($_POST['size'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'sizes',
+            'field' => 'id',
+            'terms' => [(int)$_POST['size']]
+        ));
+    }
+    if($_POST['other'] != 0){
+        array_push($terms_array, array (
+            'taxonomy' => 'miscellaneous',
+            'field' => 'id',
+            'terms' => [(int)$_POST['other']]
+        ));
+    }
+    $args['tax_query'] = $terms_array;
+    //var_dump($args);
+    $result = new WP_Query($args);
+    //var_dump($result->request);
+
+	if ($result->have_posts()) : ?>
+        <div class="container">
+            <div class="row">
+                <?php while ($result->have_posts()) : $result->the_post(); ?>
+                <?php
+                $year = get_the_terms( get_the_ID(), 'years' );
+                $date_s = get_field('start_date');
+                $date_e = get_field('end_date');
+                $location = get_the_terms( get_the_ID(), 'locations' );
+            ?>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="post_grid_content_wrapper">
+                <?php if ( has_post_thumbnail()) {?>
+                  <div class="image-post-thumb">
+                    <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
+                      <?php the_post_thumbnail('disto_large_feature_image');?>
+                      <div class="background_over_image"></div>
+                    </a>
+                  </div>
+                <?php }?>
+                <div class="post-entry-content">
+                  <div class="post-entry-content-wrapper">
+                    <div class="large_post_content">
+                      <?php echo disto_post_meta_dc(get_the_ID()); ?>
+                      <h3 class="image-post-title">
+                        <a href="<?php the_permalink(); ?>">
+                          <?php the_title(); ?>
+                          <?php if($year) : ?>
+                            <span><?php echo $year[0]->name; ?></span>
+                          <?php endif; ?>
+                        </a>
+                      </h3>
+                      <div class="e-data">
+                      <?php if( $date_s && $date_e)
+                        echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+                      ?>
+                      <?php if( $location)
+                        echo '<p">'. $location[0]->name .'</p>';
+                      ?>
+                      </div>                 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <?php endwhile; wp_reset_postdata(); ?>
+            </div>
+        </div>
+    <?php else : echo '<p>Nema rezultata za ovu pretragu, pokušajte opet.</p>'; ?>
+    <?php endif;
+    die();
 }
 
-add_action( 'init', 'create_festival_location_taxonomy', 0 );
-function create_festival_location_taxonomy() {
-  
-  $labels = array(
-    'name' => _x( 'Locations', 'taxonomy general name' ),
-    'singular_name' => _x( 'Location', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Locations' ),
-    'all_items' => __( 'All Locations' ),
-    'parent_item' => __( 'Parent Location' ),
-    'parent_item_colon' => __( 'Parent Location:' ),
-    'edit_item' => __( 'Edit Location' ), 
-    'update_item' => __( 'Update Location' ),
-    'add_new_item' => __( 'Add New Location' ),
-    'new_item_name' => __( 'New Location Name' ),
-    'menu_name' => __( 'Locations' ),
-  );    
-  
-// Now register the taxonomy
-  register_taxonomy('locations','festivals', array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'location' ),
-  ));
+
+add_action('wp_ajax_show_festivals_default', 'show_festivals_default');
+add_action('wp_ajax_nopriv_show_festivals_default', 'show_festivals_default');
+function show_festivals_default(){
+    //var_dump($_POST);
+    $args = array(
+        'post_type'       => 'festivals',
+        'post_status'     => 'publish',
+        'order_by'        => 'date',
+        'order'           => 'ASC',
+        'posts_per_page'  => 12,
+        'paged'           => $_POST['page'],
+      );
+    
+    
+    
+    //var_dump($args);
+    $all_festivals = new WP_Query($args);
+    //var_dump($result->request);
+    
+    if ($all_festivals->have_posts()) : ?>
+      <div class="content-festivals">
+        <div class="container">
+          <div class="row">
+          <?php while ($all_festivals->have_posts()) : $all_festivals->the_post(); ?>
+            <?php
+                $year = get_the_terms( get_the_ID(), 'years' );
+                $date_s = get_field('start_date');
+                $date_e = get_field('end_date');
+                $location = get_the_terms( get_the_ID(), 'locations' );
+            ?>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="post_grid_content_wrapper">
+                <?php if ( has_post_thumbnail()) {?>
+                  <div class="image-post-thumb">
+                    <a href="<?php the_permalink(); ?>" class="link_image featured-thumbnail" title="<?php the_title_attribute(); ?>">
+                      <?php the_post_thumbnail('disto_large_feature_image');?>
+                      <div class="background_over_image"></div>
+                    </a>
+                  </div>
+                <?php }?>
+                <div class="post-entry-content">
+                  <div class="post-entry-content-wrapper">
+                    <div class="large_post_content">
+                      <?php echo disto_post_meta_dc(get_the_ID()); ?>
+                      <h3 class="image-post-title">
+                        <a href="<?php the_permalink(); ?>">
+                          <?php the_title(); ?>
+                          <?php if($year) : ?>
+                            <span><?php echo $year[0]->name; ?></span>
+                          <?php endif; ?>
+                        </a>
+                      </h3>
+                      <div class="e-data">
+                      <?php if( $date_s && $date_e)
+                        echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+                      ?>
+                      <?php if( $location)
+                        echo '<p">'. $location[0]->name .'</p>';
+                      ?>
+                      </div>                 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php endwhile; ?>
+          </div>
+        </div>
+    <?php endif; 
+    die();
 }
 
-add_action( 'init', 'create_festival_genre_taxonomy', 0 );
-function create_festival_genre_taxonomy() {
-  
-  $labels = array(
-    'name' => _x( 'Genres', 'taxonomy general name' ),
-    'singular_name' => _x( 'Genre', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Genres' ),
-    'all_items' => __( 'All Genres' ),
-    'parent_item' => __( 'Parent Genre' ),
-    'parent_item_colon' => __( 'Parent Genre:' ),
-    'edit_item' => __( 'Edit Genre' ), 
-    'update_item' => __( 'Update Genre' ),
-    'add_new_item' => __( 'Add New Genre' ),
-    'new_item_name' => __( 'New Genre Name' ),
-    'menu_name' => __( 'Genres' ),
-  );    
-  
-// Now register the taxonomy
-  register_taxonomy('genres','festivals', array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'genre' ),
-  ));
-}
+// Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
+function html5wp_pagination($number) {
+    $big = 999999999;
+    echo paginate_links(array(
+        'base'      => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format'    => '?paged=%#%',
+        'current'   => max(1, get_query_var('paged')),
+        'total'     => $number->max_num_pages,
+        'prev_text' => '<<',
+        'next_text' => '>>',
+        'mid_size'  => 4,
+        'end_size'  => 4,
+    ));
+  }
 
-add_action( 'init', 'create_festival_month_taxonomy', 0 );
-function create_festival_month_taxonomy() {
-  
-  $labels = array(
-    'name' => _x( 'Months', 'taxonomy general name' ),
-    'singular_name' => _x( 'Month', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Months' ),
-    'all_items' => __( 'All Months' ),
-    'parent_item' => __( 'Parent Month' ),
-    'parent_item_colon' => __( 'Parent Month:' ),
-    'edit_item' => __( 'Edit Month' ), 
-    'update_item' => __( 'Update Month' ),
-    'add_new_item' => __( 'Add New Month' ),
-    'new_item_name' => __( 'New Month Name' ),
-    'menu_name' => __( 'Months' ),
-  );    
-  
-// Now register the taxonomy
-  register_taxonomy('months','festivals', array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'month' ),
-  ));
-}
-
-add_action( 'init', 'create_festival_size_taxonomy', 0 );
-function create_festival_size_taxonomy() {
-  
-  $labels = array(
-    'name' => _x( 'Sizes', 'taxonomy general name' ),
-    'singular_name' => _x( 'Size', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Sizes' ),
-    'all_items' => __( 'All Sizes' ),
-    'parent_item' => __( 'Parent Size' ),
-    'parent_item_colon' => __( 'Parent Size:' ),
-    'edit_item' => __( 'Edit Size' ), 
-    'update_item' => __( 'Update Size' ),
-    'add_new_item' => __( 'Add New Size' ),
-    'new_item_name' => __( 'New Size Name' ),
-    'menu_name' => __( 'Sizes' ),
-  );    
-  
-// Now register the taxonomy
-  register_taxonomy('sizes','festivals', array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'size' ),
-  ));
-}
-
-add_action( 'init', 'create_festival_days_taxonomy', 0 );
-function create_festival_days_taxonomy() {
-  $labels = array(
-    'name' => _x( 'Number of days', 'taxonomy general name' ),
-    'singular_name' => _x( 'Number of days', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Number of days' ),
-    'all_items' => __( 'All Number of days' ),
-    'parent_item' => __( 'Parent Number of days' ),
-    'parent_item_colon' => __( 'Parent Number of days:' ),
-    'edit_item' => __( 'Edit Number of days' ), 
-    'update_item' => __( 'Update Number of days' ),
-    'add_new_item' => __( 'Add New Number of days' ),
-    'new_item_name' => __( 'New Number of days Name' ),
-    'menu_name' => __( 'Number of days' ),
-  );    
-  
-// Now register the taxonomy
-  register_taxonomy('numberofdays','festivals', array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'numberofdays' ),
-  ));
-}
-
-add_action( 'init', 'create_festival_year_taxonomy', 0 );
-function create_festival_year_taxonomy() {
-  $labels = array(
-    'name' => _x( 'Years', 'taxonomy general name' ),
-    'singular_name' => _x( 'Year', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Years' ),
-    'all_items' => __( 'All Years' ),
-    'parent_item' => __( 'Parent Year' ),
-    'parent_item_colon' => __( 'Parent Year:' ),
-    'edit_item' => __( 'Edit Year' ), 
-    'update_item' => __( 'Update Year' ),
-    'add_new_item' => __( 'Add New Year' ),
-    'new_item_name' => __( 'New Year Name' ),
-    'menu_name' => __( 'Years' ),
-  );    
-  
-// Now register the taxonomy
-  register_taxonomy('years','festivals', array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'years' ),
-  ));
-}
-
-add_action( 'init', 'create_festival_camping_taxonomy', 0 );
-function create_festival_camping_taxonomy() {
-  $labels = array(
-    'name' => _x( 'Camping', 'taxonomy general name' ),
-    'singular_name' => _x( 'Camping', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Camping' ),
-    'all_items' => __( 'All Camping' ),
-    'parent_item' => __( 'Parent Camping' ),
-    'parent_item_colon' => __( 'Parent Camping:' ),
-    'edit_item' => __( 'Edit Camping' ), 
-    'update_item' => __( 'Update Camping' ),
-    'add_new_item' => __( 'Add New Camping' ),
-    'new_item_name' => __( 'New Year Camping' ),
-    'menu_name' => __( 'Camping' ),
-  );    
-  
-// Now register the taxonomy
-  register_taxonomy('camping','festivals', array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_admin_column' => true,
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'camping' ),
-  ));
-}
-?>
