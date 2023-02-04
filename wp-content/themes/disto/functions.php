@@ -919,9 +919,11 @@ function show_festivals(){
    //var_dump($_POST);
     $args = array(
         'post_type'     => 'festivals',
-        'post_status'     => 'publish',
-        'order_by'      => 'date',
-        'order'         => 'DESC',
+        'post_status'   => 'publish',
+        'meta_key'      => 'start_date',
+        'orderby'       => 'meta_value_num',
+        'order'         => 'ASC',
+        'posts_per_page'=> -1,    
     );
 
     $terms_array = array();
@@ -1048,7 +1050,8 @@ function show_festivals_default(){
     $args = array(
         'post_type'       => 'festivals',
         'post_status'     => 'publish',
-        'order_by'        => 'date',
+        'meta_key'        => 'start_date',
+        'orderby'         => 'meta_value_num',
         'order'           => 'ASC',
         'posts_per_page'  => 12,
         'paged'           => $_POST['page'],

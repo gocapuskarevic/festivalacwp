@@ -169,8 +169,9 @@ $other = get_terms( 'miscellaneous', array(
   $args = array(
     'post_type'       => 'festivals',
     'post_status'     => 'publish',
-    'order_by'        => 'date',
-    'order'           => 'ASC',
+    'meta_key'        => 'start_date',
+	  'orderby'         => 'meta_value_num',
+	  'order'           => 'ASC',
     'posts_per_page'  => 12,
     'paged'           => 1,
   );
