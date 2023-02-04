@@ -11557,6 +11557,7 @@ a.page-numbers, .page-numbers.current{
 .heading-section p:hover{
   color: #ff4200;
 }
+
 @media (max-width: 1200px) {
   .btn-wrapper{
     height: 100px;
