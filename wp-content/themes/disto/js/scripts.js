@@ -31,7 +31,7 @@ jQuery( function ( $ ) {
     });
   })
 
-  $('.page-numbers').on('click', function(e){
+  $('.c-pagination .page-numbers').on('click', function(e){
     e.preventDefault()
     console.log($(this).text())
     $page = $(this).text();
@@ -56,8 +56,17 @@ jQuery( function ( $ ) {
       }
     });
   })
-
+  
   $(document).ready(function() {
     $('.js-basic-dropdown').select2();
+  });
+
+  $(document).ready(function() {
+    let params = new URLSearchParams(window.location.search);
+    if(params.get('q') == 'srbija'){
+      console.log('dosta')
+      $('#country').val(234)
+      $('#search').click()
+    }
   });
 })

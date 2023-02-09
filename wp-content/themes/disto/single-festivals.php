@@ -55,8 +55,8 @@
                                                 <?php if($coat_of_arms) echo '<div class="image"><img src="'. $coat_of_arms .'" width="210px"></div>'; ?>
                                                 
                                                 <div class="links">
-                                                    <a href="<?php the_field('tickets'); ?>" class="btn-primary btn-primary-c">Karte</a>
-                                                    <a href="<?php the_field('official_website'); ?>" class="btn-primary btn-primary-c">Festivalski websajt</a>
+                                                    <a href="<?php the_field('tickets'); ?>" class="btn-primary btn-primary-c">Ulaznice</a>
+                                                    <a href="<?php the_field('official_website'); ?>" class="btn-primary btn-primary-c">Website</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -71,13 +71,13 @@
                                             ?>
                                                 <h2>Info</h2>
                                                 <p><b>Lokacija: </b><?php echo (get_field('custom_location')) ? the_field('custom_location') : $location[0]->name; ?></p>
-                                                
-                                                <span><b>Datumi:</b></span>
-                                                <div>
-                                                    <p>Od: <?php the_field('start_date'); ?></p>
-                                                    <p>Do: <?php the_field('end_date'); ?></p>
-                                                </div>
-                                               
+                                                <?php if(get_field('start_date')) : ?>
+                                                    <span><b>Datumi:</b></span>
+                                                    <div class="date-info">
+                                                        <p>Od: <?php the_field('start_date'); ?></p>
+                                                        <p>Do: <?php the_field('end_date'); ?></p>
+                                                    </div>
+                                                <?php endif; ?>
                                                 <p><b>Žanrovi: </b></p>
                                                 <div class="meta-category-small">
                                                     <?php
@@ -141,9 +141,6 @@
         </div>
     </section>
 
-    <?php
-        the_field('location_map');
-    ?>
     <div class="container">
         <div class="related-posts">
         <?php
@@ -178,6 +175,13 @@
             <?php endif; ?>
         </div>
     </div>
+    <div class="location-festival">
+        <h3>Lokacija</h3>
+        <?php
+            the_field('location_map');
+        ?>
+    </div>
+
 </div>
 <!-- end content -->
 <?php get_footer(); ?>

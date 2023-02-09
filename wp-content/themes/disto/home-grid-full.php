@@ -36,18 +36,7 @@ $slider_large_image_header = wp_get_attachment_image_src( $slider_large_thumb_id
 <div class="post-entry-content">
 <div class="post-entry-content-wrapper">
 <div class="post_grid_more_meta_wrapper <?php if ( !has_post_thumbnail()) {echo "no_feature_img_class";}?>">
-<?php if(get_theme_mod('disable_post_category') !=1){
-          $categories = get_the_category(get_the_ID());          
-          if ($categories) {
-            echo '<span class="meta-category-small">';
-            foreach( $categories as $tag) {
-              $tag_link = get_category_link($tag->term_id);
-              $title_bg_Color = get_term_meta($tag->term_id, "category_color_options", true);
-             echo '<a class="post-category-color-text" style="background:'.$title_bg_Color.'" href="'.esc_url($tag_link).'">'.$tag->name.'</a>';
-            }
-            echo "</span>";
-            }
-            }
+<?php 
 ?>
 </div>
 <h3 class="image-post-title"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>

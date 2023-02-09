@@ -8,6 +8,8 @@ $cat = get_terms( 'category', array(
 ) );
 $countries = get_terms( 'locations', array(
   'hide_empty' => false,
+  'orderby' => 'name',
+  'order' => 'DESC',
 ) );
 $months = get_terms( 'months', array(
   'hide_empty' => false,
@@ -108,7 +110,7 @@ $other = get_terms( 'miscellaneous', array(
 
           <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="choise-wrapper">
-              <p>Kampovanje</p>
+              <p>Kamp</p>
               <select id="campaing" class="js-basic-dropdown">
                   <option selected="true" value="0">Ne</option>
                 <?php
@@ -171,6 +173,8 @@ $other = get_terms( 'miscellaneous', array(
     'post_status'     => 'publish',
     'meta_key'        => 'start_date',
 	  'orderby'         => 'meta_value_num',
+    'meta_value' => '',
+    'meta_compare' => '!=',
 	  'order'           => 'ASC',
     'posts_per_page'  => 12,
     'paged'           => 1,
@@ -186,9 +190,9 @@ $all_festivals = new WP_Query($args); ?>
         <div class="row">
           <?php while ($all_festivals->have_posts()) : $all_festivals->the_post(); ?>
             <?php
-              $year = get_the_terms( get_the_ID(), 'years' );
               $date_s = get_field('start_date');
               $date_e = get_field('end_date');
+              $year = get_the_terms( get_the_ID(), 'years' );
               $location = get_the_terms( get_the_ID(), 'locations' );
             ?>
             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -229,17 +233,19 @@ $all_festivals = new WP_Query($args); ?>
           <?php endwhile; ?>
         </div>
       </div>
-  <?php endif; ?>
-</div></div>
-<div class="container">
-  <div class="row">
-    <div class="c-pagination">
+    <?php endif; ?>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="c-pagination">
         <?php 
-            html5wp_pagination($all_festivals); wp_reset_postdata(); 
+          html5wp_pagination($all_festivals); wp_reset_postdata(); 
         ?>
+      </div>
     </div>
   </div>
 </div>
+
   
 
 <?php get_footer(); ?>
