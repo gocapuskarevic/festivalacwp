@@ -1129,6 +1129,12 @@ function show_festivals_default(){
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
 function html5wp_pagination($number, $page = 1) {
     $big = 999999999;
+    var_dump(str_replace($big, '%#%', get_pagenum_link($big)));
+    var_dump(get_pagenum_link($big));
+    $base = '/agenda/';
+    if($_SERVER['REQUEST_URI'] == '/wp-admin/admin-ajax.php')
+        $_SERVER['REQUEST_URI'] = $base;
+  
     echo paginate_links(array(
         'base'      => str_replace($big, '%#%', get_pagenum_link($big)),
         'format'    => '?paged=%#%',
@@ -1136,8 +1142,8 @@ function html5wp_pagination($number, $page = 1) {
         'total'     => $number->max_num_pages,
         'prev_text' => '<<',
         'next_text' => '>>',
-        'mid_size'  => 4,
-        'end_size'  => 4,
+        'mid_size'  => 2,
+        'end_size'  => 2,
     ));
   }
 

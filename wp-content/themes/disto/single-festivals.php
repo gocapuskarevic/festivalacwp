@@ -12,6 +12,7 @@
     $post_id = get_the_ID();
     $full = get_post_meta( get_the_ID(), 'single_post_full_single_post_full', true );
     $post_layout_display = get_post_meta( $post_id, 'single_post_layout', true );
+    $map = get_field('location_map');
     get_template_part('single-header-7');
     ?>
 
@@ -175,12 +176,15 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="location-festival">
-        <h3>Lokacija</h3>
-        <?php
-            the_field('location_map');
-        ?>
-    </div>
+    <?php if($map) : ?>
+        <div class="location-festival">
+            <h3>Lokacija</h3>
+            <?php
+                the_field('location_map');
+            ?>
+        </div>
+    <?php endif; ?>
+    
 
 </div>
 <!-- end content -->
