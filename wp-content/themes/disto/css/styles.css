@@ -11495,6 +11495,31 @@ iframe {
   display: inline-block;
   color: #fff;
 }
+.masthead .masthead-content h1{
+  font-size: 35px !important;
+  margin-top: 20px !important;
+}
+.masthead .masthead-content p {
+  font-size: 20px !important;
+}
+.country-flag{
+  margin-left: 10px;
+  height: 15px;
+}
+
+.banner-container .meta-category-small{
+  display: none;
+}
+
+.flag-wrapper{
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.flag-wrapper p{
+  margin: 0;
+}
+
 
 .page-numbers.current{
   background-color: red;

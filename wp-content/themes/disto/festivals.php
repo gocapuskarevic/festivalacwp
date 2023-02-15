@@ -221,8 +221,12 @@ $all_festivals = new WP_Query($args); ?>
                       <?php if( $date_s && $date_e)
                         echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
                       ?>
-                      <?php if( $location)
-                        echo '<p">'. $location[0]->name .'</p>';
+                      <?php if( $location){
+                        if(wp_remote_get(get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg')["response"]["code"] == '200'){
+                          echo '<div class="d-flex flag-wrapper"><p>'. $location[0]->name .'</p>';
+                          echo '<img class="country-flag" src="'.get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg"></div>';
+                        }else echo  '<p>'. $location[0]->name .'</p>';
+                      }
                       ?>
                       </div>                 
                     </div>

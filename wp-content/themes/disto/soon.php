@@ -15,8 +15,8 @@ Template Name: Coming Soon
         <div class="masthead">
             <div class="masthead-content text-white">
                 <div class="container-fluid px-4 px-lg-0">
-                    <h1 class="fst-italic lh-1 mb-4" style="color:#fff;">Our Website is Coming Soon</h1>
-                    <p>We're working hard to finish the development of this site.</p>
+                    <h1 class="fst-italic lh-1 mb-4" style="color:#fff;font-size:35px">Our Website is Coming Soon</h1>
+                    <p style="color:#fff;font-size:25px">We're working hard to finish the development of this site.</p>
                 </div>
             </div>
         </div>
