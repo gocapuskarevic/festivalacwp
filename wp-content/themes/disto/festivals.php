@@ -4,30 +4,31 @@
 */
 get_header();
 $cat = get_terms( 'category', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
+  'exclude'  => array(178, 540, 4, 558, 6),
 ) );
 $countries = get_terms( 'locations', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
   'orderby' => 'name',
   'order' => 'DESC',
 ) );
 $months = get_terms( 'months', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
 ) );
 $genres = get_terms( 'genres', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
 ) );
 $nums = get_terms( 'numberofdays', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
 ) );
 $campings = get_terms( 'camping', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
 ) );
 $sizes = get_terms( 'sizes', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
 ) );
 $other = get_terms( 'miscellaneous', array(
-  'hide_empty' => false,
+  'hide_empty' => true,
 ) );
 ?>
 <div class="container">
