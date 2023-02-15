@@ -52,9 +52,7 @@ p{
 p iframe{
     margin-bottom: 0px;
 }
-iframe{
-    margin-bottom: 40px !important;
-}
+
 
 h1 a,
 h2 a,
@@ -13465,9 +13463,8 @@ Related post
     border-left: 0px;
     border-right: 0px;
     margin-top: -1px;
-    float: left;
     width: 100%;
-    padding: 40px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
     position: relative;
 }
 
@@ -13479,7 +13476,7 @@ Related post
     width: auto;
 }
 .related-posts .jl_related_feature_items{
-    width: 50%;
+    width: 100%;
     position: relative;
     float: left;
     margin-bottom: 30px;
@@ -17856,7 +17853,6 @@ color: #fff;
 .pk-social-links-items .pk-social-links-item .pk-social-links-label{
     font-size: 11px !important;
     line-height: 1.2 !important;
-    !important;
     margin-top: 5px;
     color: #000 !important;
 }
@@ -23105,7 +23101,6 @@ Page builder block
 .jelly_homepage_builder .post-meta.meta-main-img, .jelly_homepage_builder .post-meta.meta-main-img a{
     color: #999;
     font-size: 13px !important;
-    !important;
     letter-spacing: 0.03em;
     font-weight: 300;
     line-height: 1.2;

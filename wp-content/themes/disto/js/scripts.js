@@ -31,11 +31,9 @@ jQuery( function ( $ ) {
     });
   })
 
-  $('.page-numbers').on('click', function(e){
+  $(document).on('click', '.c-pagination .page-numbers', function(e){
     e.preventDefault()
-    console.log($(this).text())
     $page = $(this).text();
-
 
     all_data = {action: 'show_festivals_default', page: $page }
 
@@ -56,8 +54,17 @@ jQuery( function ( $ ) {
       }
     });
   })
-
+  
   $(document).ready(function() {
     $('.js-basic-dropdown').select2();
+  });
+
+  $(document).ready(function() {
+    let params = new URLSearchParams(window.location.search);
+    if(params.get('q') == 'srbija'){
+      console.log('dosta')
+      $('#country').val(234)
+      $('#search').click()
+    }
   });
 })

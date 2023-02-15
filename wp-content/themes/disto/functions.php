@@ -918,10 +918,13 @@ function show_festivals(){
     
    //var_dump($_POST);
     $args = array(
-        'post_type'     => 'festivals',
-        'post_status'     => 'publish',
-        'order_by'      => 'date',
-        'order'         => 'DESC',
+        'post_type'         => 'festivals',
+        'post_status'       => 'publish',
+        'meta_key'          => 'start_date',
+        'orderby'           => 'meta_value_num',
+        'order'             => 'ASC',
+        'posts_per_page'    => -1,
+        'category__not_in'  => 508,   
     );
 
     $terms_array = array();
@@ -1023,8 +1026,13 @@ function show_festivals(){
                       <?php if( $date_s && $date_e)
                         echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
                       ?>
-                      <?php if( $location)
-                        echo '<p">'. $location[0]->name .'</p>';
+                       <?php
+                        if( $location){
+                            if(wp_remote_get(get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg')["response"]["code"] == '200'){
+                                echo '<div class="d-flex flag-wrapper"><p>'. $location[0]->name .'</p>';
+                                echo '<img class="country-flag" src="'.get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg"></div>';
+                            }else echo  '<p>'. $location[0]->name .'</p>';
+                        }
                       ?>
                       </div>                 
                     </div>
@@ -1048,7 +1056,8 @@ function show_festivals_default(){
     $args = array(
         'post_type'       => 'festivals',
         'post_status'     => 'publish',
-        'order_by'        => 'date',
+        'meta_key'        => 'start_date',
+        'orderby'         => 'meta_value_num',
         'order'           => 'ASC',
         'posts_per_page'  => 12,
         'paged'           => $_POST['page'],
@@ -1097,8 +1106,13 @@ function show_festivals_default(){
                       <?php if( $date_s && $date_e)
                         echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
                       ?>
-                      <?php if( $location)
-                        echo '<p">'. $location[0]->name .'</p>';
+                        <?php
+                        if( $location){
+                            if(wp_remote_get(get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg')["response"]["code"] == '200'){
+                                echo '<div class="d-flex flag-wrapper"><p>'. $location[0]->name .'</p>';
+                                echo '<img class="country-flag" src="'.get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg"></div>';
+                            }else echo  '<p>'. $location[0]->name .'</p>';
+                        } 
                       ?>
                       </div>                 
                     </div>
@@ -1109,22 +1123,35 @@ function show_festivals_default(){
           <?php endwhile; ?>
           </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="c-pagination">
+                <?php 
+                    html5wp_pagination($all_festivals, $_POST['page']); wp_reset_postdata(); 
+                ?>
+                </div>
+            </div>
+        </div>
     <?php endif; 
     die();
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-function html5wp_pagination($number) {
+function html5wp_pagination($number, $page = 1) {
     $big = 999999999;
+    $base = '/agenda/';
+    if($_SERVER['REQUEST_URI'] == '/wp-admin/admin-ajax.php')
+        $_SERVER['REQUEST_URI'] = $base;
+  
     echo paginate_links(array(
         'base'      => str_replace($big, '%#%', get_pagenum_link($big)),
         'format'    => '?paged=%#%',
-        'current'   => max(1, get_query_var('paged')),
+        'current'   => max(1, $page),
         'total'     => $number->max_num_pages,
         'prev_text' => '<<',
         'next_text' => '>>',
-        'mid_size'  => 4,
-        'end_size'  => 4,
+        'mid_size'  => 2,
+        'end_size'  => 2,
     ));
   }
 

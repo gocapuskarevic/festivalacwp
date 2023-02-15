@@ -11456,13 +11456,14 @@ iframe {
   background-color: #ff4200;
 }
 
-.btn-primary{
+.btn-primary-c{
   display: inline-block;
-  padding: 20px 40px;
+  padding: 10px 20px;
+  text-transform: uppercase !important;
   background-color: #000;
   color: #fff;
 }
-.btn-primary:hover{
+.btn-primary-c:hover{
   text-decoration: none;
   background-color: #ff4200;
 }
@@ -11482,10 +11483,46 @@ iframe {
   border-radius: 5px;
   margin: 5px;
 }
-a.page-numbers, .page-numbers.current{
-  font-size: 18px;
+.c-pagination .page-numbers{
+  height: 38px;
+  font-size: 16px;
   font-weight: 800;
   margin: 5px;
+  background-color: #000;
+  padding: 3px;
+  border-radius: 50%;
+  width: 38px;
+  display: inline-block;
+  color: #fff;
+}
+.masthead .masthead-content h1{
+  font-size: 35px !important;
+  margin-top: 20px !important;
+}
+.masthead .masthead-content p {
+  font-size: 20px !important;
+}
+.country-flag{
+  margin-left: 10px;
+  height: 15px;
+}
+
+.banner-container .meta-category-small{
+  display: none;
+}
+
+.flag-wrapper{
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.flag-wrapper p{
+  margin: 0;
+}
+
+
+.page-numbers.current{
+  background-color: red;
 }
 .c-pagination{
   text-align: center;
@@ -11503,8 +11540,9 @@ a.page-numbers, .page-numbers.current{
 
 }
 .choise-wrapper p{
-  font-size: 25px;
-  margin: 30px 0 0 0;
+  font-size: 22px;
+  font-weight: 800 !important;
+  margin: 20px 0 0 0;
   color: #000;
 }
 .choise-wrapper #search{
@@ -11557,8 +11595,53 @@ a.page-numbers, .page-numbers.current{
 .heading-section p:hover{
   color: #ff4200;
 }
+.festivals-single .links{
+  text-align: center;
+}
+.festivals-single .links a{
+  margin: 5px 0;
+}
+#footer-container .feature-post-list{
+  float: none;
+}
+.date-info{
+  margin-bottom: 15px;
+}
+.date-info p{
+  margin: 0;
+}
+
+.location-festival h3{
+  text-align: center;
+}
+.location-festival p, .location-festival iframe{
+  margin: 0;
+}
+#footer-container .feature-post-list .item-details .meta-category-small{
+  display: none;
+}
+.siteorigin-panels-stretch .post-category-color-text, .post_list_medium_widget .meta-category-small, .widget_disto_recent_post_widget .meta-category-small, .slider_widget_post .meta-category-small{
+  display: none;
+}
+
+#wrapper_masonry a.featured-thumbnail{
+  height: 215px;
+}
 @media (max-width: 1200px) {
   .btn-wrapper{
     height: 100px;
   }
+}
+@media (max-width: 768px) {
+  .festivals-single .meta-data{
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .flex{
+    flex-direction: column-reverse;
+  }
+
 }
