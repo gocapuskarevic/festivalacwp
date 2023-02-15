@@ -63,8 +63,10 @@ $other = get_terms( 'miscellaneous', array(
               <select id="category" class="js-basic-dropdown">
                 <option value="0">Svi</option>
                 <?php
-                  foreach( $cat as $c )
+                  foreach( $cat as $c ){
+                    if($c->slug == 'festival') continue;
                     echo '<option value="'.$c->term_id.'">' . $c->name . '</option>';
+                  }
                 ?>
               </select>
             </div>
@@ -219,8 +221,10 @@ $all_festivals = new WP_Query($args); ?>
                         </a>
                       </h3>
                       <div class="e-data">
-                      <?php if( $date_s && $date_e)
-                        echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+                      <?php if( $date_s )
+                        echo '<span class="festival-data">'. $date_s;
+                        if($date_e) echo ' - '. $date_e;
+                        echo '</span>';
                       ?>
                       <?php if( $location){
                         if(wp_remote_get(get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg')["response"]["code"] == '200'){
