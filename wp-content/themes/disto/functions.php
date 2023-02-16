@@ -261,8 +261,10 @@ function disto_singlepost_meta($post_id) {
         $date_e = get_field('end_date');
         $location = get_the_terms( get_the_ID(), 'locations' );
         echo'<span class="single-post-meta-wrapper">';
-            if( $date_s && $date_e)
-                echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+            if( $date_s )
+            echo '<span class="festival-data">'. $date_s;
+            if($date_e) echo ' - '. $date_e;
+            echo '</span>';
             if($location)
                 echo '<span class="festival-data">'. $location[0]->name .'</span>';
                
@@ -1023,8 +1025,10 @@ function show_festivals(){
                         </a>
                       </h3>
                       <div class="e-data">
-                      <?php if( $date_s && $date_e)
-                        echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+                      <?php if( $date_s )
+                        echo '<span class="festival-data">'. $date_s;
+                        if($date_e) echo ' - '. $date_e;
+                        echo '</span>';
                       ?>
                        <?php
                         if( $location){
@@ -1103,8 +1107,10 @@ function show_festivals_default(){
                         </a>
                       </h3>
                       <div class="e-data">
-                      <?php if( $date_s && $date_e)
-                        echo '<span class="festival-data">'. $date_s.' - '. $date_e .'</span>';
+                      <?php if( $date_s )
+                       echo '<span class="festival-data">'. $date_s;
+                       if($date_e) echo ' - '. $date_e;
+                       echo '</span>';
                       ?>
                         <?php
                         if( $location){
