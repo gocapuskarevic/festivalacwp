@@ -13,7 +13,7 @@ $countries = get_terms( 'locations', array(
   'order' => 'DESC',
 ) );
 $months = get_terms( 'months', array(
-  'hide_empty' => true,
+  'hide_empty' => false,
 ) );
 $genres = get_terms( 'genres', array(
   'hide_empty' => true,

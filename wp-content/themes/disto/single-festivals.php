@@ -69,16 +69,18 @@
                                                 $genres = get_the_terms( get_the_ID(), 'genres' );
                                                 $size = get_the_terms( get_the_ID(), 'sizes' );
                                                 $lasting = get_the_terms( get_the_ID(), 'numberofdays' );
+                                                $date_s = get_field('start_date');
+                                                $date_e = get_field('end_date');
                                             ?>
                                                 <h2>Info</h2>
                                                 <p><b>Lokacija: </b><?php echo (get_field('custom_location')) ? the_field('custom_location') : $location[0]->name; ?></p>
-                                                <?php if(get_field('start_date')) : ?>
-                                                    <span><b>Datumi:</b></span>
-                                                    <div class="date-info">
-                                                        <p>Od: <?php the_field('start_date'); ?></p>
-                                                        <p>Do: <?php the_field('end_date'); ?></p>
-                                                    </div>
-                                                <?php endif; ?>
+                                                <?php if($date_s) : ?>
+                                                    <span><b>Datum<?php if($date_e) echo'i'; ?>:</b></span>
+                                                    <?php if( $date_s )
+                                                        echo '<span class="date-info">'. $date_s;
+                                                        if($date_e) echo ' - '. $date_e;
+                                                        echo '</span>'; ?>
+                                                    <?php endif; ?>
                                                 <p><b>Žanrovi: </b></p>
                                                 <div class="meta-category-small">
                                                     <?php
@@ -98,8 +100,8 @@
                                     <?php if($lineup) : ?>
                                         <div class="container">
                                             <div class="row">
+                                                <h3>Lineup</h3>
                                                 <div class="lineup-wrapper">
-                                                    <h3>Lineup</h3>
                                                     <?php echo $lineup; ?>
                                                 </div>
                                             </div>
@@ -123,9 +125,6 @@
                                             </div>
                                         <?php endif; ?>
                                     <?php endif; ?>
-
-                                    
-
                             <?php } // end of the loop.   ?>
 
 
