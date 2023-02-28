@@ -11435,7 +11435,7 @@ video.bg-video {
   width: fit-content;
   margin-bottom: 5px;
   padding: 5px;
-  background: linear-gradient(90deg, rgba(58,76,180,1) 0%, rgba(253,29,29,1) 100%);
+  background: linear-gradient(90deg, rgba(67,206,162,1) 0%, rgba(24,90,157,1) 100%);
   border-radius: 5px;
   line-height: normal;
 }
@@ -11674,7 +11674,31 @@ iframe {
 .ul-panel{
   padding: 20px 0 !important;
 }
-
+.btn-primary-blue{
+  display: block;
+  line-height: 50px;
+  width: 250px;
+  margin: auto;
+  background: #0095f6;
+  color: #fff;
+  text-align: center;
+}
+.btn-primary-blue:hover{
+  color: #fff;
+}
+.featured-blocks-wrapper{
+  padding: 20px 15px;
+}
+.featured-blocks-wrapper .btn-primary-blue{
+  margin: unset;
+}
+.featured-blocks-wrapper .image-post-thumb > a img{
+  float: none;
+  border-radius: 10px;
+}
+.featured-blocks-wrapper .post-entry-content h3{
+  font-size: 20px;
+}
 @media (max-width: 1200px) {
   .btn-wrapper{
     height: 100px;

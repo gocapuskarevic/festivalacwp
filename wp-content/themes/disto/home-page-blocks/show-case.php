@@ -1,21 +1,4 @@
 <?php
-/*
-  Template Name: Home Page Builder
- */
-?>
-<?php get_header(); ?>
-<div class="jl_home_bw">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 jl_mid_main_3col">
-                <div class="jl_3col_wrapin">
-                    <?php
-                    if (have_posts()) : 
-                        while (have_posts()) : the_post();
-                            the_content();
-                        endwhile;
-                    endif;
-                    //custom part
                     $args = array(
                         'posts_per_page' => 4,
                         'post_type'     => 'festivals',
@@ -23,17 +6,16 @@
                             array(
                                 'taxonomy' => 'miscellaneous',
                                 'field' => 'slug',
-                                'terms' => 'srb-festivali', 
+                                'terms' => 'showcase-featured', 
                             )
                         )
                     );
 
                     $post_query = new Wp_query( $args );
                     ?>
-                </div>
-                <div class="featured-blocks-wrapper">
-                <div class="row">
-                    <h3>Festivali u Srbiji</h3>
+                    <div class="featured-blocks-wrapper">
+<div class="row">
+                    <h3>Show case festivali</h3>
                     <?php
                     foreach( $post_query->posts as $post ) : setup_postdata( $post );
                     $post_id = get_the_ID();
@@ -63,14 +45,6 @@
                         </div>
                     </div>
                     <?php endforeach; ?>
-                    <a href="/agenda/?q=srbija" class="btn-primary-blue">Svi festivali</a>
+                    <a href="/agenda/" class="btn-primary-blue">Pogledaj sve festivale</a>
                 </div>
                 </div>
-                <?php  include 'home-page-blocks/focus.php'; ?>
-                <?php  include 'home-page-blocks/show-case.php'; ?>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end content -->
-<?php get_footer(); ?>

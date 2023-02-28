@@ -29,6 +29,7 @@ $sizes = get_terms( 'sizes', array(
 ) );
 $other = get_terms( 'miscellaneous', array(
   'hide_empty' => true,
+  'exclude'  => array(613, 614),
 ) );
 ?>
 <div class="container">
