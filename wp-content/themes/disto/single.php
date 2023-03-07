@@ -177,33 +177,36 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
 
                                 <div class="single_related_post">
 
-                        <?php
-                        $args = array(
-                        'posts_per_page' => 4,
-                        'post__not_in'   => array( get_the_ID() ),
-                        'no_found_rows'  => true,
-                        );
+                            <?php
+                            $args = array(
+                            'posts_per_page' => 4,
+                            'post__not_in'   => array( get_the_ID() ),
+                            'no_found_rows'  => true,
+                            );
 
-                        $cats = wp_get_post_terms( get_the_ID(), 'category' ); 
-                        $cats_ids = array();  
-                        foreach( $cats as $related_cat ) {
-                            $cats_ids[] = $related_cat->term_id; 
-                        }
-                        if ( ! empty( $cats_ids ) ) {
-                            $args['category__in'] = $cats_ids;
-                        }
+                            $cats = wp_get_post_terms( get_the_ID(), 'category' ); 
+                            $cats_ids = array();  
+                            foreach( $cats as $related_cat ) {
+                                $cats_ids[] = $related_cat->term_id; 
+                            }
+                            if ( ! empty( $cats_ids ) ) {
+                                $args['category__in'] = $cats_ids;
+                            }
 
-                        $post_query = new wp_query( $args );
+                            $post_query = new wp_query( $args );
 
-                        $post_count = 0;
-                     
-                        foreach( $post_query->posts as $post ) { setup_postdata( $post );    
-                            
-                            $post_id = get_the_ID();
-                            $categories = get_the_category(get_the_ID());
-                            $post_count ++;
+                            $post_count = 0;
                             ?>
-
+                            <div class="container">
+                                <div class="row">
+                                    <?php
+                                foreach( $post_query->posts as $post ) { setup_postdata( $post );    
+                                
+                                $post_id = get_the_ID();
+                                $categories = get_the_category(get_the_ID());
+                                $post_count ++;
+                                ?>
+                                <div class="col-md-4">
                                     <div class="jl_related_feature_items">
                                         <div class="jl_related_feature_items_in">
                                             <?php if ( has_post_thumbnail()) {?>
@@ -226,31 +229,27 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
 
                                         </div>
                                     </div>
-
-
-                                    <?php if($post_count%2==0){echo '<div class="clear_2col_related"></div>';}elseif($post_count%3==0){echo '<div class="clear_3col_related"></div>';}?>
-                                    <?php } wp_reset_postdata(); ?>
                                 </div>
-
+                                <?php } wp_reset_postdata(); ?>
                             </div>
-                            <?php } ?>
-                            <!-- comment -->                            
-                            
                         </div>
                     </div>
-                    <!-- end post -->
-                    <div class="brack_space"></div>
                 </div>
+                <?php } ?>   
             </div>
-
-            <?php if(!empty($full)){}else{?>
-            <div class="col-md-4" id="sidebar">
-                <?php echo disto_post_sidebar();?>
-                <div class="brack_space"></div>
-            </div>
-            <?php }?>
         </div>
+        <!-- end post -->
+        <div class="brack_space"></div>
     </div>
+</div>
+<?php if(!empty($full)){}else{?>
+    <div class="col-md-4" id="sidebar">
+    <?php echo disto_post_sidebar();?>
+        <div class="brack_space"></div>
+    </div>
+        <?php }?>
+</div>
+</div>
 </section>
 <!-- end content -->
 <?php get_footer(); ?>

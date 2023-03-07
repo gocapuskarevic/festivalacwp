@@ -22,6 +22,7 @@
          <?php wp_head(); ?> 
          <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> 
+<script src="https://kit.fontawesome.com/ef420427c7.js" crossorigin="anonymous"></script>
       </head>
       <body <?php body_class();?>>
          <?php wp_body_open(); ?>

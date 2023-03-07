@@ -1161,3 +1161,145 @@ function html5wp_pagination($number, $page = 1) {
     ));
   }
 
+// Creating the widget
+class wpb_widget extends WP_Widget {
+ 
+    function __construct() {
+    parent::__construct(
+     
+    // Base ID of your widget
+    'wpb_widget', 
+     
+    // Widget name will appear in UI
+    __('Custom PHP Widget', 'wpb_widget_domain'), 
+     
+    // Widget description
+    array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), )
+    );
+    }
+     
+    // Creating widget front-end
+     
+    public function widget( $args, $instance ) {
+
+        $today = date('dmY');
+        $args = array(
+            'posts_per_page' => 4,
+            'post_type'     => 'festivals',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'locations',
+                    'field' => 'slug',
+                    'terms' => 'srbija', 
+                )
+                ),
+            'orderby' => 'meta_value',
+            'meta_query' => array(
+                array(
+                    'key' => 'start_date',
+                    'value' => $today,
+                    'compare' => '>',
+                ),
+            ),
+            'order' => 'ASC',
+        );
+        $the_query_srb = new WP_Query($args);
+       
+        $args = array(
+            'posts_per_page' => 4,
+            'post_type'     => 'festivals',
+            'tax_query' => array(
+                'relation' => 'OR',
+                array(
+                    'taxonomy' => 'locations',
+                    'field' => 'slug',
+                    'terms' => ['hrvatska', 'bosna-i-hercegovina', 'albanija', 'slovenija', 'severna-makedonija', 'crna-gora', 'rumunija', 'bugarska'], 
+                )
+                ),
+            'orderby' => 'meta_value',
+            'meta_query' => array(
+                array(
+                    'key' => 'start_date',
+                    'value' => $today,
+                    'compare' => '>',
+                ),
+            ),
+            'order' => 'ASC',
+        );
+        $the_query_region = new WP_Query($args);
+    
+        ?>
+        <div class="tab-wrapper-header">
+            <h3 class="js-open-tab" data-tab="srb">Srbija</h3>
+            <h3 class="js-open-tab" data-tab="reg">Region</h3>
+        </div>
+        <div class="tab-wrapper">
+            <div class="tab-item" id="tab-srb">
+                <?php
+                if($the_query_srb->have_posts()) :
+                    //echo '<h3>Srbija</h3>';
+                    while( $the_query_srb->have_posts() ) : $the_query_srb->the_post();
+                    ?>
+                        <div class="tab-item-box">
+                            <?php echo get_the_post_thumbnail(get_the_ID(), 'thumbnail') ?>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </div>
+                    <?php
+                    endwhile;
+                endif;
+                ?>
+            </div>
+            <div class="tab-item" id="tab-reg">
+                <?php
+                if($the_query_region->have_posts()) :
+                    //echo '<h3>Region</h3>';
+                    while( $the_query_region->have_posts() ) : $the_query_region->the_post();
+                    ?>
+                      <div class="tab-item-box">
+                            <?php echo get_the_post_thumbnail() ?>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </div>
+                    <?php
+                    endwhile;
+                endif;
+                ?>
+            </div>
+        </div>
+        <?php
+        wp_reset_postdata();
+    
+
+    }
+     
+    // Widget Backend
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }
+        else {
+            $title = __( 'New title', 'wpb_widget_domain' );
+        }
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+        <?php
+        
+    }
+     
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        return $instance;
+    }
+     
+    // Class wpb_widget ends here
+} 
+     
+    // Register and load the widget
+    function wpb_load_widget() {
+        register_widget( 'wpb_widget' );
+    }
+    add_action( 'widgets_init', 'wpb_load_widget' );

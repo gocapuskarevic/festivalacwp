@@ -74,7 +74,7 @@ h4 a:hover,
 h5 a:hover,
 h6 a:hover{
     text-decoration: none !important;
-    color: #ff4200 !important;
+    color: #1f7ba2 !important;
 }
 h1 {
     font-size: 40px;
@@ -13580,7 +13580,7 @@ body:not(.jl-has-sidebar) .related-posts .jl-post-title{
 }
 .related-posts .jl-post-title{
     margin-bottom: 0px !important;
-    font-size: 22px !important;
+    font-size: 18px !important;
     margin-top: 20px;
     float: left;
     width: 100%;
@@ -15969,7 +15969,6 @@ color: #fff;
     width: 100%;
 }
 .jl_home_bw .jl_mid_main_3col, .jl_home_bw .jl_3col_wrapin, .jl_home_bw .panel-layout{
-    float: left;
     width: 100%;
 }
 #wrapper_masonry .row{

@@ -30,6 +30,18 @@ jQuery( function ( $ ) {
       }
     });
   })
+  $('.js-open-tab').on('click', function(){
+    $tab = $(this).data('tab')
+    console.log($tab)
+    if($tab == 'srb'){
+      $('#tab-reg').css('z-index','1');
+      $('#tab-' + $tab).css('z-index','20');
+    }
+    if($tab == 'reg'){
+      $('#tab-srb').css('z-index','1');
+      $('#tab-' + $tab).css('z-index','20');
+    }
+  })
 
   $(document).on('click', '.c-pagination .page-numbers', function(e){
     e.preventDefault()
@@ -62,8 +74,11 @@ jQuery( function ( $ ) {
   $(document).ready(function() {
     let params = new URLSearchParams(window.location.search);
     if(params.get('q') == 'srbija'){
-      console.log('dosta')
       $('#country').val(234)
+      $('#search').click()
+    }
+    if(params.get('q') == 'showcase'){
+      $('#other').val(505)
       $('#search').click()
     }
   });
