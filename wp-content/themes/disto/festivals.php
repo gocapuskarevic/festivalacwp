@@ -5,7 +5,7 @@
 get_header();
 $cat = get_terms( 'category', array(
   'hide_empty' => true,
-  'exclude'  => array(178, 540, 4, 558, 6),
+  'exclude'  => array(178, 540, 4, 558, 6, 5, 574),
 ) );
 $countries = get_terms( 'locations', array(
   'hide_empty' => true,
@@ -29,7 +29,7 @@ $sizes = get_terms( 'sizes', array(
 ) );
 $other = get_terms( 'miscellaneous', array(
   'hide_empty' => true,
-  'exclude'  => array(613, 614),
+  'exclude'  => array(613, 614, 615),
 ) );
 ?>
 <div class="container">
@@ -172,16 +172,25 @@ $other = get_terms( 'miscellaneous', array(
 
 <?php
   //$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+  $today = date('Ymd');
   $args = array(
     'post_type'       => 'festivals',
     'post_status'     => 'publish',
-    'meta_key'        => 'start_date',
-	  'orderby'         => 'meta_value_num',
-    'meta_value' => '',
-    'meta_compare' => '!=',
+    //'meta_key'        => 'start_date',
+	  //'orderby'         => 'meta_value_num',
+    //'meta_value' => '',
+    //'meta_compare' => '!=',
 	  'order'           => 'ASC',
     'posts_per_page'  => 12,
     'paged'           => 1,
+    'orderby' => 'meta_value',
+    'meta_query' => array(
+      array(
+          'key' => 'start_date',
+          'value' => $today,
+          'compare' => '>',
+      ),
+    ),
   );
 
 //var_dump($args);

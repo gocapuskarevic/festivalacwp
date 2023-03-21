@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <?php endforeach; ?>
-                    <a href="/agenda/?q=srbija" class="btn-primary-blue">Svi festivali</a>
+                    <a href="/agenda/?q=srbija" class="btn-primary-blue">Ostali festivali u Srbiji</a>
                 </div>
                 </div>
                 <?php  include 'home-page-blocks/focus.php'; ?>

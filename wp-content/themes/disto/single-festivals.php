@@ -56,8 +56,8 @@
                                                 <?php if($coat_of_arms) echo '<div class="image"><img src="'. $coat_of_arms .'" width="210px"></div>'; ?>
                                                 
                                                 <div class="links">
-                                                    <a href="<?php the_field('tickets'); ?>" class="btn-primary btn-primary-c">Ulaznice</a>
-                                                    <a href="<?php the_field('official_website'); ?>" class="btn-primary btn-primary-c">Website</a>
+                                                    <a href="<?php the_field('tickets'); ?>" target="_blank" class="btn-primary btn-primary-c">Ulaznice</a>
+                                                    <a href="<?php the_field('official_website'); ?>" target="_blank" class="btn-primary btn-primary-c">Website</a>
                                                 </div>
                                             </div>
                                         </div>

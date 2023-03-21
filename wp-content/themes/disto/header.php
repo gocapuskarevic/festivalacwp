@@ -2,6 +2,15 @@
 <!--[if IE 9 ]><html class="ie ie9" <?php language_attributes(); ?>><![endif]-->
    <html <?php language_attributes(); ?>>
       <head>
+         <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1BYRFC1LH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1BYRFC1LH');
+</script>
           <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />

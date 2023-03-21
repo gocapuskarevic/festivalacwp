@@ -11453,19 +11453,19 @@ iframe {
   transition:all ease .5s;
 }
 .festivals-single .meta-category-small a:hover{
-  background-color: #ff4200;
+  background-color: #2b8e9f;
 }
 
 .btn-primary-c{
   display: inline-block;
   padding: 10px 20px;
   text-transform: uppercase !important;
-  background-color: #000;
+  background-color: #2b8e9f !important;
   color: #fff;
 }
 .btn-primary-c:hover{
   text-decoration: none;
-  background-color: #ff4200;
+  background-color: #2b8e9f;
 }
 .c-pagination .page-numbers{
   height: 38px;
@@ -11506,7 +11506,7 @@ iframe {
 
 
 .page-numbers.current{
-  background-color: red;
+  background-color: #2b8e9f;
 }
 .c-pagination{
   text-align: center;
@@ -11576,7 +11576,7 @@ iframe {
   color: #000;
 }
 .heading-section p:hover{
-  color: #ff4200;
+  color: #2b8e9f;
 }
 .festivals-single .links{
   text-align: center;
@@ -11648,6 +11648,11 @@ iframe {
   display: inline;
   margin-right: 25px;
 }
+.four-column-list{
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+}
 .three-column-list{
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -11664,7 +11669,7 @@ iframe {
   -moz-column-count: 1;
   column-count: 1;
 }
-.three-column-list, .two-column-list, .one-column-list{
+.four-column-list, .three-column-list, .two-column-list, .one-column-list{
   list-style: none;
   margin: 0;
 }
@@ -11680,7 +11685,7 @@ iframe {
   line-height: 50px;
   width: 250px;
   margin: auto;
-  background: #1f7ba2;
+  background: #2b8e9f;
   color: #fff;
   text-align: center;
   border-radius: 8px;
@@ -11728,6 +11733,12 @@ iframe {
   border-radius: 8px;
   margin-right: 10px;
 }
+
+.tab-item-box .country-flag{
+  width: 20px;
+  height: auto;
+  border-radius: 0;
+}
 .btn-primary-blue:hover{
   color: #fff;
 }
@@ -11745,19 +11756,36 @@ iframe {
 .featured-blocks-wrapper .post-entry-content h3{
   font-size: 20px;
 }
-@media (max-width: 1200px) {
+.festivals-all .image-post-thumb > a img{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.info-wrapper .date-info{
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
   .btn-wrapper{
     height: 100px;
+  }
+  .festivals-all .image-post-thumb > a img{
+    height: 300px;
   }
 }
 @media (max-width: 768px) {
   .festivals-single .meta-data{
     margin-top: 30px;
   }
+  .festivals-all .image-post-thumb > a img{
+    height: 250px;
+  }
   .post_content .lineup-wrapper .lineup-featured{
     border-bottom: none;
   }
-  .three-column-list, .two-column-list, .one-column-list{
+  .four-column-list, .three-column-list, .two-column-list, .one-column-list{
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;

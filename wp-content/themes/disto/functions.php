@@ -266,7 +266,7 @@ function disto_singlepost_meta($post_id) {
             if($date_e) echo ' - '. $date_e;
             echo '</span>';
             if($location)
-                echo '<span class="festival-data">'. $location[0]->name .'</span>';
+                echo '<span class="festival-data"><a href="'.get_term_link($location[0]).'">'. $location[0]->name .'</a></span>';
                
                 /*if(function_exists('disto_bac_PostViews')){
                 if(get_theme_mod('disable_post_view') !=1){echo '<span class="view_options"><i class="fa fa-eye"></i>';
@@ -917,13 +917,19 @@ add_action( 'wp_enqueue_scripts', 'disto_enqueue_script' );
 add_action('wp_ajax_show_festivals', 'show_festivals');
 add_action('wp_ajax_nopriv_show_festivals', 'show_festivals');
 function show_festivals(){
-    
+    $today = date('Ymd');
    //var_dump($_POST);
     $args = array(
         'post_type'         => 'festivals',
         'post_status'       => 'publish',
-        'meta_key'          => 'start_date',
-        'orderby'           => 'meta_value_num',
+        'orderby' => 'meta_value',
+        'meta_query' => array(
+          array(
+              'key' => 'start_date',
+              'value' => $today,
+              'compare' => '>',
+          ),
+        ),
         'order'             => 'ASC',
         'posts_per_page'    => -1,
         'category__not_in'  => 508,   
@@ -1057,11 +1063,18 @@ add_action('wp_ajax_show_festivals_default', 'show_festivals_default');
 add_action('wp_ajax_nopriv_show_festivals_default', 'show_festivals_default');
 function show_festivals_default(){
     //var_dump($_POST);
+    $today = date('Ymd');
     $args = array(
         'post_type'       => 'festivals',
         'post_status'     => 'publish',
-        'meta_key'        => 'start_date',
-        'orderby'         => 'meta_value_num',
+        'orderby' => 'meta_value',
+        'meta_query' => array(
+          array(
+              'key' => 'start_date',
+              'value' => $today,
+              'compare' => '>',
+          ),
+        ),
         'order'           => 'ASC',
         'posts_per_page'  => 12,
         'paged'           => $_POST['page'],
@@ -1182,7 +1195,7 @@ class wpb_widget extends WP_Widget {
      
     public function widget( $args, $instance ) {
 
-        $today = date('dmY');
+        $today = date('Ymd');
         $args = array(
             'posts_per_page' => 4,
             'post_type'     => 'festivals',
@@ -1239,10 +1252,20 @@ class wpb_widget extends WP_Widget {
                 if($the_query_srb->have_posts()) :
                     //echo '<h3>Srbija</h3>';
                     while( $the_query_srb->have_posts() ) : $the_query_srb->the_post();
+                    $date_s = get_field('start_date', get_the_ID());
+                    $date_e = get_field('end_date', get_the_ID());
+                    $location = get_the_terms( get_the_ID(), 'locations' );
                     ?>
                         <div class="tab-item-box">
                             <?php echo get_the_post_thumbnail(get_the_ID(), 'thumbnail') ?>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <div class="info-wrapper">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <?php if( $date_s )
+                                echo '<p class="date-info">'. $date_s;
+                                if($date_e) echo ' - '. $date_e;
+                                echo '</p>'; ?>
+                                <?php echo '<img class="country-flag" width="20px" src="'.get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg">'; ?>
+                            </div>
                         </div>
                     <?php
                     endwhile;
@@ -1254,10 +1277,20 @@ class wpb_widget extends WP_Widget {
                 if($the_query_region->have_posts()) :
                     //echo '<h3>Region</h3>';
                     while( $the_query_region->have_posts() ) : $the_query_region->the_post();
+                    $date_s = get_field('start_date', get_the_ID());
+                    $date_e = get_field('end_date', get_the_ID());
+                    $location = get_the_terms( get_the_ID(), 'locations' );
                     ?>
                       <div class="tab-item-box">
                             <?php echo get_the_post_thumbnail() ?>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <div class="info-wrapper">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <?php if( $date_s )
+                                echo '<p class="date-info">'. $date_s;
+                                if($date_e) echo ' - '. $date_e;
+                                echo '</p>'; ?>
+                                <?php echo '<img class="country-flag" width="20px" src="'.get_template_directory_uri().'/flags/'.$location[0]->slug.'.svg">'; ?>
+                            </div>
                         </div>
                     <?php
                     endwhile;
@@ -1267,8 +1300,6 @@ class wpb_widget extends WP_Widget {
         </div>
         <?php
         wp_reset_postdata();
-    
-
     }
      
     // Widget Backend
@@ -1294,12 +1325,54 @@ class wpb_widget extends WP_Widget {
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         return $instance;
     }
-     
-    // Class wpb_widget ends here
-} 
-     
-    // Register and load the widget
-    function wpb_load_widget() {
-        register_widget( 'wpb_widget' );
+}
+
+// Register and load the widget
+add_action( 'widgets_init', 'wpb_load_widget' );
+function wpb_load_widget() {
+    register_widget( 'wpb_widget' );
+    //register_widget( 'wpb_turneja_link' );
+}
+
+class My_Title_Widget extends WP_Widget {
+ 
+    // Widget Setup
+    function __construct() {
+        parent::__construct(
+            'my_title_widget', // Widget ID
+            'Title Widget', // Widget name
+            array( 'description' => 'Adds a title to your sidebar.' ) // Widget description
+        );
     }
-    add_action( 'widgets_init', 'wpb_load_widget' );
+ 
+    // Widget Output
+    function widget( $args, $instance ) {
+        $title = apply_filters( 'widget_title', $instance['title'] );
+ 
+       echo '<h3><a href="/kategorija/turneja">Turneja</a></h3>';
+    }
+ 
+    // Save Widget Settings
+    function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = strip_tags( $new_instance['title'] );
+ 
+        return $instance;
+    }
+ 
+    // Widget Settings Form
+    function form( $instance ) {
+        $title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+        </p>
+        <?php
+    }
+}
+ 
+function my_register_widgets() {
+    register_widget( 'My_Title_Widget' );
+}
+add_action( 'widgets_init', 'my_register_widgets' );

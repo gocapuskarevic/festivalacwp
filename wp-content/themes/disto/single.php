@@ -1,4 +1,5 @@
 <?php get_header();?>
+<style>.fluidvids{width:100% !important;}</style>
 <?php
 if (have_posts()) { while (have_posts()) { the_post();
 $categories = get_the_category();

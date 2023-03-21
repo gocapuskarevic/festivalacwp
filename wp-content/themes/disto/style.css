@@ -74,7 +74,7 @@ h4 a:hover,
 h5 a:hover,
 h6 a:hover{
     text-decoration: none !important;
-    color: #1f7ba2 !important;
+    color: #2b8e9f !important;
 }
 h1 {
     font-size: 40px;
@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     width: 100%;
 }
 ::selection {
-    background-color: #ff4200;
+    background-color: #2b8e9f;
     color: #FFF;
 }
 blockquote.quote_content {
@@ -409,7 +409,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .postnav #prepost, .
     margin: 0px 5px;
 }
 .breadcrumbs_options a:hover{
-    color: #ff4200;
+    color: #2b8e9f;
     text-decoration: none !important;
 }
 .main_content {
@@ -459,7 +459,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .postnav #prepost, .
 }
 .content_single_page a,
 .content_single_page a:hover {
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .page-full {
     padding-bottom: 20px;
@@ -2874,7 +2874,7 @@ header  post header
 }
 .home_grid_2_post_header_style .banner-container .jl_carousel_more{
     color: #fff;
-    background: #ff4200;
+    background: #2b8e9f;
     height: 25px;
     line-height: 25px;
     padding: 0px 15px;
@@ -4082,7 +4082,7 @@ header grid 8 post header
     border-radius: 100px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
-    border: 2px solid #ff4200;
+    border: 2px solid #2b8e9f;
     color: #FFF;
     font-weight: 400;
     font-size: 35px;
@@ -4110,7 +4110,7 @@ header grid 8 post header
     top: -2px;
     left: -2px;
     padding: 2px;
-    background: #ff4200;
+    background: #2b8e9f;
     -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
     -o-transition: -o-transform 0.5s;
@@ -4207,7 +4207,7 @@ header grid 8 post header
 .meta_category_text_small a{
     font-size: 10px;
     position: relative;
-    color: #ff4200;
+    color: #2b8e9f;
     float: left;
     margin-right: 8px;
     letter-spacing: 0px;
@@ -4292,7 +4292,7 @@ header grid 8 post header
     line-height: 22px;
     font-size: 10px;
     color: #000;
-    background: #ff4200;
+    background: #2b8e9f;
     float: none;
     padding: 0px 12px;
     margin-right: 2px;
@@ -4367,7 +4367,7 @@ border-radius: 100%;
 border-radius: 100%;
 }
 .carousel-item-slider-4:hover .jelly_pro_post_arrow_right:hover, .carousel-item-slider-4:hover .jelly_pro_post_arrow_left:hover{
-    background: #ff4200;
+    background: #2b8e9f;
     opacity: 1;
 }
 .carousel-item-slider-4:hover .jelly_pro_post_arrow_right {
@@ -4505,10 +4505,10 @@ color: #777;
     -o-transition: all .2s ease-in-out;
 }
 .carousel-item-slider .jelly_pro_post_arrow_right:hover {
-    background: #ff4200;
+    background: #2b8e9f;
 }
 .carousel-item-slider .jelly_pro_post_arrow_left:hover {
-    background: #ff4200;
+    background: #2b8e9f;
 }
 
 .carousel-item-slider .jelly_pro_post_arrow_right {
@@ -6007,7 +6007,7 @@ Header menu style 3
     height: 35px;
     line-height: 35px;
     width: 35px;
-    background: #ff4200;
+    background: #2b8e9f;
     text-align: center;
     cursor: pointer;
 }
@@ -6019,7 +6019,7 @@ Header menu style 3
     height: 35px;
     line-height: 35px;
     width: 35px;
-    background: #ff4200;
+    background: #2b8e9f;
     text-align: center;
 }
 .header_layout_style3_custom .header_top_bar_wrapper .search_header_menu .menu_mobile_icons i{
@@ -6089,7 +6089,7 @@ Header menu style 3
   font-size: 14px;
 }
 .header_layout_style3_custom .navigation_wrapper .jl_main_menu > li:hover > a{
-  color: #ff4200;
+  color: #2b8e9f;
 }
 .header_layout_style3_custom .navigation_wrapper .jl_main_menu > li:hover > a, .header_layout_style3_custom .navigation_wrapper .jl_main_menu > .current-menu-item > a, .header_layout_style3_custom .navigation_wrapper .jl_main_menu > .current-menu-parent > a, .header_layout_style3_custom .navigation_wrapper .jl_main_menu > .current-menu-ancestor > a{}
 .header_layout_style3_custom .search_header_menu{
@@ -6227,7 +6227,7 @@ Header menu style 5
     height: 35px;
     line-height: 35px;
     width: 35px;
-    background: #ff4200;
+    background: #2b8e9f;
     text-align: center;
     cursor: pointer;
 }
@@ -6239,7 +6239,7 @@ Header menu style 5
     height: 35px;
     line-height: 35px;
     width: 35px;
-    background: #ff4200;
+    background: #2b8e9f;
     text-align: center;
 }
 .header_layout_style5_custom .header_top_bar_wrapper .search_header_menu .menu_mobile_icons i{
@@ -6305,7 +6305,7 @@ Header menu style 5
   font-size: 14px;
 }
 .header_layout_style5_custom .navigation_wrapper .jl_main_menu > li:hover > a{
-  color: #ff4200;
+  color: #2b8e9f;
 }
 .header_layout_style5_custom .navigation_wrapper .jl_main_menu > li:hover > a, .header_layout_style5_custom .navigation_wrapper .jl_main_menu > .current-menu-item > a, .header_layout_style5_custom .navigation_wrapper .jl_main_menu > .current-menu-parent > a, .header_layout_style5_custom .navigation_wrapper .jl_main_menu > .current-menu-ancestor > a{}
 .header_layout_style5_custom .search_header_menu{
@@ -6338,7 +6338,7 @@ Header menu style 5
     color: #000;
 }
 .header_layout_style5_custom .jl_random_post_link:hover{
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .header_layout_style5_custom .main_menu .menu_mobile_icons, .header_layout_style5_custom .main_menu .search_header_wrapper{
     position: absolute;
@@ -6972,7 +6972,7 @@ line-height: 45px;
     color: #5eb2ef;
 }
 .jl_count_style_1 .jl-pinterest i{
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .jl_count_style_1 .jl-instagram i{
     color: #125d8f;
@@ -7039,7 +7039,7 @@ line-height: 45px;
     background: #5eb2ef;
 }
 .jl_count_style_2 .jl-pinterest i{
-    background: #ff4200;
+    background: #2b8e9f;
 }
 .jl_count_style_2 .jl-instagram i{
     background: #125d8f;
@@ -7158,7 +7158,7 @@ line-height: 45px;
 .social-count-plus ul .count-users a:before{ content: "\f007"; }
 
 .social-count-plus ul .count-pinterest{ background: #f8f9fa !important; }
-.social-count-plus ul .count-pinterest a{ color: #ff4200 !important; }
+.social-count-plus ul .count-pinterest a{ color: #2b8e9f !important; }
 .social-count-plus ul .count-pinterest a:before{ content: "\f0d2"; }
 
 .social-count-plus ul .count-github{ background: #f8f9fa !important; }
@@ -8295,7 +8295,7 @@ line-height: 45px;
     text-align: left;
     height: 43px;
     line-height: 43px;
-    background: #ff4200;
+    background: #2b8e9f;
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
@@ -8962,7 +8962,7 @@ continue reading button
 
 .large_continue_reading span a:hover, .jelly_homepage_builder .large_continue_reading span a:hover{
     text-decoration: none !important;
-    background: #ff4200;
+    background: #2b8e9f;
     color: #FFF !important;
 }
 
@@ -9366,7 +9366,7 @@ Form
 
 }
 .logged-in-as a:hover{
-    color: #ff4200;
+    color: #2b8e9f;
     text-decoration: none !important;
 }
 /*-------------------------------------------------------------------------------------
@@ -9725,7 +9725,7 @@ footer .recent_post_large_widget{
     line-height: 20px;
     font-size: 12px;
     color: #FFF;
-    background: #ff4200;
+    background: #2b8e9f;
     float: left;
     padding: 0px 7px;
     margin-left: 5px;
@@ -9751,7 +9751,7 @@ footer .recent_post_large_widget{
     margin-top: 0px;
 }
 .recent_post_large_widget .recent_list_item_number{
-    background: #ff4200;
+    background: #2b8e9f;
     border: 2px solid #fff;
     color: #fff;
     font-size: 12px;
@@ -9806,7 +9806,7 @@ footer .recent_post_large_widget{
     top: 0px;
     left: 0px;
     text-align: center;
-    background: #ff4200;
+    background: #2b8e9f;
     color: #fff;
     font-weight: 800;
     font-size: 18px;
@@ -9842,7 +9842,7 @@ footer .recent_post_large_widget{
     margin-top: 15px;
 }
 .post-meta a:hover{
-    color: #ff4200 !important;
+    color: #2b8e9f !important;
 }
 
 
@@ -10440,7 +10440,7 @@ Megamenu
 .menu_post_feature .builder_cat_title_list_style{
     width: 20% !important;
     float: left;
-    background: #ff4200 !important;
+    background: #2b8e9f !important;
     margin: 0px 0px -500px;
     padding-bottom: 500px;
     margin-left: -20px;
@@ -11048,7 +11048,7 @@ Full screen menu with full screen slider
     color: #0077B5;
 }
 .social_icon_header_top.jl_socialcolor li a.pinterest i{
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .social_icon_header_top.jl_socialcolor li a.twitter i{
     color: #5eb2ef;
@@ -12341,7 +12341,7 @@ home grid overlay 4 col
   position: relative;
 }
 .post_list_widget .recent_list_item_number{
-    background: #ff4200;
+    background: #2b8e9f;
     border: 2px solid #fff;
     color: #fff;
     font-size: 12px;
@@ -12776,7 +12776,7 @@ Grid post widget
     outline: none;
 }
 .email_subscribe_box .buttons:hover{
-    background: #ff4200;
+    background: #2b8e9f;
 }
 .cfs_from_wrapper{
     position: relative;
@@ -12888,7 +12888,7 @@ footer .tagcloud a{
 .tagcloud a:hover,
 .tag-cat a:hover {
     text-decoration: none !important;
-    background: #ff4200;
+    background: #2b8e9f;
     color: #FFF !important;
     border: 1px solid transparent;
 }
@@ -12946,7 +12946,7 @@ Pagination
     -moz-transition: all .1s ease-in-out;
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
-    background: #ff4200;
+    background: #2b8e9f;
     color: #fff;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -12954,7 +12954,7 @@ Pagination
 }
 .jellywp_pagination ul li a:hover {
     text-decoration: none !important;
-    background: #ff4200;
+    background: #2b8e9f;
     color: #FFF;
 }
 
@@ -13153,7 +13153,7 @@ Author profile
     -o-transition: background 0.3s linear;
 }
 .auth .social-icons-list-widget a:hover{
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .auth .social-icons-list-widget i {
     font-size: 15px;
@@ -13185,7 +13185,7 @@ Author profile
     -o-transition: all .2s ease-in-out;
 }
 .tag-cat a:hover {
-    background: #ff4200;
+    background: #2b8e9f;
     color: #FFF;
     padding: 0px 10px !important;
 }
@@ -13233,7 +13233,7 @@ Author profile
     font-family: inherit !important;
 }
 .single_section_content .counts.mashsbcount{
-    color: #ff4200;
+    color: #2b8e9f;
     font-family: inherit;
     letter-spacing: -3px;
     padding-top: 3px;
@@ -13879,14 +13879,14 @@ Comment box
 }
 .comment-meta .comment-author-name a:hover{
     text-decoration: none !important;
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .comment-meta .comment-author-date{
         display: block;
         margin-top: -5px;
 }
 .comment-meta .comment-author-date:hover, .comment-meta .comment-author-date:hover time{
-    color: #ff4200;
+    color: #2b8e9f;
     text-decoration: none !important;
 }
 
@@ -13933,7 +13933,7 @@ Comment box
 }
 .comment-reply-link:hover, .comment-edit-link:hover{
     color: #fff !important;
-    background: #ff4200;
+    background: #2b8e9f;
     text-decoration: none !important;
 }
 .comment time {
@@ -13996,7 +13996,7 @@ dd{
 #commentform #submit:hover,
 .wpcf7-form-control.wpcf7-submit:hover {
     color: #FFF;
-    background: #ff4200;
+    background: #2b8e9f;
 }
 .single_section_comment p{
     font-size: 14px;
@@ -14757,10 +14757,6 @@ Menu slide
     float: left;
     width: 100%;
 }
-.image-post-thumb > a img{
-    float: left;
-    width: 100%;
-}
 .blog_list_post_style .post-entry-content {
     width: 50% !important;
     padding: 0px 0px 0px 25px; 
@@ -14885,7 +14881,7 @@ Menu slide
 
 
 .personal_magazine_style .social_icon_header li a:hover{
-    color: #ff4200;
+    color: #2b8e9f;
 }
 
 
@@ -15319,7 +15315,7 @@ p.notfound_p_text{
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
-.full-slider-main-home-wrapper .more_btn a:hover{ border: 1px solid #ff4200;}
+.full-slider-main-home-wrapper .more_btn a:hover{ border: 1px solid #2b8e9f;}
 
 .full-slider-wrapper .banner-carousel-item .banner-container .more_btn a{
     color: #000;
@@ -15332,8 +15328,8 @@ p.notfound_p_text{
 }
 .full-slider-wrapper .banner-carousel-item .banner-container .more_btn a:hover, .single-item-slider .banner-carousel-item .banner-container .more_btn a:hover{
     text-decoration: none !important;
-    border: 1px solid #ff4200;
-    box-shadow: 200px 0 0 0 #ff4200 inset;
+    border: 1px solid #2b8e9f;
+    box-shadow: 200px 0 0 0 #2b8e9f inset;
     color: #fff;
 }
 
@@ -15628,8 +15624,8 @@ p.notfound_p_text{
     border-radius: 100px;
 }
 .footer_top_small_carousel_5 .slick-dots li.slick-active button{
-    background: #ff4200;
-    border: 1px solid #ff4200;
+    background: #2b8e9f;
+    border: 1px solid #2b8e9f;
 }
 .footer_top_small_carousel_5 .slick-dots li button:before{
     opacity: 0;
@@ -17222,14 +17218,14 @@ color: #fff;
     letter-spacing: 0.05em;
 }
 .single_post_entry_content .single_post_category_top a:hover{
-    color: #ff4200 !important;
+    color: #2b8e9f !important;
 }
 .single_post_entry_content .single-meta-category-small a{
     padding: 3px 9px;
     font-size: 13px;
     line-height: 1;
     margin-right: 5px;
-    background-color: #ff4200;
+    background-color: #2b8e9f;
     color: #fff;
 }
 .single_post_entry_content .single-meta-category-small a:hover{
@@ -17915,7 +17911,7 @@ color: #fff;
 }
 .single_post_share_icon li a:hover{
     text-decoration: none !important;
-    color: #ff4200;
+    color: #2b8e9f;
     
 }
 
@@ -19198,7 +19194,7 @@ Blog large overlay layout with sidebar
 }
 .post_large_footer_meta .post_tag_footer a:hover{
     text-decoration: none !important;
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .post_large_footer_meta .post_comment_footer, .post_large_footer_meta .post_love_footer{
     margin-right: 7px;
@@ -19229,7 +19225,7 @@ Blog large overlay layout with sidebar
     color: #222;
 }
 .post_large_footer_meta .post_comment_footer a:hover, .post_large_footer_meta .post_love_footer a:hover{
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .post_large_footer_meta .post_comment_footer i, .post_large_footer_meta .post_love_footer i, .post_large_footer_meta .post_view_footer i{
     margin-right: 5px;
@@ -19278,7 +19274,7 @@ Blog large overlay layout with sidebar
     transition: all 0.4s ease 0s;
 }
 .large_post_share_icons li a:hover {
-    color: #ff4200;
+    color: #2b8e9f;
 }
 
 
@@ -19558,7 +19554,7 @@ Blog large overlay layout with sidebar
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    background: #ff4200;
+    background: #2b8e9f;
     color: #fff;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -19945,7 +19941,7 @@ Blog large overlay layout with sidebar
     color: #313131;
 }
 .post-meta-bot .love_post_view a:hover{
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .post-meta-bot .meta-comment {
     float: right;
@@ -19962,7 +19958,7 @@ Blog large overlay layout with sidebar
 }
 .post-meta-bot .meta-comment a:hover {
     text-decoration: none !important;
-    color: #ff4200;
+    color: #2b8e9f;
 }
 .meta-comment a:hover {
     text-decoration: none !important;
@@ -20349,7 +20345,7 @@ widget style 4
     margin-left: -18px;
     width: 36px;
     height: 3px;
-    background: #ff4200;
+    background: #2b8e9f;
     border: 0px;
 }
 .jl_custom_title4 #sidebar .widget .widget-title h2 a{
@@ -20393,7 +20389,7 @@ widget style 5
     margin-left: -18px;
     width: 36px;
     height: 2px;
-    background: #ff4200;
+    background: #2b8e9f;
     border: 0px;
     display: none;
 }
@@ -20446,7 +20442,7 @@ Footer post 5 col
     margin-left: -18px;
     width: 36px;
     height: 3px;
-    background: #ff4200;
+    background: #2b8e9f;
 }
 .jl_footer_wrapper .footer_top_5_item.jl_cus_1, .jl_footer_wrapper .footer_top_5_item.jl_cus_2, .jl_footer_wrapper .footer_top_5_item.jl_cus_4, .jl_footer_wrapper .footer_top_5_item.jl_cus_5{
     width: 100%;
@@ -20577,7 +20573,7 @@ widget style 6
     margin-left: -18px;
     width: 36px;
     height: 2px;
-    background: #ff4200;
+    background: #2b8e9f;
     border: 0px;
     display: none;
 }
@@ -23975,8 +23971,8 @@ Page builder block
 }
 .jl_large_builder.jelly_homepage_builder .jl_large_more:hover{
     text-decoration: none !important;
-    background: #ff4200;
-    border-color: #ff4200;
+    background: #2b8e9f;
+    border-color: #2b8e9f;
     color: #fff;
 }
 .jl_large_builder.jelly_homepage_builder .jl_footer_social{
@@ -25214,7 +25210,7 @@ line-height: 33px;
 }
 .product-name a, .product-name a:hover{ color: #222 !important;}
 .woocommerce .star-rating span:before{ color: #ffc902;}
-.woocommerce a.added_to_cart, .woocommerce-page a.added_to_cart{color: #ff4200; font-weight: bold;}
+.woocommerce a.added_to_cart, .woocommerce-page a.added_to_cart{color: #2b8e9f; font-weight: bold;}
 .woocommerce a.added_to_cart:hover, .woocommerce-page a.added_to_cart:hover{ text-decoration: none !important; }
 .woocommerce .widget_price_filter .price_slider_amount .button:hover, .woocommerce-page .widget_price_filter .price_slider_amount .button:hover,
 .woocommerce #content input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce-page #content input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, 
@@ -25336,7 +25332,7 @@ color: #484848;
 .woocommerce-ordering .orderby{
     text-transform: uppercase;
 }
-.woocommerce ul.products li.product .star-rating span, .woocommerce ul.products li.product .star-rating span{ color: #ff4200;}
+.woocommerce ul.products li.product .star-rating span, .woocommerce ul.products li.product .star-rating span{ color: #2b8e9f;}
 .woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3{ font-weight: bold; padding:0px; font-weight: bold;
 font-size: 15px;
 line-height: 1.2;
@@ -25351,7 +25347,7 @@ margin-bottom: 9px;}
     height: 45px;
     line-height: 43px;
     border: 0px !important;
-    background: none #ff4200;
+    background: none #2b8e9f;
     box-shadow: none;
     text-shadow: none;
     margin: 0px !important;
@@ -25605,7 +25601,7 @@ font-size: 18px;
 
 .woocommerce #content nav.woocommerce-pagination ul li a:focus, .woocommerce #content nav.woocommerce-pagination ul li a:hover, .woocommerce #content nav.woocommerce-pagination ul li span.current, .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce-page #content nav.woocommerce-pagination ul li a:focus, .woocommerce-page #content nav.woocommerce-pagination ul li a:hover, .woocommerce-page #content nav.woocommerce-pagination ul li span.current, .woocommerce-page nav.woocommerce-pagination ul li a:focus, .woocommerce-page nav.woocommerce-pagination ul li a:hover, .woocommerce-page nav.woocommerce-pagination ul li span.current,
 .woocommerce #content nav.woocommerce-pagination ul li a, .woocommerce #content nav.woocommerce-pagination ul li span, .woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span, .woocommerce-page #content nav.woocommerce-pagination ul li a, .woocommerce-page #content nav.woocommerce-pagination ul li span, .woocommerce-page nav.woocommerce-pagination ul li a, .woocommerce-page nav.woocommerce-pagination ul li span{
-    background: #ff4200;
+    background: #2b8e9f;
     color: #FFF !important;
     font-size: 15px;
     margin-right: 5px;
@@ -26728,7 +26724,7 @@ footer .widget .image-flickr-widget li {
 }
 #menu-footer-menu li a:hover{
     text-decoration: none !important;
-    color: #ff4200;
+    color: #2b8e9f;
 }
 #footer-container .feature-post-list.popular-post-widget li,
 #footer-container .feature-post-list.recent-post-widget li,

@@ -2,6 +2,8 @@
                     $args = array(
                         'posts_per_page' => 4,
                         'post_type'     => 'festivals',
+                        'order_by'      => 'date',
+                        'order'   => 'ASC',
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'miscellaneous',
