@@ -1,7 +1,17 @@
 <?php
+$today = date('Ymd');
 $args = array(
     'posts_per_page' => 4,
     'post_type'     => 'festivals',
+    'orderby' => 'meta_value',
+        'meta_query' => array(
+            array(
+                'key' => 'start_date',
+                'value' => $today,
+                'compare' => '>',
+            ),
+        ),
+    'order' => 'ASC',
     'tax_query' => array(
         array(
             'taxonomy' => 'miscellaneous',

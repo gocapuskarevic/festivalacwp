@@ -92,7 +92,7 @@
                                                 </div>
                                                 <div>
                                                     <p><b>Kapacitet: </b> <?php echo $size[0]->name; ?></p>
-                                                    <p><b>Broj dana: <b><?php echo $lasting[0]->name; ?> dana</p>
+                                                    <p><b>Broj dana: </b><?php echo $lasting[0]->name; ?> dana</p>
                                                 </div>
                                             </div>
                                         </div>

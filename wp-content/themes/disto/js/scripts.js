@@ -32,7 +32,8 @@ jQuery( function ( $ ) {
   })
   $('.js-open-tab').on('click', function(){
     $tab = $(this).data('tab')
-    console.log($tab)
+    $('.js-open-tab').removeClass('active')
+    $(this).addClass('active')
     if($tab == 'srb'){
       $('#tab-reg').css('z-index','1');
       $('#tab-' + $tab).css('z-index','20');

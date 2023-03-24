@@ -11693,18 +11693,24 @@ iframe {
 .tab-wrapper-header{
   display: flex;
   margin-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #2b8e9f;
 }
 .tab-wrapper-header h3{
+  color: #fff;
+  text-transform: uppercase;
   margin-top: 0;
   margin-right: 10px;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
-  border: 1px solid black;
-  border-bottom: none;
   border-radius: 8px 8px 0 0;
   padding: 10px;
   margin-bottom: 0;
+  background-color: #2b8e9f;
+  filter: brightness(0.8);
+  font-weight: 400 !important;
+}
+.tab-wrapper-header h3.active{
+  filter: brightness(1);
 }
 .tab-wrapper{
   position: relative;
@@ -11765,6 +11771,12 @@ iframe {
 .info-wrapper .date-info{
   font-size: 10px;
   margin-bottom: 0;
+}
+.info-wrapper a{
+  color: #2b8e9f;
+}
+.info-wrapper a:hover{
+  opacity: 0.8;
 }
 
 @media (max-width: 1199px) {

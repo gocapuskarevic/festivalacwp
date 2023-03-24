@@ -70,7 +70,7 @@ class disto_about_us_widget extends WP_widget{
         <?php }?>
         <?php if($feed_description){?>
         <p>
-            <?php echo esc_attr($feed_description); ?>
+            <?php echo $feed_description; ?>
         </p>
         <?php }?>
         <?php if($image_sign){?>

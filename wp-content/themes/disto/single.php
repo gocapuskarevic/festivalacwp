@@ -172,9 +172,7 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
                             <?php if(get_theme_mod('disable_post_related') !=1){?>
                             <div class="related-posts">
                               <?php if (is_active_sidebar('jl_ads_before_related')) : echo '<div class="jl_ads_section">'; dynamic_sidebar('jl_ads_before_related');echo '</div>'; endif;?>  
-                                <h4>
-                                    <?php esc_html_e('Povezani članci', 'disto'); ?>
-                                </h4>
+                                
 
                                 <div class="single_related_post">
 
@@ -200,6 +198,11 @@ if (is_active_sidebar('jl_ads_above_title')) : echo '<div class="jl_ads_section"
                             ?>
                             <div class="container">
                                 <div class="row">
+                                    <?php if($post_query) : ?>
+                                        <h4>
+                                    <?php esc_html_e('Povezani članci', 'disto'); ?>
+                                </h4>
+                                <?php endif; ?>
                                     <?php
                                 foreach( $post_query->posts as $post ) { setup_postdata( $post );    
                                 

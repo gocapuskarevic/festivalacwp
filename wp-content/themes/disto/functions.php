@@ -1243,7 +1243,7 @@ class wpb_widget extends WP_Widget {
     
         ?>
         <div class="tab-wrapper-header">
-            <h3 class="js-open-tab" data-tab="srb">Srbija</h3>
+            <h3 class="js-open-tab active" data-tab="srb">Srbija</h3>
             <h3 class="js-open-tab" data-tab="reg">Region</h3>
         </div>
         <div class="tab-wrapper">
